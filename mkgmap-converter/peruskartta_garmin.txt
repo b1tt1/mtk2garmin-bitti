@@ -555,7 +555,7 @@ Type=0x10f07
 String1=0x00,Kallio
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #D1C7D1"
+"1 c #AAAAAA"
 [end]
 
 
