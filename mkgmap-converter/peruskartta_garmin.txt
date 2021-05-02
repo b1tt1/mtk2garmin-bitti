@@ -481,7 +481,7 @@ Type=0x10f03
 String1=0x00,Soistuma
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #FFFFFF"
+"1 c #AAFFFF"
 [end]
 
 
@@ -501,7 +501,7 @@ Type=0x10f05
 String1=0x00,Metsit. suo (helppo)
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #FFFFFF"
+"1 c #55FFFF"
 [end]
 
 
@@ -629,7 +629,7 @@ Type=0x10f0b
 String1=0x00,Maatuva vesialue
 ExtendedLabels=N
 Xpm="0 0 1 0"
-"1 c #55AAFF"
+"1 c #AAAAFF"
 [end]
 
 
