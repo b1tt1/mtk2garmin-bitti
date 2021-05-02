@@ -1101,7 +1101,7 @@ Type=0x0d
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_1/Routable customizable line/Non NT, NT
 UseOrientation=Y
 Xpm="32 1 2  1"
-"! c #0000FF"
+"! c #000000"
 "  c none"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 ;12345678901234567890123456789012
