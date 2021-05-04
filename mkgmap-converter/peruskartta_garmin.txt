@@ -1364,7 +1364,7 @@ ExtendedLabels=N
 Type=0x20
 LineWidth=1
 Xpm="0 0 1 0"
-"a c #C08040"
+"a c #C0803F"
 FontStyle=NoLabel
 [end]
 
@@ -1372,7 +1372,7 @@ FontStyle=NoLabel
 Type=0x21
 LineWidth=1
 Xpm="0 0 1 0"
-"a c #C08040"
+"a c #C0803F"
 FontStyle=NoLabel
 [end]
 
@@ -1380,7 +1380,7 @@ FontStyle=NoLabel
 Type=0x22
 LineWidth=2
 Xpm="0 0 1 0"
-"a c #C08040"
+"a c #C0803F"
 FontStyle=NoLabel
 [end]
 
