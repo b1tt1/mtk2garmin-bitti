@@ -984,7 +984,7 @@ UseOrientation=Y
 LineWidth=4
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #C04040"
+"1 c #C08080"
 "2 c #000000"
 ExtendedLabels=N
 [end]
@@ -997,7 +997,7 @@ UseOrientation=Y
 LineWidth=2
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #C04040"
+"1 c #C08080"
 "2 c #000000"
 ExtendedLabels=N
 [end]
@@ -1010,7 +1010,7 @@ UseOrientation=Y
 LineWidth=4
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #C04040"
+"1 c #C08080"
 "2 c #000000"
 ExtendedLabels=N
 [end]
@@ -1023,7 +1023,7 @@ UseOrientation=Y
 LineWidth=2
 BorderWidth=1
 Xpm="0 0 2 0"
-"1 c #C04040"
+"1 c #C08080"
 "2 c #000000"
 ExtendedLabels=N
 String1=0x00,P‰‰llystetty
