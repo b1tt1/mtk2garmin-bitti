@@ -71,7 +71,7 @@ cd ..
 mkdir splitted
 
 echo "Splitting file..."
-java -jar -Xmx15G mkgmap/splitter.jar --output-dir=splitted --max-areas=1024 --max-nodes=600000 all_osm.osm.pbf
+java -jar -Xmx10G mkgmap/splitter.jar --output-dir=splitted --max-areas=1024 --max-nodes=600000 all_osm.osm.pbf
 echo "Splitting done"
 (cat mkgmap_mtk2garmin.args;echo;cat splitted/template.args) > splitted/mkgmap_mtk2garmin.args
 (cat mkgmap_mtk2garmin_noparcel.args;echo;cat splitted/template.args) > splitted/mkgmap_mtk2garmin_noparcel.args
@@ -80,10 +80,10 @@ java -cp "mkgmap/mkgmap.jar:lib/*jar" uk.me.parabola.mkgmap.main.TypCompiler per
 echo "Compiling typ done"
 
 echo "Compiling garmin img parcels"
-java -jar -Xmx15G mkgmap/mkgmap.jar -c splitted/mkgmap_mtk2garmin.args perus.typ
+java -jar -Xmx10G mkgmap/mkgmap.jar -c splitted/mkgmap_mtk2garmin.args perus.typ
 
 echo "Compiling garmin img noparcels"
-java -jar -Xmx15G mkgmap/mkgmap.jar -c splitted/mkgmap_mtk2garmin_noparcel.args perus.typ
+java -jar -Xmx10G mkgmap/mkgmap.jar -c splitted/mkgmap_mtk2garmin_noparcel.args perus.typ
 
 mv mtkgarmin/gmapsupp.img "/opt/mtk2garmin_build/output/${time_stamp}/mtk_suomi.img"
 mv mtkgarmin_noparcel/gmapsupp.img "/opt/mtk2garmin_build/output/${time_stamp}/mtk_suomi_eikr.img"

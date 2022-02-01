@@ -4,7 +4,7 @@ set -e
 git clone --single-branch https://github.com/pailakka/mapsforge.git
 cd mapsforge
 docker build -t mapsforge-writer --no-cache -f Dockerfile .
-docker run -e JAVACMD_OPTIONS=-Xmx15G \
+docker run -e JAVACMD_OPTIONS=-Xmx10G \
            -v /opt/mtk2garmin_build/mtk2garmin:/mapdata \
            mapsforge-writer \
            /app/bin/osmosis \

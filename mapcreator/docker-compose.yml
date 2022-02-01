@@ -13,7 +13,7 @@ services:
       - mapstyle:/mapstyles
       - /opt/mtk2garmin-build/output:/output
     environment:
-      - JAVACMD_OPTIONS=-Xmx15G
+      - JAVACMD_OPTIONS=-Xmx10G
   mtk2garmin-converter:
     image: teemupel/mtk2garmin-converter
     volumes:
