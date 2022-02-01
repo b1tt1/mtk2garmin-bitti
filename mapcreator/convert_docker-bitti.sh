@@ -8,12 +8,12 @@ docker-compose down -v
 docker pull quay.io/azavea/openjdk-gdal:3.1-jdk11-slim
 docker build --tag "localhost:5000/mtk2garmin-ubuntugis-base" -f ./ubuntugis-base/Dockerfile ./ubuntugis-base
 # docker push teemupel/mtk2garmin-ubuntugis-base
-docker push localhost:5000/mtk2garmin-ubuntugis-base
+# docker push localhost:5000/mtk2garmin-ubuntugis-base
 
 echo "******1*****"
 
 docker-compose build --parallel
-docker-compose push
+# docker-compose push
 
 echo "******2*****"
 
