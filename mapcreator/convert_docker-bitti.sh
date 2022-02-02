@@ -3,6 +3,7 @@ set -euxo pipefail
 
 printf -v date '%(%Y%m%d)T' -1
 
+# Bitti: tarvitaan
 docker-compose down -v
 
 docker pull quay.io/azavea/openjdk-gdal:3.1-jdk11-slim
@@ -12,6 +13,7 @@ docker build --tag "localhost:5000/mtk2garmin-ubuntugis-base" -f ./ubuntugis-bas
 
 echo "******1*****"
 
+# Bitti: tarvitaan
 docker-compose build --parallel
 # docker-compose push
 
@@ -23,7 +25,7 @@ if docker build --tag "localhost:5000/mtk2garmin-additional-data:$date" -f ../ge
   docker push localhost:5000/mtk2garmin-additional-data:latest
 fi
 
-docker-compose pull
+# docker-compose pull
 
 echo "******3*****"
 
@@ -35,9 +37,11 @@ time docker-compose run mml-client /go/src/app/mml-muutostietopalvelu-client loa
 echo "******5*****"
 
 
+# Bitti: tarvitaan
 docker-compose up --no-start additional-data
 echo "******6*****"
 
+# Bitti: tarvitaan
 docker-compose up --no-start mapstyles
 echo "******7*****"
 
@@ -49,6 +53,7 @@ time docker-compose run merger ./merge_files.sh
 
 echo "******9*****"
 
+# Bitti: tarvitaan
 time docker-compose run mkgmap ./run_mkgmap.sh
 
 echo "******10*****"
