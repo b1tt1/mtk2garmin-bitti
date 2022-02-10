@@ -81,4 +81,5 @@ echo "******14*****"
 
 
 # time docker-compose run site
+# Bitti: tarvitaan
 docker-compose down -v
