@@ -36,6 +36,8 @@ time docker-compose run mml-client /go/src/app/mml-muutostietopalvelu-client loa
 
 echo "******5*****"
 
+# Bitti: tarvitaan (kerran?)
+docker build --tag "localhost:5000/mtk2garmin-converter" -f ../mtk2garmin-converter/Dockerfile ../mtk2garmin-converter
 
 # Bitti: tarvitaan
 docker-compose up --no-start additional-data

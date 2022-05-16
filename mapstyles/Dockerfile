@@ -1,4 +1,5 @@
-FROM teemupel/mtk2garmin-ubuntugis-base as builder
+# FROM teemupel/mtk2garmin-ubuntugis-base as builder
+FROM localhost:5000/mtk2garmin-ubuntugis-base as builder
 
 WORKDIR /opt/mapstyles
 ADD . .
