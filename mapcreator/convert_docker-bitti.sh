@@ -60,13 +60,13 @@ time docker-compose run mkgmap ./run_mkgmap.sh
 
 echo "******10*****"
 
-# time docker-compose run mapsforge /app/bin/osmosis \
-#            --rbf file=/convertedpbf/all_osm.osm.pbf workers=2 \
-#            --mapfile-writer file=/output/mtk_all.map bbox=59.4507573,19.0714057,70.1120744,31.6133108 \
-#            simplification-max-zoom=12 simplification-factor=16 threads=4 \
-#            zoom-interval-conf=5,4,7,8,8,11,12,12,13,14,14,21 \
-#            label-position=true polylabel=true \
-#            tag-conf-file=/mapstyles/mapsforge_peruskartta/mml_tag-mapping_tidy.xml type=hd comment="(c) NLS, Metsahallitus, Liikennevirasto, OpenStreetMap contributors 2019"
+time docker-compose run mapsforge /app/bin/osmosis \
+           --rbf file=/convertedpbf/all_osm.osm.pbf workers=2 \
+           --mapfile-writer file=/output/mtk_all.map bbox=59.4507573,19.0714057,70.1120744,31.6133108 \
+           simplification-max-zoom=12 simplification-factor=16 threads=4 \
+           zoom-interval-conf=5,4,7,8,8,11,12,12,13,14,14,21 \
+           label-position=true polylabel=true \
+           tag-conf-file=/mapstyles/mapsforge_peruskartta/mml_tag-mapping_tidy.xml type=hd comment="(c) NLS, Metsahallitus, Liikennevirasto, OpenStreetMap contributors 2019"
 
 
 echo "******11*****"
