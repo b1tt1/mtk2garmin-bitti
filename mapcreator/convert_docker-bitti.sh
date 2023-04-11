@@ -7,9 +7,9 @@ printf -v date '%(%Y%m%d)T' -1
 docker-compose down -v
 
 docker pull quay.io/azavea/openjdk-gdal:3.1-jdk11-slim
-docker build --tag "localhost:5000/mtk2garmin-ubuntugis-base" -f ./ubuntugis-base/Dockerfile ./ubuntugis-base
+docker build --tag "nas.local:5500/mtk2garmin-ubuntugis-base" -f ./ubuntugis-base/Dockerfile ./ubuntugis-base
 # docker push teemupel/mtk2garmin-ubuntugis-base
-# docker push localhost:5000/mtk2garmin-ubuntugis-base
+# docker push nas.local:5500/mtk2garmin-ubuntugis-base
 
 echo "******1*****"
 
@@ -19,10 +19,10 @@ docker-compose build --parallel
 
 echo "******2*****"
 
-if docker build --tag "localhost:5000/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
+if docker build --tag "nas.local:5500/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
   echo "Succesfully loaded additional data"
-  docker tag "localhost:5000/mtk2garmin-additional-data:$date" localhost:5000/mtk2garmin-additional-data:latest
-  docker push localhost:5000/mtk2garmin-additional-data:latest
+  docker tag "nas.local:5500/mtk2garmin-additional-data:$date" nas.local:5500/mtk2garmin-additional-data:latest
+  docker push nas.local:5500/mtk2garmin-additional-data:latest
 fi
 
 # docker-compose pull
@@ -37,7 +37,7 @@ time docker-compose run mml-client /go/src/app/mml-muutostietopalvelu-client loa
 echo "******5*****"
 
 # Bitti: tarvitaan (kerran?)
-docker build --tag "localhost:5000/mtk2garmin-converter" -f ../mtk2garmin-converter/Dockerfile ../mtk2garmin-converter
+docker build --tag "nas.local:5500/mtk2garmin-converter" -f ../mtk2garmin-converter/Dockerfile ../mtk2garmin-converter
 
 # Bitti: tarvitaan
 docker-compose up --no-start additional-data
