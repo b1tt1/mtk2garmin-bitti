@@ -15,8 +15,8 @@ services:
     #environment:
       #- JAVACMD_OPTIONS=-Xmx10G
   mtk2garmin-converter:
-    #image: teemupel/mtk2garmin-converter
-    image: nas.local:5500/mtk2garmin-converter
+    image: teemupel/mtk2garmin-converter
+    # image: nas.local:5500/mtk2garmin-converter
     volumes:
       - ./mtk2garmin.conf:/opt/mtk2garmin/mtk2garmin.conf
       - /opt/mtkdata/:/mtkdata
