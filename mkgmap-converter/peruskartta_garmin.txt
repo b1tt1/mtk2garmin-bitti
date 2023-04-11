@@ -1090,9 +1090,10 @@ String1=0x00,Päällystämätön
 Type=0x09
 ;GRMN_TYPE: Roads/HIGH_SPEED_RAMP, RAMP/Highway ramp which is to be driven at high speeds/Non NT, NT
 UseOrientation=Y
-Xpm="32 1 2  1"
+Xpm="32 2 2  1"
 "! c #CB0000"
 "  c none"
+" !!! !!! !!! !!! !!! !!! !!! !!!"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 ;12345678901234567890123456789012
 String1=0x00,Polku (MH)
@@ -1134,9 +1135,10 @@ ExtendedLabels=N
 Type=0x0d
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_1/Routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 1 2  1"
+Xpm="32 2 2  1"
 "! c #181BDA"
 "  c none"
+" !!! !!! !!! !!! !!! !!! !!! !!!"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 ;12345678901234567890123456789012
 String1=0x00,Polku (OSM)
@@ -1148,10 +1150,11 @@ ExtendedLabels=N
 Type=0x0e
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_2/Routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 1 2  1"
+Xpm="32 2 2  1"
 "! c #404040"
 "  c none"
 "!!!!!   !!!!!   !!!!!   !!!!!   "
+"!   !!!!!   !!!!!   !!!!!   !!!!"
 ;12345678901234567890123456789012
 String1=0x00,Kävely- ja pyörätie
 ExtendedLabels=N
@@ -1162,10 +1165,11 @@ ExtendedLabels=N
 Type=0x0f
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_3/Routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 1 2  1"
+Xpm="32 2 2  1"
 "! c #404040"
 "  c none"
 "!!!!!   !!!!!   !!!!!   !!!!!   "
+"!   !!!!!   !!!!!   !!!!!   !!!!"
 ;12345678901234567890123456789012
 String1=0x00,Kävely- ja pyörätie
 ExtendedLabels=N
@@ -1241,9 +1245,10 @@ ExtendedLabels=N
 Type=0x16
 ;GRMN_TYPE: Roads/TRAIL/Walkway or trail/Non NT, NT
 UseOrientation=Y
-Xpm="32 1 2  1"
+Xpm="32 2 2  1"
 "! c #404040"
 "  c none"
+"!!!!    !!!!    !!!!    !!!!    "
 "!!!!    !!!!    !!!!    !!!!    "
 ;12345678901234567890123456789012
 String1=0x00,Polku
