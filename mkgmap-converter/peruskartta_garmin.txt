@@ -1804,7 +1804,7 @@ ExtendedLabels=N
 DayXpm="11 11 2 1"   Colormode=16
 "!	c #BFB6BF"
 "  	c none"
-"   !!!!!   "  
+"   !!!!!   "
 "  !!!!!!!  "
 " !!!!!!!!! "
 "!!!!!!!!!!!"
@@ -1817,24 +1817,6 @@ DayXpm="11 11 2 1"   Colormode=16
 "   !!!!!   "
 ;12345678901
 [end]
-
-[_point]
-Type=0x6614
-;GRMN_TYPE: Geographical Named Points of Interest - Land Related/ROCK/Rock/Non NT, NT
-String1=0x00,Kallio
-ExtendedLabels=N
-DayXpm="6 6 2 1"   Colormode=16
-"!	c #BFB6BF"
-"  	c none"
-" !!!! "
-"!!!!!!"
-"!!!!!!"
-"!!!!!!"
-"!!!!!!"
-" !!!! "
-;12345
-[end]
-
 
 [_point]
 Type=0x066

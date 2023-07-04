@@ -13,7 +13,6 @@ kohdeluokka=32714 [0x2d0e]  #Sekametsa
 kohdeluokka=32901 [0x6612 level 1]  #Puiston nimi
 kohdeluokka=33001 [0x6612 level 1]  #Taytemaan nimi
 kohdeluokka=33101 [0x6612 level 1]  #Urheilu- ja virkistysalueen nimi
-kohdeluokka=34100 [0x6614]  #Kalliosymboli
 kohdeluokka=34200 [0x6615]  #Harva louhikko
 kohdeluokka=34100 [0x6614]  #Kalliosymboli
 kohdeluokka=34600 [0x6613]  #Kivi
