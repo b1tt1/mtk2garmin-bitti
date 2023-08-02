@@ -1,3 +1,5 @@
+; -*- coding: iso-8859-15 -*-
+
 [_id]
 ProductCode=1
 FID=801
