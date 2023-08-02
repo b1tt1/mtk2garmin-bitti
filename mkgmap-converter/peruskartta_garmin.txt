@@ -2060,7 +2060,7 @@ DayXpm="10 14 82 2"   Colormode=16
 "%3	c #E87E01"
 "%4	c #E8DC05"
 "%5	c #E6A801"
-"%6	c #E6CF00"docker compose build --parallel
+"%6	c #E6CF00"
 "%7	c #E6BD00"
 "%8	c #E6C100"
 "%9	c #E79700"
