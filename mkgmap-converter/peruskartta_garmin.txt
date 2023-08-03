@@ -1432,13 +1432,15 @@ ExtendedLabels=N
 Type=0x29
 ;GRMN_TYPE: Misc. Line Types/POWERLINE/Powerline/Non NT
 UseOrientation=Y
-Xpm="32 3 4  1"
+Xpm="32 5 4  1"
 "! c #000000"
 "  c none"
 "3 c #FFFFFF"
 "4 c none"
 "!                               "
+"!                               "
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!                               "
 "!                               "
 ;12345678901234567890123456789012
 String1=0x06,Sähkölinja
@@ -1450,16 +1452,17 @@ ExtendedLabels=N
 Type=0x10100
 ;GRMN_TYPE: //
 UseOrientation=N
-Xpm="32 5 4  1"
+Xpm="32 6 4  1"
 "! c #000000"
 "  c none"
 "3 c #FFFFFF"
 "4 c none"
-"!   !   !   !   !   !   !   !   "
-"!   !   !   !   !   !   !   !   "
+"!!      !!      !!      !!      "
+"!!      !!      !!      !!      "
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!   !   !   !   !   !   !   !   "
-"!   !   !   !   !   !   !   !   "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!      !!      !!      !!      "
+"!!      !!      !!      !!      "
 ;12345678901234567890123456789012
 String1=0x06,Jyrkänne
 ExtendedLabels=N
@@ -1505,13 +1508,15 @@ ExtendedLabels=N
 Type=0x10f00
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_LINE_33/Non-routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 3 4  1"
+Xpm="32 5 4  1"
 "! c #000000"
 "  c none"
 "3 c #FFFFFF"
 "4 c none"
 "       !!              !!       "
+"       !!              !!       "
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"       !!              !!       "
 "       !!              !!       "
 ;12345678901234567890123456789012
 String1=0x06,Aita
@@ -1822,7 +1827,7 @@ Type=0x2f12
 ;GRMN_TYPE: Geographical Named Points of Interest/TOWER/Tower/Non NT, NT
 String1=0x06,Masto
 ExtendedLabels=N
-DayXpm="7 12 2 1"   Colormode=16
+DayXpm="14 24 2 1"   Colormode=16
 "!	c #000000"
 "  	c none"
 "      !!      "
@@ -2237,18 +2242,18 @@ DayXpm="18 18 3 1"   Colormode=16
 "                  "
 "                  "
 "        ##        "
-"        ##        "
-"      ##!!##      "
-"     ##!!!!##     "
+"      ######      "
+"     ###!!###     "
 "    ##!!!!!!##    "
-"   ###!!!!!!!!#   "
+"   ##!!!!!!!!##   "
+"   ##!!!!!!!!##   "
 "  ##!!!!!!!!!!##  "
 "  ##!!!!!!!!!!##  "
-"   ###!!!!!!!!#   "
+"   ##!!!!!!!!##   "
+"   ##!!!!!!!!##   "
 "    ##!!!!!!##    "
-"     ##!!!!##     "
-"      ##!!##      "
-"        ##        "
+"     ###!!###     "
+"      ######      "
 "        ##        "
 "                  "
 "                  "
@@ -2651,7 +2656,7 @@ Type=0x2d0e
 ;GRMN_TYPE: User Customizable Points/CUSTOMIZABLE_POINT_15/User customizable point type/Non NT, NT
 String1=0x06,Sekametsä
 ExtendedLabels=N
-DayXpm="7 8 2 1"   Colormode=16
+DayXpm="14 16 2 1"   Colormode=16
 "!	c #000000"
 "  	c none"
 "    !!!!!!    "
@@ -2661,10 +2666,10 @@ DayXpm="7 8 2 1"   Colormode=16
 "!!          !!"
 "!!          !!"
 "!!          !!"
-"!!    !!    !!"
+"!!          !!"
 " !!   !!   !! "
 "  !!  !!  !!  "
-"   !!!  !!!   "
+"     !!!!     "
 "    !!  !!    "
 "    !!  !!    "
 "   !!    !!   "
@@ -2682,17 +2687,17 @@ NightXpm="14 16 2 1"   Colormode=16
 "!!          !!"
 "!!          !!"
 "!!          !!"
-"!!    !!    !!"
+"!!          !!"
 " !!   !!   !! "
 "  !!  !!  !!  "
-"   !!!  !!!   "
+"     !!!!     "
 "    !!  !!    "
 "    !!  !!    "
 "   !!    !!   "
 "  !!      !!  "
 " !!        !! "
 ;12345678901234
-;DayXpm="14 16 2 1"   Colormode=16
+;DayXpm="7 8 2 1"   Colormode=16
 ;"!	c #000000"
 ;"  	c none"
 ;"  !!!  "
