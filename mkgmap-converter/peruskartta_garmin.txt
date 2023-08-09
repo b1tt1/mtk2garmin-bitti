@@ -72,8 +72,9 @@ Type=0x05
 ;GRMN_TYPE: Large Manmade Areas/PARKING_LOT/Parking lot area/Non NT
 String1=0x06,Parkkialue
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FFB37F"
+"2 c #664026"
 [end]
 
 
@@ -82,8 +83,9 @@ Type=0x07
 ;GRMN_TYPE: Large Manmade Areas/AIRPORT/Airport area/Non NT
 String1=0x06,Lentokenttäalue
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FFFF8C"
+"2 c #3A3A00"
 [end]
 
 
@@ -92,8 +94,9 @@ Type=0x0c
 ;GRMN_TYPE: Large Manmade Areas/INDUSTRIAL_COMPLEX/Industrial complex area/Non NT
 String1=0x06,Teollisuus
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #997399"
+"2 c #796679"
 [end]
 
 
@@ -102,8 +105,9 @@ Type=0x0e
 ;GRMN_TYPE: Large Manmade Areas/AIRPORT_RUNWAYS/Airport runway area/Non NT
 String1=0x06,Kiitorata
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FF7F66"
+"2 c #8D4D40"
 [end]
 
 
@@ -112,8 +116,9 @@ Type=0x19
 ;GRMN_TYPE: Large Manmade Areas/SPORTS_COMPLEX/Sports arena or stadium/Non NT
 String1=0x06,Urheilualue
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #E6FF7F"
+"1 c #404D0D"
 [end]
 
 
@@ -122,9 +127,11 @@ Type=0x1a
 ;GRMN_TYPE: Large Manmade Areas/CEMETARY/Cemetary/Non NT
 String1=0x06,Hautausmaa
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #000000"
 "# c #7FFF7F"
+"3 c #FFFFFF"
+"4 c #408040"
 "################################"
 "################################"
 "################################"
@@ -165,8 +172,9 @@ Xpm="32 32 2 1"
 Type=0x32
 ;GRMN_TYPE: Water Areas/SEA/Sea/Non NT
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #4080FF"
+"1 c #40609F"
 [end]
 
 
@@ -174,8 +182,9 @@ Xpm="0 0 1 0"
 Type=0x3c
 ;GRMN_TYPE: Water Areas/LAKE_100MI/Lake less than 250 sq mi but greater or equal to 100 sq mi in area/Non NT
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #4080FF"
+"2 c #40609F"
 [end]
 
 
@@ -184,8 +193,9 @@ Type=0x3f
 ;GRMN_TYPE: Water Areas/LAKE, LAKE_5MI/Medium sized lake, typically between 5 and 30 sq mi in area/Non NT
 String1=0x06,Allas
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #4080FF"
+"2 c #40609F"
 [end]
 
 
@@ -193,8 +203,9 @@ Xpm="0 0 1 0"
 Type=0x46
 ;GRMN_TYPE: Water Areas/LARGE_RIVER/Major river, typically at least 700 ft in width/Non NT
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #4080FF"
+"2 c #40609F"
 [end]
 
 
@@ -202,8 +213,9 @@ Xpm="0 0 1 0"
 Type=0x4b
 ;GRMN_TYPE: Map Bounds/DATA_BOUNDS/Bounds of map after creation/Non NT
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FBFBEF"
+"2 c #0A0A04"
 [end]
 
 
@@ -212,9 +224,11 @@ Type=0x4e
 ;GRMN_TYPE: Surface Cover Areas/ORCHARD/Orchard or plantation area/Non NT
 String1=0x06,Puutarha
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #00FF39"
 "# c #FFD778"
+"3 c #63E380"
+"4 c #584414"
 "!!!!############!!!!############"
 "!!!!############!!!!############"
 "!!!!############!!!!############"
@@ -256,8 +270,9 @@ Type=0x4f
 ;GRMN_TYPE: Surface Cover Areas/SCRUB/Scrub brush area/Non NT
 String1=0x06,Niitty
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FFF97D"
+"2 c #444103"
 [end]
 
 
@@ -266,9 +281,11 @@ Type=0x51
 ;GRMN_TYPE: Surface Cover Areas/WETLAND/Wetland or swamp area/Non NT
 String1=0x06,Vaikeak. puuton
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #D1CC3F"
 "# c #4CBFE6"
+"3 c #7A7731"
+"4 c #2D667A"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "################################"
@@ -310,9 +327,11 @@ Type=0x53
 ;GRMN_TYPE: Surface Cover Areas/FLAT/Sand, tidal, mud, etc. flat area/Non NT
 String1=0x06,Hietikko
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #000000"
 "# c #FFFF66"
+"3 c #FFFFFF"
+"4 c #4D4D00"
 "###############!!###############"
 "###############!!##########!!###"
 "###########################!!###"
@@ -354,8 +373,9 @@ Type=0x54
 ;GRMN_TYPE: Surface Cover Areas/LAND/Land area/Non NT
 String1=0x06,Pelto
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FFD778"
+"2 c #584414"
 [end]
 
 
@@ -364,8 +384,9 @@ Type=0x10904
 ;GRMN_TYPE: Large Manmade Areas/AIRPORT(NT)/Airport area/NT
 String1=0x06,Lentoliikennealue
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FFE67F"
+"2 c #4D400D"
 [end]
 
 
@@ -374,8 +395,9 @@ Type=0x1090b
 ;GRMN_TYPE: Large Manmade Areas/AIRPORT_RUNWAYS(NT)/Airport runway area/NT
 String1=0x06,Kiitorata
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #F35959"
+"2 c #A65959"
 [end]
 
 
@@ -384,8 +406,9 @@ Type=0x10f00
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_1/Customizable area/Non NT, NT
 String1=0x06,Turvetuotantoalue
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #CDB366"
+"2 c #73663F"
 [end]
 
 
@@ -394,9 +417,11 @@ Type=0x10f01
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_2/Customizable area/Non NT, NT
 String1=0x06,Täytemaa
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #000000"
 "# c #FEFFD8"
+"3 c #FFFFFF"
+"4 c #141401"
 "################################"
 "################################"
 "################################"
@@ -438,9 +463,11 @@ Type=0x10f02
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_3/Customizable area/Non NT, NT
 String1=0x06,Kaatopaikka
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #955114"
 "# c #FEFFD8"
+"3 c #CDAB8C"
+"4 c #141401"
 "################################"
 "################################"
 "################################"
@@ -482,9 +509,11 @@ Type=0x10f03
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_4/Customizable area/Non NT, NT
 String1=0x06,Soistuma
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #BFEBEB"
 "# c #FFFFFF"
+"3 c #142A2A"
+"4 c #000000"
 "!##!!##!!##!!##!!##!!##!!##!!##!"
 "##!!##!!##!!##!!##!!##!!##!!##!!"
 "#!!##!!##!!##!!##!!##!!##!!##!!#"
@@ -526,8 +555,9 @@ Type=0x10f04
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_5/Customizable area/Non NT, NT
 String1=0x06,Helppokulkuinen puuton
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #D1CC3F"
+"2 c #7A7731"
 [end]
 
 
@@ -536,8 +566,9 @@ Type=0x10f05
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_6/Customizable area/Non NT, NT
 String1=0x06,Metsit. suo (helppo)
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #BFEBEB"
+"2 c #142A2A"
 [end]
 
 
@@ -546,9 +577,11 @@ Type=0x10f06
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_7/Customizable area/Non NT, NT
 String1=0x06,Vaikeak. mets.
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #4CBFE6"
 "# c #BFE4E4"
+"3 c #2D667A"
+"4 c #1B2E2E"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "################################"
@@ -590,8 +623,9 @@ Type=0x10f07
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_8/Customizable area/Non NT, NT
 String1=0x06,Kallio
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #BFB6BF"
+"2 c #454045"
 [end]
 
 
@@ -600,8 +634,9 @@ Type=0x10f08
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_9/Customizable area/Non NT, NT
 String1=0x06,Puisto
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #B3FF66"
+"2 c #4D7326"
 [end]
 
 
@@ -610,8 +645,9 @@ Type=0x10f09
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_10/Customizable area/Non NT, NT
 String1=0x06,Vesijättö
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FFFF3F"
+"2 c #606000"
 [end]
 
 
@@ -620,9 +656,11 @@ Type=0x10f0a
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_11/Customizable area/Non NT, NT
 String1=0x06,Tulva-alue
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #93CCFB"
 "  c none"
+"3 c #1C3850"
+"4 c none"
 "!        !!            !!!   !  "
 "    !           !      !        "
 "   !              !             "
@@ -664,8 +702,9 @@ Type=0x10f0b
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_12/Customizable area/Non NT, NT
 String1=0x06,Maatuva vesialue
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #80A3FF"
+"2 c #2E406E"
 [end]
 
 
@@ -674,8 +713,10 @@ Type=0x10f0c
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_13/Customizable area/Non NT, NT
 String1=0x06,Varvikko
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #F3CC00"
+"  c none"
+"! c #998620"
 "  c none"
 "   !   !   !   !   !   !   !   !"
 "  !   !   !   !   !   !   !   ! "
@@ -718,9 +759,11 @@ Type=0x10f0d
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_14/Customizable area/Non NT, NT
 String1=0x06,Hiekkakuoppa
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #000000"
 "# c #F5F5D0"
+"3 c #FFFFFF"
+"4 c #1D1D0A"
 "#######################!########"
 "######################!!!#######"
 "####!#######!##########!########"
@@ -762,9 +805,11 @@ Type=0x10f0e
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_15/Customizable area/Non NT, NT
 String1=0x06,Louhos
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #666666"
 "# c #FFFFD9"
+"3 c #999999"
+"4 c #131300"
 "################################"
 "################################"
 "####!###########################"
@@ -806,8 +851,9 @@ Type=0x10f0f
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_16/Customizable area/Non NT, NT
 String1=0x06,Varastoalue
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #ECECD9"
+"2 c #1D1D13"
 [end]
 
 
@@ -816,9 +862,11 @@ Type=0x10f10
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_17/Customizable area/Non NT, NT
 String1=0x06,Hakkuuaukea
 ExtendedLabels=N
-Xpm="32 32 2 1"
+Xpm="32 32 4 1"
 "! c #B3D900"
 "  c none"
+"3 c #93A639"
+"4 c none"
 "   !   !   !   !   !   !   !   !"
 "  !!  !!  !!  !!  !!  !!  !!  !!"
 " !!  !!  !!  !!  !!  !!  !!  !! "
@@ -863,7 +911,7 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #000000"
 "  c none"
-"3 c #404040"
+"3 c #FFFFFF"
 "4 c none"
 "                                "
 "                                "
@@ -906,8 +954,9 @@ Type=0x10f12
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_19/Customizable area/Non NT, NT
 String1=0x06,Asuttu
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #333333"
+"2 c #CCCCCC"
 [end]
 
 
@@ -916,8 +965,9 @@ Type=0x10f13
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_20/Customizable area/Non NT, NT
 String1=0x06,Muu
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #A0A0A0"
+"2 c #5F5F5F"
 [end]
 
 
@@ -926,8 +976,9 @@ Type=0x10f14
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_21/Customizable area/Non NT, NT
 String1=0x06,Kirkollinen
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #7F00FF"
+"2 c #8040C0"
 [end]
 
 
@@ -936,8 +987,9 @@ Type=0x10f15
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_22/Customizable area/Non NT, NT
 String1=0x06,Julkinen
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FF33FF"
+"2 c #660066"
 [end]
 
 
@@ -946,8 +998,9 @@ Type=0x10f16
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_23/Customizable area/Non NT, NT
 String1=0x06,Loma
 ExtendedLabels=N
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #40C040"
+"2 c #7FBF7F"
 [end]
 
 
@@ -960,9 +1013,11 @@ Type=0x01
 UseOrientation=Y
 LineWidth=5
 BorderWidth=1
-Xpm="0 0 2 0"
+Xpm="0 0 4 0"
 "1 c #40C000"
 "2 c #000000"
+"3 c #9FDF7F"
+"4 c #FFFFFF"
 String1=0x06,Moottoritie
 ExtendedLabels=N
 [end]
@@ -974,9 +1029,11 @@ Type=0x02
 UseOrientation=Y
 LineWidth=5
 BorderWidth=1
-Xpm="0 0 2 0"
+Xpm="0 0 4 0"
 "1 c #FFCC00"
 "2 c #000000"
+"3 c #99801A"
+"4 c #FFFFFF"
 ExtendedLabels=N
 [end]
 
@@ -987,9 +1044,11 @@ Type=0x03
 UseOrientation=Y
 LineWidth=4
 BorderWidth=1
-Xpm="0 0 2 0"
+Xpm="0 0 4 0"
 "1 c #C08080"
 "2 c #000000"
+"3 c #7F5F5F"
+"4 c #FFFFFF"
 ExtendedLabels=N
 [end]
 
@@ -1000,9 +1059,11 @@ Type=0x04
 UseOrientation=Y
 LineWidth=2
 BorderWidth=1
-Xpm="0 0 2 0"
+Xpm="0 0 4 0"
 "1 c #C08080"
 "2 c #000000"
+"3 c #7F5F5F"
+"4 c #FFFFFF"
 ExtendedLabels=N
 [end]
 
@@ -1013,9 +1074,11 @@ Type=0x05
 UseOrientation=Y
 LineWidth=4
 BorderWidth=1
-Xpm="0 0 2 0"
+Xpm="0 0 4 0"
 "1 c #C08080"
 "2 c #000000"
+"3 c #7F5F5F"
+"4 c #FFFFFF"
 ExtendedLabels=N
 [end]
 
@@ -1026,9 +1089,11 @@ Type=0x06
 UseOrientation=Y
 LineWidth=2
 BorderWidth=1
-Xpm="0 0 2 0"
+Xpm="0 0 4 0"
 "1 c #C08080"
 "2 c #000000"
+"3 c #7F5F5F"
+"4 c #FFFFFF"
 ExtendedLabels=N
 String1=0x06,Päällystetty
 [end]
@@ -1039,8 +1104,9 @@ Type=0x07
 ;GRMN_TYPE: Roads/ALLEY, DRIVEWAY/Alleyway, private driveway to residence/Non NT, NT
 UseOrientation=Y
 LineWidth=2
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #313131"
+"2 c #CECECE"
 ExtendedLabels=N
 [end]
 
@@ -1073,8 +1139,9 @@ String1=0x06,Kiinteistöraja
 ;GRMN_TYPE: Roads/ALLEY, DRIVEWAY/Alleyway, private driveway to residence/Non NT, NT
 UseOrientation=Y
 LineWidth=1
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #FF0000"
+"2 c #FF8080"
 ExtendedLabels=N
 [end]
 
@@ -1084,9 +1151,11 @@ Type=0x08
 UseOrientation=Y
 LineWidth=2
 BorderWidth=1
-Xpm="0 0 2 0"
+Xpm="0 0 4 0"
 "1 c #7B6500"
 "2 c #000000"
+"3 c #CDC28F"
+"4 c #FFFFFF"
 ExtendedLabels=N
 String1=0x06,Päällystämätön
 [end]
@@ -1096,9 +1165,11 @@ String1=0x06,Päällystämätön
 Type=0x09
 ;GRMN_TYPE: Roads/HIGH_SPEED_RAMP, RAMP/Highway ramp which is to be driven at high speeds/Non NT, NT
 UseOrientation=Y
-Xpm="32 2 2  1"
+Xpm="32 2 4 1"
 "! c #CB0000"
 "  c none"
+"3 c #FF9A9A"
+"4 c none"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 ;12345678901234567890123456789012
@@ -1111,9 +1182,11 @@ ExtendedLabels=N
 Type=0x0a
 ;GRMN_TYPE: Roads/UNPAVED_ROAD/Gravel or dirt road/Non NT, NT
 UseOrientation=N
-Xpm="32 2 2  1"
+Xpm="32 2 4 1"
 "! c #4A4A00"
 "  c none"
+"3 c #DADAB5"
+"4 c none"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 ;12345678901234567890123456789012
@@ -1126,9 +1199,11 @@ ExtendedLabels=N
 Type=0x0c
 ;GRMN_TYPE: Roads/ROUNDABOUT/Roundabout/Non NT, NT
 UseOrientation=N
-Xpm="32 2 2  1"
+Xpm="32 2 4 1"
 "! c #0040FF"
 "  c none"
+"3 c #6080DF"
+"4 c none"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 ;12345678901234567890123456789012
@@ -1141,9 +1216,11 @@ ExtendedLabels=N
 Type=0x0d
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_1/Routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 2 2  1"
+Xpm="32 2 4 1"
 "! c #181BDA"
 "  c none"
+"3 c #8586E6"
+"4 c none"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 ;12345678901234567890123456789012
@@ -1156,9 +1233,11 @@ ExtendedLabels=N
 Type=0x0e
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_2/Routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 2 2  1"
+Xpm="32 2 4 1"
 "! c #404040"
 "  c none"
+"3 c #BFBFBF"
+"4 c none"
 "!!!!!   !!!!!   !!!!!   !!!!!   "
 "!!!!!   !!!!!   !!!!!   !!!!!   "
 ;12345678901234567890123456789012
@@ -1171,9 +1250,11 @@ ExtendedLabels=N
 Type=0x0f
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_3/Routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 2 2  1"
+Xpm="32 2 4 1"
 "! c #404040"
 "  c none"
+"3 c #BFBFBF"
+"4 c none"
 "!!!!!   !!!!!   !!!!!   !!!!!   "
 "!!!!!   !!!!!   !!!!!   !!!!!   "
 ;12345678901234567890123456789012
@@ -1186,9 +1267,11 @@ ExtendedLabels=N
 Type=0x10
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_4/Routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 1 2  1"
+Xpm="32 1 4 1"
 "! c #FF4000"
 "  c none"
+"3 c #DF8060"
+"4 c none"
 "!!!!!!!!        !!!!!!!!        "
 ;12345678901234567890123456789012
 String1=0x06,Lossi
@@ -1200,7 +1283,7 @@ ExtendedLabels=N
 Type=0x11
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_5/Routable customizable line/Non NT, NT
 UseOrientation=N
-Xpm="32 4 4  1"
+Xpm="32 4 4 1"
 "! c #000000"
 "# c #FFFFFF"
 "3 c #FFFFFF"
@@ -1219,9 +1302,11 @@ ExtendedLabels=N
 Type=0x12
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_6/Routable customizable line/Non NT, NT
 UseOrientation=N
-Xpm="32 5 2  1"
+Xpm="32 5 4 1"
 "! c #008000"
 "  c none"
+"3 c #BFFFBF"
+"4 c none"
 "!   !   !   !   !   !   !   !   "
 "   !   !   !   !   !   !   !   !"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -1236,8 +1321,10 @@ ExtendedLabels=N
 Type=0x13
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_6/Routable customizable line/Non NT, NT
 UseOrientation=N
-Xpm="32 5 2  1"
+Xpm="32 5 4 1"
 "! c #c100ab"
+"  c none"
+"! c #AA499F"
 "  c none"
 "!   !   !   !   !   !   !   !   "
 "   !   !   !   !   !   !   !   !"
@@ -1253,9 +1340,11 @@ ExtendedLabels=N
 Type=0x16
 ;GRMN_TYPE: Roads/TRAIL/Walkway or trail/Non NT, NT
 UseOrientation=Y
-Xpm="32 2 2  1"
+Xpm="32 2 4 1"
 "! c #404040"
 "  c none"
+"3 c #BFBFBF"
+"4 c none"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 ;12345678901234567890123456789012
@@ -1267,9 +1356,11 @@ ExtendedLabels=N
 Type=0x10e00
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_LINE_1/Non-routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 7 2  1"
+Xpm="32 7 4 1"
 "! c #404040"
 "  c none"
+"3 c #BFBFBF"
+"4 c none"
 "  !       !       !       !     "
 "  !       !       !       !     "
 "  !       !       !       !     "
@@ -1288,8 +1379,9 @@ Type=0x18
 ;GRMN_TYPE: Water Features/STREAM/Small stream or creek/Non NT
 UseOrientation=Y
 LineWidth=1
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #4080FF"
+"2 c #40609F"
 String1=0x06,Oja (<2m)
 ExtendedLabels=N
 [end]
@@ -1299,9 +1391,11 @@ ExtendedLabels=N
 Type=0x19
 ;GRMN_TYPE: Misc. Line Types/TIME_ZONE_BOUNDARY/Indicates the boundary of a time zone/Non NT
 UseOrientation=Y
-Xpm="32 3 2  1"
+Xpm="32 3 4 1"
 "! c #F8FCF8"
 "# c #606060"
+"3 c #050705"
+"4 c #9F9F9F"
 "################################"
 "!!!!####!!!!####!!!!####!!!!####"
 "################################"
@@ -1315,9 +1409,11 @@ ExtendedLabels=N
 Type=0x1c
 ;GRMN_TYPE: Political Borders/MJR_PLTCL_BDRY/Major political boundary (typically used for state, provincial borders)/Non NT
 UseOrientation=N
-Xpm="32 4 2  1"
+Xpm="32 4 4 1"
 "! c #4800F2"
 "  c none"
+"3 c #8662DB"
+"4 c none"
 "   !   !   !   !   !   !   !   !"
 "  !   !   !   !   !   !   !   ! "
 " !   !   !   !   !   !   !   !  "
@@ -1332,9 +1428,11 @@ ExtendedLabels=N
 Type=0x1d
 ;GRMN_TYPE: Political Borders/MNR_PLTCL_BDRY/Minor political boundary (typically used for county/parish borders)
 UseOrientation=N
-Xpm="32 2 2  1"
+Xpm="32 2 4 1"
 "! c #C040C0"
 "  c none"
+"3 c #7F3F7F"
+"4 c none"
 "  !!  !!!!!!!!!!  !!  !!!!!!!!!!"
 "  !!  !!!!!!!!!!  !!  !!!!!!!!!!"
 ;12345678901234567890123456789012
@@ -1347,8 +1445,10 @@ ExtendedLabels=N
 Type=0x1e
 ;GRMN_TYPE: Political Borders/INTRN_PLTCL_BDRY/International boundary/Non NT
 UseOrientation=N
-Xpm="32 5 2  1"
+Xpm="32 5 4 1"
 "! c #4800F2"
+"  c none"
+"! c #8662DB"
 "  c none"
 "   !   !   !   !   !   !   !   !"
 "  !   !   !   !   !   !   !   ! "
@@ -1366,8 +1466,9 @@ Type=0x1f
 ;GRMN_TYPE: Water Features/RIVER/Large stream or river/Non NT
 UseOrientation=Y
 LineWidth=2
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "1 c #4080FF"
+"2 c #40609F"
 String1=0x06,Oja (>2m)
 ExtendedLabels=N
 [end]
@@ -1376,24 +1477,27 @@ ExtendedLabels=N
 [_line]
 Type=0x20
 LineWidth=1
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "a c #C0803F"
+"2 c #A0805F"
 FontStyle=NoLabel
 [end]
 
 [_line]
 Type=0x21
 LineWidth=1
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "a c #C0803F"
+"2 c #A0805F"
 FontStyle=NoLabel
 [end]
 
 [_line]
 Type=0x22
 LineWidth=2
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "a c #C0803F"
+"2 c #A0805F"
 FontStyle=NoLabel
 [end]
 
@@ -1401,16 +1505,18 @@ FontStyle=NoLabel
 [_line]
 Type=0x24
 LineWidth=1
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "a c #80FFFF"
+"2 c #004040"
 FontStyle=NoLabel
 [end]
 
 [_line]
 Type=0x25
 LineWidth=2
-Xpm="0 0 1 0"
+Xpm="0 0 2 0"
 "a c #80FFFF"
+"2 c #004040"
 FontStyle=NoLabel
 [end]
 
@@ -1418,7 +1524,7 @@ FontStyle=NoLabel
 Type=0x28
 ;GRMN_TYPE: Misc. Line Types/PIPELINE/Oil or water pipeline/Non NT
 UseOrientation=Y
-Xpm="32 1 4  1"
+Xpm="32 1 4 1"
 "! c #000000"
 "  c none"
 "3 c #FFFFFF"
@@ -1434,7 +1540,7 @@ ExtendedLabels=N
 Type=0x29
 ;GRMN_TYPE: Misc. Line Types/POWERLINE/Powerline/Non NT
 UseOrientation=Y
-Xpm="32 5 4  1"
+Xpm="32 5 4 1"
 "! c #000000"
 "  c none"
 "3 c #FFFFFF"
@@ -1454,7 +1560,7 @@ ExtendedLabels=N
 Type=0x10100
 ;GRMN_TYPE: //
 UseOrientation=N
-Xpm="32 6 4  1"
+Xpm="32 6 4 1"
 "! c #000000"
 "  c none"
 "3 c #FFFFFF"
@@ -1475,9 +1581,11 @@ ExtendedLabels=N
 Type=0x10102
 ;GRMN_TYPE: //
 UseOrientation=N
-Xpm="32 5 2  1"
+Xpm="32 5 4 1"
 "! c #804000"
 "  c none"
+"3 c #DFBF9F"
+"4 c none"
 "!   !   !   !   !   !   !   !   "
 "!   !   !   !   !   !   !   !   "
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -1493,9 +1601,11 @@ ExtendedLabels=N
 Type=0x10110
 ;GRMN_TYPE: //
 UseOrientation=Y
-Xpm="32 4 2  1"
+Xpm="32 4 4 1"
 "! c #FFFFFF"
 "  c none"
+"3 c #000000"
+"4 c none"
 "    !!      !!      !!      !!  "
 "   !!!!    !!!!    !!!!    !!!! "
 "   !!!!    !!!!    !!!!    !!!! "
@@ -1510,7 +1620,7 @@ ExtendedLabels=N
 Type=0x10f00
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_LINE_33/Non-routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 5 4  1"
+Xpm="32 5 4 1"
 "! c #000000"
 "  c none"
 "3 c #FFFFFF"
@@ -1587,9 +1697,21 @@ DayXpm="8 8 2 1"   Colormode=16
 " !!!!!! "
 "  !!!!  "
 ;12345678
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #CFCFCF"
+"  	c none"
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+;12345678
 ;DayXpm="4 4 2 1"   Colormode=16
 ;"!	c #303030"
-;"  	c none"
+;"  c none"
 ;" !! "
 ;"!!!!"
 ;"!!!!"
@@ -1607,6 +1729,17 @@ FontStyle=NormalFont
 CustomColor=No
 DayXpm="8 8 2 1"   Colormode=16
 "!	c #303030"
+"  	c none"
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #CFCFCF"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -1635,6 +1768,18 @@ SubType=0x00
 ExtendedLabels=N
 DayXpm="8 8 2 1"   Colormode=16
 "!	c #303030"
+"  	c none"
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+;12345678
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #CFCFCF"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -1675,6 +1820,18 @@ DayXpm="8 8 2 1"   Colormode=16
 " !!!!!! "
 "  !!!!  "
 ;12345678
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #CFCFCF"
+"  	c none"
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+;12345678
 ;DayXpm="4 4 2 1"   Colormode=16
 ;"!	c #303030"
 ;"  	c none"
@@ -1705,6 +1862,18 @@ DayXpm="8 8 2 1"   Colormode=16
 " !!!!!! "
 "  !!!!  "
 ;12345678
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #5B5B5B"
+"  	c none"
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+;12345678
 ;DayXpm="4 4 2 1"   Colormode=16
 "!	c #A4A4A4"
 ;"  	c none"
@@ -1724,6 +1893,23 @@ ExtendedLabels=N
 DayXpm="14 12 3 1"   Colormode=16
 "!	c #898989"
 "#	c #000000"
+"  	c none"
+"      ##      "
+"    ######    "
+"   ##!!!!##   "
+"  ##!!!!!!##  "
+" ##!!!!!!!!## "
+"##!!!!!!!!!!##"
+"##!!!!!!!!!!##"
+"##!!!!!!!!!!##"
+"##!!!!!!!!!!##"
+"##!!!!!!!!!!##"
+"##!!!!!!!!!!##"
+"##!!!!!!!!!!##"
+;12345678901234
+NightXpm="14 12 3 1"   Colormode=16
+"!	c #767676"
+"#	c #FFFFFF"
 "  	c none"
 "      ##      "
 "    ######    "
@@ -1778,6 +1964,26 @@ DayXpm="16 16 2 1"   Colormode=16
 "!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!"
 ;1234567890123456
+NightXpm="16 16 2 1"   Colormode=16
+"!	c #FFFFFF"
+"  	c none"
+"!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!"
+"!!!!        !!!!"
+"!!!!        !!!!"
+"!!!!        !!!!"
+"!!!!        !!!!"
+"!!!!        !!!!"
+"!!!!        !!!!"
+"!!!!        !!!!"
+"!!!!        !!!!"
+"!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!"
+;1234567890123456
 ;DayXpm="8 8 2 1"   Colormode=16
 ;"!	c #000000"
 ;"  	c none"
@@ -1813,6 +2019,18 @@ DayXpm="8 8 2 1"   Colormode=16
 " !!!!!! "
 "  !!!!  "
 ;12345678
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #CFCFCF"
+"  	c none"
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+;12345678
 ;DayXpm="4 4 2 1"   Colormode=16
 ;"!	c #303030"
 ;"  	c none"
@@ -1831,6 +2049,34 @@ String1=0x06,Masto
 ExtendedLabels=N
 DayXpm="14 24 2 1"   Colormode=16
 "!	c #000000"
+"  	c none"
+"      !!      "
+"     !!!!     "
+"    !!!!!!    "
+"   !!!!!!!!   "
+"  !!!!!!!!!!  "
+" !!!!!!!!!!!! "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"    !!!!!!    "
+"   !!!!!!!!   "
+" !!!!!!!!!!!! "
+"!!!!!!!!!!!!!!"
+;12345678901234
+NightXpm="14 24 2 1"   Colormode=16
+"!	c #FFFFFF"
 "  	c none"
 "      !!      "
 "     !!!!     "
@@ -1894,6 +2140,18 @@ DayXpm="8 8 2 1"   Colormode=16
 " !!!!!! "
 "  !!!!  "
 ;12345678
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #CFCFCF"
+"  	c none"
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+;12345678
 ;DayXpm="4 4 2 1"   Colormode=16
 ;"!	c #303030"
 ;"  	c none"
@@ -1914,6 +2172,23 @@ ExtendedLabels=N
 DayXpm="12 12 3 1"   Colormode=16
 "#	c #000000"
 "%	c #3A74CC"
+"  	c none"
+"##%%%%%%%%##"
+"##%%%%%%%%##"
+"##%%%%%%%%##"
+"##%%%%%%%%##"
+"##%%%%%%%%##"
+"##%%%%%%%%##"
+"##%%%%%%%%##"
+"##%%%%%%%%##"
+"##%%%%%%%%##"
+"##%%%%%%%%##"
+" ###%%%%### "
+"   ######   "
+;123456789012
+NightXpm="12 12 3 1"   Colormode=16
+"#	c #FFFFFF"
+"%	c #5F7CA8"
 "  	c none"
 "##%%%%%%%%##"
 "##%%%%%%%%##"
@@ -1952,6 +2227,22 @@ String1=0x06,Puomi
 ExtendedLabels=N
 DayXpm="12 12 2 1"   Colormode=16
 "!	c #FF0000"
+"  	c none"
+"!!        !!"
+"!!!      !!!"
+" !!!    !!! "
+"  !!!  !!!  "
+"   !!!!!!   "
+"    !!!!    "
+"    !!!!    "
+"   !!!!!!   "
+"  !!!  !!!  "
+" !!!    !!! "
+"!!!      !!!"
+"!!        !!"
+;123456789012
+NightXpm="12 12 2 1"   Colormode=16
+"!	c #FF8080"
 "  	c none"
 "!!        !!"
 "!!!      !!!"
@@ -2037,6 +2328,21 @@ DayXpm="11 11 2 1"   Colormode=16
 "  !!!!!!!  "
 "   !!!!!   "
 ;12345678901
+NightXpm="11 11 2 1"   Colormode=16
+"!	c #454045"
+"  	c none"
+"   !!!!!   "
+"  !!!!!!!  "
+" !!!!!!!!! "
+"!!!!!!!!!!!"
+"!!!!!!!!!!!"
+"!!!!!!!!!!!"
+"!!!!!!!!!!!"
+"!!!!!!!!!!!"
+" !!!!!!!!! "
+"  !!!!!!!  "
+"   !!!!!   "
+;12345678901
 [end]
 
 [_point]
@@ -2048,6 +2354,18 @@ ExtendedLabels=N
 DayXpm="8 8 2 1"   Colormode=16
 "!	c #006500"
 "#	c #FFFFFF"
+"########"
+"########"
+"##!!!!##"
+"##!!!!##"
+"##!!!!##"
+"##!!!!##"
+"########"
+"########"
+;1234567890123456
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #CDFFCD"
+"#	c #000000"
 "########"
 "########"
 "##!!!!##"
@@ -2080,6 +2398,24 @@ String1=0x06,Vedenalainen kivi
 ExtendedLabels=N
 DayXpm="14 14 2 1"   Colormode=16
 "!	c #000000"
+"  	c none"
+"!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!"
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+;12345678901234
+NightXpm="14 14 2 1"   Colormode=16
+"!	c #FFFFFF"
 "  	c none"
 "!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!"
@@ -2133,6 +2469,24 @@ DayXpm="14 14 2 1"   Colormode=16
 "      !!      "
 "      !!      "
 ;12345678901234
+NightXpm="14 14 2 1"   Colormode=16
+"!	c #FFFFFF"
+"  	c none"
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!"
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+;12345678901234
 ;DayXpm="7 7 2 1"   Colormode=16
 ;"!	c #000000"
 ;"  	c none"
@@ -2154,6 +2508,24 @@ String1=0x06,Vedenpäällinen kivi
 ExtendedLabels=N
 DayXpm="14 14 2 1"   Colormode=16
 "!	c #000000"
+"  	c none"
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"      !!      "
+"!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!"
+;12345678901234
+NightXpm="14 14 2 1"   Colormode=16
+"!	c #FFFFFF"
 "  	c none"
 "      !!      "
 "      !!      "
@@ -2201,6 +2573,18 @@ DayXpm="8 8 2 1"   Colormode=16
 " !!!!!! "
 "  !!!!  "
 ;12345678
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #CFCFCF"
+"  	c none"
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+;12345678
 ;DayXpm="4 4 2 1"   Colormode=16
 ;"!	c #303030"
 ;"  	c none"
@@ -2219,6 +2603,22 @@ String1=0x06,Kaislikko
 ExtendedLabels=N
 DayXpm="18 12 2 1"   Colormode=16
 "!	c #000000"
+"  	c none"
+"    !!      !!    "
+"    !!      !!    "
+"    !!      !!    "
+"    !!      !!    "
+"     !!    !!     "
+"      !!  !!      "
+"!!    !!  !!    !!"
+"!!    !!  !!    !!"
+" !!   !!  !!   !! "
+"  !!  !!  !!  !!  "
+"  !!  !!  !!  !!  "
+"  !!  !!  !!  !!  "
+;123456789012345678
+NightXpm="18 12 2 1"   Colormode=16
+"!	c #FFFFFF"
 "  	c none"
 "    !!      !!    "
 "    !!      !!    "
@@ -2568,6 +2968,18 @@ DayXpm="8 8 2 1"   Colormode=16
 " !!!!!! "
 "  !!!!  "
 ;12345678
+NightXpm="8 8 2 1"   Colormode=16
+"!	c #CFCFCF"
+"  	c none"
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+;12345678
 ;DayXpm="4 4 2 1"   Colormode=16
 ;"!	c #303030"
 ;"  	c none"
@@ -2820,6 +3232,21 @@ DayXpm="10 10 3 1"   Colormode=16
 "   ####   "
 "    ##    "
 ;1234567890
+NightXpm="10 10 3 1"   Colormode=16
+"!	c #FFFFFF"
+"#	c #000000"
+"  	c none"
+"    ##    "
+"   ####   "
+"  ##!!##  "
+" ##!!!!## "
+"##!!!!!!##"
+"##!!!!!!##"
+" ##!!!!## "
+"  ##!!##  "
+"   ####   "
+"    ##    "
+;1234567890
 ;DayXpm="5 5 3 1"   Colormode=16
 ;"!	c #000000"
 ;"#	c #FFFFFF"
@@ -2841,6 +3268,35 @@ ExtendedLabels=N
 DayXpm="9 24 3 1"   Colormode=16
 "!	c #030303"
 "#	c #EFEFEF"
+"  	c none"
+"  # !  ##"
+" ###! ###"
+" ###! ###"
+" ###!  ##"
+" ##!!! ##"
+" #!!!!!##"
+" !!#! !!#"
+"!!  !  !!"
+"    !    "
+"    ! #  "
+"  ##! ## "
+" ###! ###"
+" ###! ###"
+" ###! ###"
+" ###! ###"
+" ###!  ##"
+" # !!!  #"
+"  !! !!  "
+" !!###!! "
+"!! ### !!"
+"!!#### !!"
+" !!###!! "
+"  !!#!!  "
+"   !!!   "
+;123456789
+NightXpm="9 24 3 1"   Colormode=16
+"!	c #FCFCFC"
+"#	c #101010"
 "  	c none"
 "  # !  ##"
 " ###! ###"
