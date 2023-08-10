@@ -2,7 +2,7 @@
 
 import sys
 # import colorsys
-from colormath.color_objects import LabColor, sRGBColor
+from colormath.color_objects import LabColor, sRGBColor, HSLColor
 from colormath.color_conversions import convert_color
 
 for line in sys.stdin:
@@ -30,12 +30,27 @@ for line in sys.stdin:
     # nb = int(nb*255)
 
     # 3. toimiva? Muunna Lab:hen, käännä L-kanava, sitten takaisin
+    # rgb = sRGBColor.new_from_rgb_hex(line)
+    # lab = convert_color(rgb, LabColor)
+    # # (l,a,b) = lab.get_value_tuple()
+    # lab.lab_l = 100.0 - lab.lab_l
+    # rgb2 = convert_color(lab, sRGBColor)
+    # nr = int(255*rgb2.clamped_rgb_r)
+    # ng = int(255*rgb2.clamped_rgb_g)
+    # nb = int(255*rgb2.clamped_rgb_b)
+    #
+    # hr = hex(nr)[2:].rjust(2,'0')
+    # hg = hex(ng)[2:].rjust(2,'0')
+    # hb = hex(nb)[2:].rjust(2,'0')
+    #
+    # print((" -> #"+hr+hg+hb).upper(), "Clamped: R",(rgb2.rgb_r != rgb2.clamped_rgb_r),"G",(rgb2.rgb_g != rgb2.clamped_rgb_g),"B",(rgb2.rgb_b != rgb2.clamped_rgb_b))
+
+    # 4. toimiva? Muunna HSL:ään, käännä L-kanava, sitten takaisin
     # rgb = sRGBColor(r, g, b, is_upscaled=True)
     rgb = sRGBColor.new_from_rgb_hex(line)
-    lab = convert_color(rgb, LabColor)
-    # (l,a,b) = lab.get_value_tuple()
-    lab.lab_l = 100.0 - lab.lab_l
-    rgb2 = convert_color(lab, sRGBColor)
+    hsl = convert_color(rgb, HSLColor)
+    hsl.hsl_l = 1.0 - hsl.hsl_l
+    rgb2 = convert_color(hsl, sRGBColor)
     nr = int(255*rgb2.clamped_rgb_r)
     ng = int(255*rgb2.clamped_rgb_g)
     nb = int(255*rgb2.clamped_rgb_b)
@@ -44,4 +59,5 @@ for line in sys.stdin:
     hg = hex(ng)[2:].rjust(2,'0')
     hb = hex(nb)[2:].rjust(2,'0')
 
+    # print((" -> #"+hr+hg+hb).upper(), "Clamped: R",(rgb2.rgb_r != rgb2.clamped_rgb_r),"G",(rgb2.rgb_g != rgb2.clamped_rgb_g),"B",(rgb2.rgb_b != rgb2.clamped_rgb_b))
     print((" -> #"+hr+hg+hb).upper())
