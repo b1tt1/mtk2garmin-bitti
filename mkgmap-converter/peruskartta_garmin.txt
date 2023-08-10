@@ -74,7 +74,7 @@ String1=0x06,Parkkialue
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #FFB37F"
-"2 c #664026"
+"2 c #572200"
 [end]
 
 
@@ -85,7 +85,7 @@ String1=0x06,Lentokenttäalue
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #FFFF8C"
-"2 c #3A3A00"
+"2 c #170E00"
 [end]
 
 
@@ -96,7 +96,7 @@ String1=0x06,Teollisuus
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #997399"
-"2 c #796679"
+"2 c #876287"
 [end]
 
 
@@ -118,7 +118,7 @@ String1=0x06,Urheilualue
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #E6FF7F"
-"1 c #404D0D"
+"1 c #FF7F66"
 [end]
 
 
@@ -131,7 +131,7 @@ Xpm="32 32 4 1"
 "! c #000000"
 "# c #7FFF7F"
 "3 c #FFFFFF"
-"4 c #408040"
+"4 c #002A00"
 "################################"
 "################################"
 "################################"
@@ -174,7 +174,7 @@ Type=0x32
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #4080FF"
-"1 c #40609F"
+"2 c #0063DD"
 [end]
 
 
@@ -184,7 +184,7 @@ Type=0x3c
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #4080FF"
-"2 c #40609F"
+"2 c #0063DD"
 [end]
 
 
@@ -195,7 +195,7 @@ String1=0x06,Allas
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #4080FF"
-"2 c #40609F"
+"2 c #0063DD"
 [end]
 
 
@@ -205,7 +205,7 @@ Type=0x46
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #4080FF"
-"2 c #40609F"
+"2 c #0063DD"
 [end]
 
 
@@ -215,7 +215,7 @@ Type=0x4b
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #FBFBEF"
-"2 c #0A0A04"
+"2 c #070700"
 [end]
 
 
@@ -227,8 +227,8 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #00FF39"
 "# c #FFD778"
-"3 c #63E380"
-"4 c #584414"
+"3 c #003200"
+"4 c #351C00"
 "!!!!############!!!!############"
 "!!!!############!!!!############"
 "!!!!############!!!!############"
@@ -272,7 +272,7 @@ String1=0x06,Niitty
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #FFF97D"
-"2 c #444103"
+"2 c #1F1100"
 [end]
 
 
@@ -284,8 +284,8 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #D1CC3F"
 "# c #4CBFE6"
-"3 c #7A7731"
-"4 c #2D667A"
+"3 c #333300"
+"4 c #004B6C"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "################################"
@@ -331,7 +331,7 @@ Xpm="32 32 4 1"
 "! c #000000"
 "# c #FFFF66"
 "3 c #FFFFFF"
-"4 c #4D4D00"
+"4 c #1D0F00"
 "###############!!###############"
 "###############!!##########!!###"
 "###########################!!###"
@@ -375,7 +375,7 @@ String1=0x06,Pelto
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #FFD778"
-"2 c #584414"
+"2 c #351C00"
 [end]
 
 
@@ -386,7 +386,7 @@ String1=0x06,Lentoliikennealue
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #FFE67F"
-"2 c #4D400D"
+"2 c #2B1700"
 [end]
 
 
@@ -397,7 +397,7 @@ String1=0x06,Kiitorata
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #F35959"
-"2 c #A65959"
+"2 c #BA2230"
 [end]
 
 
@@ -408,7 +408,7 @@ String1=0x06,Turvetuotantoalue
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #CDB366"
-"2 c #73663F"
+"2 c #4C3D00"
 [end]
 
 
@@ -421,7 +421,7 @@ Xpm="32 32 4 1"
 "! c #000000"
 "# c #FEFFD8"
 "3 c #FFFFFF"
-"4 c #141401"
+"4 c #070600"
 "################################"
 "################################"
 "################################"
@@ -466,8 +466,8 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #955114"
 "# c #FEFFD8"
-"3 c #CDAB8C"
-"4 c #141401"
+"3 c #C57A3C"
+"4 c #070600"
 "################################"
 "################################"
 "################################"
@@ -512,7 +512,7 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #BFEBEB"
 "# c #FFFFFF"
-"3 c #142A2A"
+"3 c #002021"
 "4 c #000000"
 "!##!!##!!##!!##!!##!!##!!##!!##!"
 "##!!##!!##!!##!!##!!##!!##!!##!!"
@@ -557,7 +557,7 @@ String1=0x06,Helppokulkuinen puuton
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #D1CC3F"
-"2 c #7A7731"
+"2 c #333300"
 [end]
 
 
@@ -568,7 +568,7 @@ String1=0x06,Metsit. suo (helppo)
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #BFEBEB"
-"2 c #142A2A"
+"2 c #002021"
 [end]
 
 
@@ -580,8 +580,8 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #4CBFE6"
 "# c #BFE4E4"
-"3 c #2D667A"
-"4 c #1B2E2E"
+"3 c #004B6C"
+"4 c #002424"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "################################"
@@ -625,7 +625,7 @@ String1=0x06,Kallio
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #BFB6BF"
-"2 c #454045"
+"2 c #403940"
 [end]
 
 
@@ -636,7 +636,7 @@ String1=0x06,Puisto
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #B3FF66"
-"2 c #4D7326"
+"2 c #002300"
 [end]
 
 
@@ -647,7 +647,7 @@ String1=0x06,Vesijättö
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #FFFF3F"
-"2 c #606000"
+"2 c #221000"
 [end]
 
 
@@ -659,7 +659,7 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #93CCFB"
 "  c none"
-"3 c #1C3850"
+"3 c #00355A"
 "4 c none"
 "!        !!            !!!   !  "
 "    !           !      !        "
@@ -704,7 +704,7 @@ String1=0x06,Maatuva vesialue
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #80A3FF"
-"2 c #2E406E"
+"2 c #004999"
 [end]
 
 
@@ -716,8 +716,8 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #F3CC00"
 "  c none"
-"! c #998620"
-"  c none"
+"3 c #402700"
+"4 c none"
 "   !   !   !   !   !   !   !   !"
 "  !   !   !   !   !   !   !   ! "
 " !   !   !   !   !   !   !   !  "
@@ -763,7 +763,7 @@ Xpm="32 32 4 1"
 "! c #000000"
 "# c #F5F5D0"
 "3 c #FFFFFF"
-"4 c #1D1D0A"
+"4 c #121100"
 "#######################!########"
 "######################!!!#######"
 "####!#######!##########!########"
@@ -808,8 +808,8 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #666666"
 "# c #FFFFD9"
-"3 c #999999"
-"4 c #131300"
+"3 c #888888"
+"4 c #070600"
 "################################"
 "################################"
 "####!###########################"
@@ -853,7 +853,7 @@ String1=0x06,Varastoalue
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #ECECD9"
-"2 c #1D1D13"
+"2 c #161603"
 [end]
 
 
@@ -865,7 +865,7 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #B3D900"
 "  c none"
-"3 c #93A639"
+"3 c #1D3600"
 "4 c none"
 "   !   !   !   !   !   !   !   !"
 "  !!  !!  !!  !!  !!  !!  !!  !!"
@@ -956,7 +956,7 @@ String1=0x06,Asuttu
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #333333"
-"2 c #CCCCCC"
+"2 c #C2C2C2"
 [end]
 
 
@@ -967,7 +967,7 @@ String1=0x06,Muu
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #A0A0A0"
-"2 c #5F5F5F"
+"2 c #505050"
 [end]
 
 
@@ -978,7 +978,7 @@ String1=0x06,Kirkollinen
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #7F00FF"
-"2 c #8040C0"
+"2 c #BA4EFF"
 [end]
 
 
@@ -989,7 +989,7 @@ String1=0x06,Julkinen
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #FF33FF"
-"2 c #660066"
+"2 c #B300B8"
 [end]
 
 
@@ -1000,7 +1000,7 @@ String1=0x06,Loma
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #40C040"
-"2 c #7FBF7F"
+"2 c #005A00"
 [end]
 
 
@@ -1016,7 +1016,7 @@ BorderWidth=1
 Xpm="0 0 4 0"
 "1 c #40C000"
 "2 c #000000"
-"3 c #9FDF7F"
+"3 c #005B00"
 "4 c #FFFFFF"
 String1=0x06,Moottoritie
 ExtendedLabels=N
@@ -1032,7 +1032,7 @@ BorderWidth=1
 Xpm="0 0 4 0"
 "1 c #FFCC00"
 "2 c #000000"
-"3 c #99801A"
+"3 c #432200"
 "4 c #FFFFFF"
 ExtendedLabels=N
 [end]
@@ -1047,7 +1047,7 @@ BorderWidth=1
 Xpm="0 0 4 0"
 "1 c #C08080"
 "2 c #000000"
-"3 c #7F5F5F"
+"3 c #884D4E"
 "4 c #FFFFFF"
 ExtendedLabels=N
 [end]
@@ -1062,7 +1062,7 @@ BorderWidth=1
 Xpm="0 0 4 0"
 "1 c #C08080"
 "2 c #000000"
-"3 c #7F5F5F"
+"3 c #884D4E"
 "4 c #FFFFFF"
 ExtendedLabels=N
 [end]
@@ -1077,7 +1077,7 @@ BorderWidth=1
 Xpm="0 0 4 0"
 "1 c #C08080"
 "2 c #000000"
-"3 c #7F5F5F"
+"3 c #884D4E"
 "4 c #FFFFFF"
 ExtendedLabels=N
 [end]
@@ -1092,7 +1092,7 @@ BorderWidth=1
 Xpm="0 0 4 0"
 "1 c #C08080"
 "2 c #000000"
-"3 c #7F5F5F"
+"3 c #884D4E"
 "4 c #FFFFFF"
 ExtendedLabels=N
 String1=0x06,Päällystetty
@@ -1106,7 +1106,7 @@ UseOrientation=Y
 LineWidth=2
 Xpm="0 0 2 0"
 "1 c #313131"
-"2 c #CECECE"
+"2 c #C5C5C5"
 ExtendedLabels=N
 [end]
 
@@ -1141,7 +1141,7 @@ UseOrientation=Y
 LineWidth=1
 Xpm="0 0 2 0"
 "1 c #FF0000"
-"2 c #FF8080"
+"2 c #E80000"
 ExtendedLabels=N
 [end]
 
@@ -1154,7 +1154,7 @@ BorderWidth=1
 Xpm="0 0 4 0"
 "1 c #7B6500"
 "2 c #000000"
-"3 c #CDC28F"
+"3 c #9F8529"
 "4 c #FFFFFF"
 ExtendedLabels=N
 String1=0x06,Päällystämätön
@@ -1168,7 +1168,7 @@ UseOrientation=Y
 Xpm="32 2 4 1"
 "! c #CB0000"
 "  c none"
-"3 c #FF9A9A"
+"3 c #FD4629"
 "4 c none"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
@@ -1185,7 +1185,7 @@ UseOrientation=N
 Xpm="32 2 4 1"
 "! c #4A4A00"
 "  c none"
-"3 c #DADAB5"
+"3 c #B2AD62"
 "4 c none"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
@@ -1202,7 +1202,7 @@ UseOrientation=N
 Xpm="32 2 4 1"
 "! c #0040FF"
 "  c none"
-"3 c #6080DF"
+"3 c #7974FF"
 "4 c none"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
 "   !!!!!   !!!!!   !!!!!   !!!!!"
@@ -1219,7 +1219,7 @@ UseOrientation=Y
 Xpm="32 2 4 1"
 "! c #181BDA"
 "  c none"
-"3 c #8586E6"
+"3 c #B786FF"
 "4 c none"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
 " !!! !!! !!! !!! !!! !!! !!! !!!"
@@ -1236,7 +1236,7 @@ UseOrientation=Y
 Xpm="32 2 4 1"
 "! c #404040"
 "  c none"
-"3 c #BFBFBF"
+"3 c #B2B2B2"
 "4 c none"
 "!!!!!   !!!!!   !!!!!   !!!!!   "
 "!!!!!   !!!!!   !!!!!   !!!!!   "
@@ -1253,7 +1253,7 @@ UseOrientation=Y
 Xpm="32 2 4 1"
 "! c #404040"
 "  c none"
-"3 c #BFBFBF"
+"3 c #B2B2B2"
 "4 c none"
 "!!!!!   !!!!!   !!!!!   !!!!!   "
 "!!!!!   !!!!!   !!!!!   !!!!!   "
@@ -1270,7 +1270,7 @@ UseOrientation=Y
 Xpm="32 1 4 1"
 "! c #FF4000"
 "  c none"
-"3 c #DF8060"
+"3 c #D00000"
 "4 c none"
 "!!!!!!!!        !!!!!!!!        "
 ;12345678901234567890123456789012
@@ -1305,7 +1305,7 @@ UseOrientation=N
 Xpm="32 5 4 1"
 "! c #008000"
 "  c none"
-"3 c #BFFFBF"
+"3 c #29941D"
 "4 c none"
 "!   !   !   !   !   !   !   !   "
 "   !   !   !   !   !   !   !   !"
@@ -1324,8 +1324,8 @@ UseOrientation=N
 Xpm="32 5 4 1"
 "! c #c100ab"
 "  c none"
-"! c #AA499F"
-"  c none"
+"3 c #E13AC8"
+"4 c none"
 "!   !   !   !   !   !   !   !   "
 "   !   !   !   !   !   !   !   !"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -1359,7 +1359,7 @@ UseOrientation=Y
 Xpm="32 7 4 1"
 "! c #404040"
 "  c none"
-"3 c #BFBFBF"
+"3 c #B2B2B2"
 "4 c none"
 "  !       !       !       !     "
 "  !       !       !       !     "
@@ -1381,7 +1381,7 @@ UseOrientation=Y
 LineWidth=1
 Xpm="0 0 2 0"
 "1 c #4080FF"
-"2 c #40609F"
+"2 c #0063DD"
 String1=0x06,Oja (<2m)
 ExtendedLabels=N
 [end]
@@ -1394,8 +1394,8 @@ UseOrientation=Y
 Xpm="32 3 4 1"
 "! c #F8FCF8"
 "# c #606060"
-"3 c #050705"
-"4 c #9F9F9F"
+"3 c #010601"
+"4 c #8E8E8E"
 "################################"
 "!!!!####!!!!####!!!!####!!!!####"
 "################################"
@@ -1412,7 +1412,7 @@ UseOrientation=N
 Xpm="32 4 4 1"
 "! c #4800F2"
 "  c none"
-"3 c #8662DB"
+"3 c #BB6DFF"
 "4 c none"
 "   !   !   !   !   !   !   !   !"
 "  !   !   !   !   !   !   !   ! "
@@ -1431,7 +1431,7 @@ UseOrientation=N
 Xpm="32 2 4 1"
 "! c #C040C0"
 "  c none"
-"3 c #7F3F7F"
+"3 c #BE3EBE"
 "4 c none"
 "  !!  !!!!!!!!!!  !!  !!!!!!!!!!"
 "  !!  !!!!!!!!!!  !!  !!!!!!!!!!"
@@ -1448,7 +1448,7 @@ UseOrientation=N
 Xpm="32 5 4 1"
 "! c #4800F2"
 "  c none"
-"! c #8662DB"
+"! c #BB6DFF"
 "  c none"
 "   !   !   !   !   !   !   !   !"
 "  !   !   !   !   !   !   !   ! "
@@ -1468,7 +1468,7 @@ UseOrientation=Y
 LineWidth=2
 Xpm="0 0 2 0"
 "1 c #4080FF"
-"2 c #40609F"
+"2 c #0063DD"
 String1=0x06,Oja (>2m)
 ExtendedLabels=N
 [end]
@@ -1479,7 +1479,7 @@ Type=0x20
 LineWidth=1
 Xpm="0 0 2 0"
 "a c #C0803F"
-"2 c #A0805F"
+"2 c #8B5312"
 FontStyle=NoLabel
 [end]
 
@@ -1488,7 +1488,7 @@ Type=0x21
 LineWidth=1
 Xpm="0 0 2 0"
 "a c #C0803F"
-"2 c #A0805F"
+"2 c #8B5312"
 FontStyle=NoLabel
 [end]
 
@@ -1497,7 +1497,7 @@ Type=0x22
 LineWidth=2
 Xpm="0 0 2 0"
 "a c #C0803F"
-"2 c #A0805F"
+"2 c #8B5312"
 FontStyle=NoLabel
 [end]
 
@@ -1507,7 +1507,7 @@ Type=0x24
 LineWidth=1
 Xpm="0 0 2 0"
 "a c #80FFFF"
-"2 c #004040"
+"2 c #002222"
 FontStyle=NoLabel
 [end]
 
@@ -1516,7 +1516,7 @@ Type=0x25
 LineWidth=2
 Xpm="0 0 2 0"
 "a c #80FFFF"
-"2 c #004040"
+"2 c #002222"
 FontStyle=NoLabel
 [end]
 
@@ -1584,7 +1584,7 @@ UseOrientation=N
 Xpm="32 5 4 1"
 "! c #804000"
 "  c none"
-"3 c #DFBF9F"
+"3 c #DB8C4E"
 "4 c none"
 "!   !   !   !   !   !   !   !   "
 "!   !   !   !   !   !   !   !   "
@@ -1698,7 +1698,7 @@ DayXpm="8 8 2 1"   Colormode=16
 "  !!!!  "
 ;12345678
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #CFCFCF"
+"!	c #C6C6C6"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -1739,7 +1739,7 @@ DayXpm="8 8 2 1"   Colormode=16
 " !!!!!! "
 "  !!!!  "
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #CFCFCF"
+"!	c #C6C6C6"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -1779,7 +1779,7 @@ DayXpm="8 8 2 1"   Colormode=16
 "  !!!!  "
 ;12345678
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #CFCFCF"
+"!	c #C6C6C6"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -1821,7 +1821,7 @@ DayXpm="8 8 2 1"   Colormode=16
 "  !!!!  "
 ;12345678
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #CFCFCF"
+"!	c #C6C6C6"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -1863,7 +1863,7 @@ DayXpm="8 8 2 1"   Colormode=16
 "  !!!!  "
 ;12345678
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #5B5B5B"
+"!	c #4C4C4C"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -1908,7 +1908,7 @@ DayXpm="14 12 3 1"   Colormode=16
 "##!!!!!!!!!!##"
 ;12345678901234
 NightXpm="14 12 3 1"   Colormode=16
-"!	c #767676"
+"!	c #656565"
 "#	c #FFFFFF"
 "  	c none"
 "      ##      "
@@ -2020,7 +2020,7 @@ DayXpm="8 8 2 1"   Colormode=16
 "  !!!!  "
 ;12345678
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #CFCFCF"
+"!	c #C6C6C6"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -2141,7 +2141,7 @@ DayXpm="8 8 2 1"   Colormode=16
 "  !!!!  "
 ;12345678
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #CFCFCF"
+"!	c #C6C6C6"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -2188,7 +2188,7 @@ DayXpm="12 12 3 1"   Colormode=16
 ;123456789012
 NightXpm="12 12 3 1"   Colormode=16
 "#	c #FFFFFF"
-"%	c #5F7CA8"
+"%	c #3F78D0"
 "  	c none"
 "##%%%%%%%%##"
 "##%%%%%%%%##"
@@ -2242,7 +2242,7 @@ DayXpm="12 12 2 1"   Colormode=16
 "!!        !!"
 ;123456789012
 NightXpm="12 12 2 1"   Colormode=16
-"!	c #FF8080"
+"!	c #E80000"
 "  	c none"
 "!!        !!"
 "!!!      !!!"
@@ -2329,7 +2329,7 @@ DayXpm="11 11 2 1"   Colormode=16
 "   !!!!!   "
 ;12345678901
 NightXpm="11 11 2 1"   Colormode=16
-"!	c #454045"
+"!	c #403940"
 "  	c none"
 "   !!!!!   "
 "  !!!!!!!  "
@@ -2364,7 +2364,7 @@ DayXpm="8 8 2 1"   Colormode=16
 "########"
 ;1234567890123456
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #CDFFCD"
+"!	c #5BAB49"
 "#	c #000000"
 "########"
 "########"
@@ -2574,7 +2574,7 @@ DayXpm="8 8 2 1"   Colormode=16
 "  !!!!  "
 ;12345678
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #CFCFCF"
+"!	c #C6C6C6"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -2969,7 +2969,7 @@ DayXpm="8 8 2 1"   Colormode=16
 "  !!!!  "
 ;12345678
 NightXpm="8 8 2 1"   Colormode=16
-"!	c #CFCFCF"
+"!	c #C6C6C6"
 "  	c none"
 "  !!!!  "
 " !!!!!! "
@@ -3296,7 +3296,7 @@ DayXpm="9 24 3 1"   Colormode=16
 ;123456789
 NightXpm="9 24 3 1"   Colormode=16
 "!	c #FCFCFC"
-"#	c #101010"
+"#	c #121212"
 "  	c none"
 "  # !  ##"
 " ###! ###"
