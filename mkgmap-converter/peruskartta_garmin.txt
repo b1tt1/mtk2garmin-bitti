@@ -284,8 +284,8 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #D1CC3F"
 "# c #4CBFE6"
-"3 c #C0BB2E"
-"4 c #188BB3"
+"3 c #616200"
+"4 c #00698F"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "################################"
@@ -319,6 +319,7 @@ Xpm="32 32 4 1"
 "################################"
 "################################"
 ;12345678901234567890123456789012
+; Yöväri tummennettu, alkup. #C0BB2E, #188BB3
 [end]
 
 
@@ -557,7 +558,8 @@ String1=0x06,Helppokulkuinen puuton
 ExtendedLabels=N
 Xpm="0 0 2 0"
 "1 c #D1CC3F"
-"2 c #C0BB2E"
+"2 c #616200"
+; Yöväri tummennettu, alkup. #C0BB2E
 [end]
 
 
@@ -580,7 +582,7 @@ ExtendedLabels=N
 Xpm="32 32 4 1"
 "! c #4CBFE6"
 "# c #BFE4E4"
-"3 c #188BB3"
+"3 c #00698F"
 "4 c #1B4040"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -615,6 +617,7 @@ Xpm="32 32 4 1"
 "################################"
 "################################"
 ;12345678901234567890123456789012
+; Yöväri tummennettu, alkup. #188BB3, #1B4040
 [end]
 
 
@@ -1474,32 +1477,37 @@ String1=0x06,Oja (>2m)
 ExtendedLabels=N
 [end]
 
-
+; Korkeuskäyrä
 [_line]
 Type=0x20
 LineWidth=1
 Xpm="0 0 2 0"
 "a c #C0803F"
-"2 c #C0803F"
+"2 c #945A19"
 FontStyle=NoLabel
+; Yöväriä tummennettu, alkup. #C0803F
 [end]
 
+; Korkeuskäyrä
 [_line]
 Type=0x21
 LineWidth=1
 Xpm="0 0 2 0"
 "a c #C0803F"
-"2 c #C0803F"
+"2 c #945A19"
 FontStyle=NoLabel
+; Yöväriä tummennettu, alkup. #C0803F
 [end]
 
+; Korkeuskäyrä
 [_line]
 Type=0x22
 LineWidth=2
 Xpm="0 0 2 0"
 "a c #C0803F"
-"2 c #C0803F"
+"2 c #945A19"
 FontStyle=NoLabel
+; Yöväriä tummennettu, alkup. #C0803F
 [end]
 
 
