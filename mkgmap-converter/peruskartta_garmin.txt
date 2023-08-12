@@ -1173,8 +1173,8 @@ Xpm="32 2 4 1"
 "  c none"
 "3 c #FF3434"
 "4 c none"
-"  !!!  !!  !!!  !!  !!!  !!  !!!"
-"  !!!  !!  !!!  !!  !!!  !!  !!!"
+"    !!!!    !!!!    !!!!    !!!!"
+"    !!!!    !!!!    !!!!    !!!!"
 ;12345678901234567890123456789012
 String1=0x06,Polku (MH)
 ExtendedLabels=N
@@ -1190,8 +1190,8 @@ Xpm="32 2 4 1"
 "  c none"
 "3 c #FFFFB4"
 "4 c none"
-"   !!!!!   !!!!!   !!!!!   !!!!!"
-"   !!!!!   !!!!!   !!!!!   !!!!!"
+"  !!!!!!  !!!!!!  !!!!!!  !!!!!!"
+"  !!!!!!  !!!!!!  !!!!!!  !!!!!!"
 ;12345678901234567890123456789012
 String1=0x06,Ajopolku
 ExtendedLabels=N
@@ -1207,8 +1207,8 @@ Xpm="32 2 4 1"
 "  c none"
 "3 c #003FFF"
 "4 c none"
-"   !!!!!   !!!!!   !!!!!   !!!!!"
-"   !!!!!   !!!!!   !!!!!   !!!!!"
+"  !!!!!!  !!!!!!  !!!!!!  !!!!!!"
+"  !!!!!!  !!!!!!  !!!!!!  !!!!!!"
 ;12345678901234567890123456789012
 String1=0x06,Ajopolku (OSM)
 ExtendedLabels=N
@@ -1224,8 +1224,8 @@ Xpm="32 2 4 1"
 "  c none"
 "3 c #2487E7"
 "4 c none"
-"  !!!  !!  !!!  !!  !!!  !!  !!!"
-"  !!!  !!  !!!  !!  !!!  !!  !!!"
+"    !!!!    !!!!    !!!!    !!!!"
+"    !!!!    !!!!    !!!!    !!!!"
 ;12345678901234567890123456789012
 ; Suora inversio #181BDA -> #2427E7, mutta tuottaa liian lähellä ojaa olevan värin
 String1=0x06,Polku (OSM)
@@ -1352,8 +1352,8 @@ Xpm="32 2 4 1"
 "  c none"
 "3 c #BFBFBF"
 "4 c none"
-"  !!!  !!  !!!  !!  !!!  !!  !!!"
-"  !!!  !!  !!!  !!  !!!  !!  !!!"
+"    !!!!    !!!!    !!!!    !!!!"
+"    !!!!    !!!!    !!!!    !!!!"
 ;12345678901234567890123456789012
 String1=0x06,Polku
 ExtendedLabels=N
@@ -1384,7 +1384,7 @@ ExtendedLabels=N
 Type=0x18
 ;GRMN_TYPE: Water Features/STREAM/Small stream or creek/Non NT
 UseOrientation=Y
-LineWidth=1
+LineWidth=2
 Xpm="0 0 2 0"
 "1 c #4080FF"
 "2 c #0040BF"
@@ -1475,7 +1475,7 @@ ExtendedLabels=N
 Type=0x1f
 ;GRMN_TYPE: Water Features/RIVER/Large stream or river/Non NT
 UseOrientation=Y
-LineWidth=2
+LineWidth=4
 Xpm="0 0 2 0"
 "1 c #4080FF"
 "2 c #0040BF"
@@ -1575,17 +1575,19 @@ ExtendedLabels=N
 Type=0x10100
 ;GRMN_TYPE: //
 UseOrientation=N
-Xpm="32 6 4 1"
+Xpm="32 8 4 1"
 "! c #000000"
 "  c none"
 "3 c #FFFFFF"
 "4 c none"
-"!!      !!      !!      !!      "
-"!!      !!      !!      !!      "
+"!!              !!              "
+"!!              !!              "
+"!!              !!              "
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!      !!      !!      !!      "
-"!!      !!      !!      !!      "
+"!!              !!              "
+"!!              !!              "
+"!!              !!              "
 ;12345678901234567890123456789012
 String1=0x06,Jyrkänne
 ExtendedLabels=N
