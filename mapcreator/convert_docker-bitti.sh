@@ -91,3 +91,5 @@ echo "******14*****"
 echo "******15*****"
 # Bitti: tarvitaan
 docker compose down -v
+# !!!Bitti!!! Poista docker ps -a:n näyttämät mkgmap:t ja niiden imaget
+
