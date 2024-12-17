@@ -1170,12 +1170,21 @@ String1=0x06,Päällystämätön
 Type=0x09
 ;GRMN_TYPE: Roads/HIGH_SPEED_RAMP, RAMP/Highway ramp which is to be driven at high speeds/Non NT, NT
 UseOrientation=Y
-Xpm="32 2 4 1"
+; Xpm="32 2 4 1"
+; "! c #CB0000"
+; "  c none"
+; "3 c #FF3434"
+; "4 c none"
+; "    !!!!    !!!!    !!!!    !!!!"
+; "    !!!!    !!!!    !!!!    !!!!"
+;12345678901234567890123456789012
+Xpm="32 3 4 1"
 "! c #CB0000"
 "  c none"
 "3 c #FF3434"
 "4 c none"
 "    !!!!    !!!!    !!!!    !!!!"
+"!  !!!!!!  !!!!!!  !!!!!!  !!!!!"
 "    !!!!    !!!!    !!!!    !!!!"
 ;12345678901234567890123456789012
 String1=0x06,Polku (MH)
@@ -1221,12 +1230,21 @@ ExtendedLabels=N
 Type=0x0d
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_ROUTE_LINE_1/Routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 2 4 1"
+;Xpm="32 2 4 1"
+;"! c #181BDA"
+;"  c none"
+;"3 c #2487E7"
+;"4 c none"
+;"    !!!!    !!!!    !!!!    !!!!"
+;"    !!!!    !!!!    !!!!    !!!!"
+;12345678901234567890123456789012
+Xpm="32 3 4 1"
 "! c #181BDA"
 "  c none"
 "3 c #2487E7"
 "4 c none"
 "    !!!!    !!!!    !!!!    !!!!"
+"!  !!!!!!  !!!!!!  !!!!!!  !!!!!"
 "    !!!!    !!!!    !!!!    !!!!"
 ;12345678901234567890123456789012
 ; Suora inversio #181BDA -> #2427E7, mutta tuottaa liian lähellä ojaa olevan värin
@@ -1349,12 +1367,21 @@ ExtendedLabels=N
 Type=0x16
 ;GRMN_TYPE: Roads/TRAIL/Walkway or trail/Non NT, NT
 UseOrientation=Y
-Xpm="32 2 4 1"
+;Xpm="32 2 4 1"
+;"! c #404040"
+;"  c none"
+;"3 c #BFBFBF"
+;"4 c none"
+;"    !!!!    !!!!    !!!!    !!!!"
+;"    !!!!    !!!!    !!!!    !!!!"
+;12345678901234567890123456789012
+Xpm="32 3 4 1"
 "! c #404040"
 "  c none"
 "3 c #BFBFBF"
 "4 c none"
 "    !!!!    !!!!    !!!!    !!!!"
+"!  !!!!!!  !!!!!!  !!!!!!  !!!!!"
 "    !!!!    !!!!    !!!!    !!!!"
 ;12345678901234567890123456789012
 String1=0x06,Polku
@@ -1386,7 +1413,8 @@ ExtendedLabels=N
 Type=0x18
 ;GRMN_TYPE: Water Features/STREAM/Small stream or creek/Non NT
 UseOrientation=Y
-LineWidth=2
+;LineWidth=2
+LineWidth=1
 Xpm="0 0 2 0"
 "1 c #4080FF"
 "2 c #0040BF"
@@ -1477,7 +1505,8 @@ ExtendedLabels=N
 Type=0x1f
 ;GRMN_TYPE: Water Features/RIVER/Large stream or river/Non NT
 UseOrientation=Y
-LineWidth=4
+;LineWidth=4
+LineWidth=3
 Xpm="0 0 2 0"
 "1 c #4080FF"
 "2 c #0040BF"
@@ -1488,10 +1517,17 @@ ExtendedLabels=N
 ; Korkeuskäyrä
 [_line]
 Type=0x20
-LineWidth=1
-Xpm="0 0 2 0"
-"a c #C0803F"
-"2 c #945A19"
+; LineWidth=1
+; Xpm="0 0 2 0"
+; "a c #C0803F"
+; "2 c #945A19"
+Xpm="32 1 4 1"
+"! c #C0803F"
+"  c none"
+"3 c #945A19"
+"4 c none"
+"     !!!!!!!!!!!     !!!!!!!!!!!"
+;12345678901234567890123456789012
 FontStyle=NoLabel
 ; Yöväriä tummennettu, alkup. #C0803F
 [end]
@@ -1499,10 +1535,17 @@ FontStyle=NoLabel
 ; Korkeuskäyrä
 [_line]
 Type=0x21
-LineWidth=1
-Xpm="0 0 2 0"
-"a c #C0803F"
-"2 c #945A19"
+; LineWidth=1
+; Xpm="0 0 2 0"
+; "a c #C0803F"
+; "2 c #945A19"
+Xpm="32 1 4 1"
+"! c #C0803F"
+"  c none"
+"3 c #945A19"
+"4 c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
 FontStyle=NoLabel
 ; Yöväriä tummennettu, alkup. #C0803F
 [end]
@@ -1510,7 +1553,8 @@ FontStyle=NoLabel
 ; Korkeuskäyrä
 [_line]
 Type=0x22
-LineWidth=2
+LineWidth=1
+; LineWidth=2
 Xpm="0 0 2 0"
 "a c #C0803F"
 "2 c #945A19"
@@ -1521,16 +1565,24 @@ FontStyle=NoLabel
 
 [_line]
 Type=0x24
-LineWidth=1
-Xpm="0 0 2 0"
-"a c #80FFFF"
-"2 c #007E7F"
+; LineWidth=1
+; Xpm="0 0 2 0"
+; "a c #80FFFF"
+; "2 c #007E7F"
+Xpm="32 1 4 1"
+"! c #80FFFF"
+"  c none"
+"3 c #007E7F"
+"4 c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
 FontStyle=NoLabel
 [end]
 
 [_line]
 Type=0x25
-LineWidth=2
+; LineWidth=2
+LineWidth=1
 Xpm="0 0 2 0"
 "a c #80FFFF"
 "2 c #007E7F"
