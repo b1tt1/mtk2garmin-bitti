@@ -13,7 +13,9 @@ ADD mkgmap_mtk2garmin.args .
 ADD mkgmap_mtk2garmin_noparcel.args .
 ADD peruskartta_garmin.txt .
 ADD run_mkgmap.sh .
+ADD run_mkgmap2.sh .
 
 RUN chmod +x run_mkgmap.sh
+RUN chmod +x run_mkgmap2.sh
 # RUN java -jar -Xmx10G mkgmap.jar --family-id=2501 peruskartta_garmin.txt && mv peruskartta_garmin.typ perus.typ
 RUN java -jar mkgmap.jar --family-id=2501 peruskartta_garmin.txt && mv peruskartta_garmin.typ perus.typ

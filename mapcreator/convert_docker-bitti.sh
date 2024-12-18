@@ -59,7 +59,8 @@ time docker compose run merger ./merge_files.sh
 echo "******9*****"
 
 # Bitti: tarvitaan
-time docker compose run mkgmap ./run_mkgmap.sh
+# time docker compose run mkgmap ./run_mkgmap.sh
+time docker compose run mkgmap ./run_mkgmap2.sh
 
 echo "******10*****"
 
