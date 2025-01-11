@@ -1,0 +1,45 @@
+Id      Kartta      965
+0x2f12  Masto       Nimetön viestintä
+
+0x6413  Kellotapuli Tunneli
+
+0x6502  Pintakivi   Hiekkasärkkä
+0x6503  Vedenp.kivi Lahti
+0x6511  Lähde       Lähde
+
+(0x6600-
+ 0x662f  "Geographic places - Land)
+
+0x6600  -
+0x6601  -
+0x6602
+0x6603  Vesist.kohteen nimi
+0x6604  Kaislikko   Ranta
+0x6605  -
+0x6606  Niemen nimi
+0x6607  -
+0x6608  -
+0x6609  -
+0x660a  -
+0x660b  -
+0x660c  -
+0x660d  -
+0x660e  -
+0x660f  (Portti)
+0x6610  -
+0x6611  -
+0x6612  Monia nimiä
+0x6613  Kivi        Selänne
+0x6614  Kallio      Kari
+0x6615  Louhikko    Rinne
+0x6616  Kohouman nimi
+0x6617  Painanteen nimi
+0x6618  Luonn.merk. Metsikkö
+0x6619  Havumetsä   Luola
+0x661a  Lehtimetsä  Muu
+0x661b  Sekametsä   Muu
+0x661c  -
+0x661d  -
+0x661e  -
+0x661f  -
+0x662?  -
