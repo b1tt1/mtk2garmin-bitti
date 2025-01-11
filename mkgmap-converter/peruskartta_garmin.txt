@@ -1762,7 +1762,7 @@ ExtendedLabels=N
 
 
 [_point]
-Type=0x001
+Type=0x0d
 SubType=0x00
 ;GRMN_TYPE: Political Entities/CITY_10M/Large city with >10 million inhabitants/Non NT
 ExtendedLabels=Y
@@ -1804,7 +1804,7 @@ NightXpm="8 8 2 1"   Colormode=16
 
 
 [_point]
-Type=0x002
+Type=0x0e
 SubType=0x00
 ;GRMN_TYPE: Political Entities/CITY_5M, LARGE_CITY/Large city center, typically 1M+ inhabitants/Non NT
 ExtendedLabels=Y
@@ -1845,10 +1845,13 @@ NightXpm="8 8 2 1"   Colormode=16
 
 
 [_point]
-Type=0x003
+Type=0x0f
 SubType=0x00
 ;GRMN_TYPE: Political Entities/CITY_2M/Large city with a range of (2, 5] million inhabitants/Non NT
-ExtendedLabels=N
+ExtendedLabels=Y
+FontStyle=SmallFont
+CustomColor=No
+; ExtendedLabels=N
 DayXpm="8 8 2 1"   Colormode=16
 "!	c #303030"
 "  	c none"
@@ -1885,7 +1888,7 @@ NightXpm="8 8 2 1"   Colormode=16
 
 
 [_point]
-Type=0x004
+Type=0x0f
 SubType=0x00
 ;GRMN_TYPE: Political Entities/CITY_1M/Large city with a range of (1, 2] million inhabitants/Non NT
 ExtendedLabels=Y
@@ -1927,7 +1930,7 @@ NightXpm="8 8 2 1"   Colormode=16
 
 
 [_point]
-Type=0x005
+Type=0x0f
 SubType=0x00
 ;GRMN_TYPE: Political Entities/CITY_500K/City with the range of (0.5, 1] million inhabitants/Non NT
 ExtendedLabels=Y
