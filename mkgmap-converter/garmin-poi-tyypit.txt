@@ -29,17 +29,17 @@ Id      Kartta      965
 0x6610  -
 0x6611  -
 0x6612  Monia nimiä
-0x6613  Kivi        Selänne
-0x6614  Kallio      Kari
-0x6615  Louhikko    Rinne
+0x6613  (Kivi)        Selänne
+0x6614  (Kallio)      Kari
+0x6615  (Louhikko)    Rinne
 0x6616  Kohouman nimi
 0x6617  Painanteen nimi
 0x6618  Luonn.merk. Metsikkö
-0x6619  Havumetsä   Luola
+0x6619  (Havumetsä) Luola
 0x661a  Lehtimetsä  Muu
 0x661b  Sekametsä   Muu
-0x661c  -
-0x661d  -
-0x661e  -
-0x661f  -
+0x661c  Havumetsä   Muu
+0x661d  Kivi        Muu
+0x661e  Kallio      Muu
+0x661f  Louhikko    Muu
 0x662?  -

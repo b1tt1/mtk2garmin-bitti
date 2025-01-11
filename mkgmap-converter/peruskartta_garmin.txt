@@ -2347,7 +2347,7 @@ NightXpm="12 12 2 1"   Colormode=16
 
 
 [_point]
-Type=0x6613
+Type=0x661d
 ;GRMN_TYPE: Geographical Named Points of Interest - Land Related/ROCK/Rock/Non NT, NT
 ;String1=0x06,Kivi
 ExtendedLabels=N
@@ -2396,7 +2396,7 @@ NightXpm="10 12 2 1"   Colormode=16
 [end]
 
 [_point]
-Type=0x6614
+Type=0x661e
 ;String1=0x06,Kallio
 ExtendedLabels=N
 DayXpm="12 12 2 1"   Colormode=16
@@ -3080,7 +3080,7 @@ NightXpm="8 8 2 1"   Colormode=16
 
 
 [_point]
-Type=0x6615
+Type=0x661f
 ;GRMN_TYPE: User Customizable Points/CUSTOMIZABLE_POINT_12/User customizable point type/Non NT, NT
 ;String1=0x06,Harva louhikko
 ExtendedLabels=N
@@ -3125,7 +3125,7 @@ NightXpm="6 10 2 1"   Colormode=16
 
 
 [_point]
-Type=0x6619
+Type=0x661c
 ;GRMN_TYPE: User Customizable Points/CUSTOMIZABLE_POINT_13/User customizable point type/Non NT, NT
 ;String1=0x06,Havumetsä
 ExtendedLabels=N
