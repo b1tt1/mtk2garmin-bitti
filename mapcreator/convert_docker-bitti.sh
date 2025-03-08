@@ -4,11 +4,11 @@ set -euxo pipefail
 printf -v date '%(%Y%m%d)T' -1
 
 # Bitti: tarvitaan
-docker compose down -v
+docker compose down -v --remove-orphans
 
-docker pull ghcr.io/osgeo/gdal:ubuntu-full-3.6.3
-docker build --tag nas.local:5500/mtk2garmin-ubuntugis-base -f ./ubuntugis-base/Dockerfile ./ubuntugis-base
-# docker push nas.local:5500/mtk2garmin-ubuntugis-base
+docker pull ghcr.io/osgeo/gdal:ubuntu-full-3.10.0
+docker build --tag teemupel/mtk2garmin-ubuntugis-base -f ./ubuntugis-base/Dockerfile ./ubuntugis-base
+# docker push teemupel/mtk2garmin-ubuntugis-base
 
 echo "******1*****"
 
@@ -18,11 +18,10 @@ docker compose build --parallel
 
 echo "******2*****"
 
-if docker build --tag "nas.local:5500/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
+if docker build --tag "localhost:5000/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
   echo "Succesfully loaded additional data"
-  docker tag "nas.local:5500/mtk2garmin-additional-data:$date" nas.local:5500/mtk2garmin-additional-data:latest
-#   docker push nas.local:5500/mtk2garmin-additional-data:latest
-#   docker push "nas.local:5500/mtk2garmin-additional-data:$date"
+  docker tag "localhost:5000/mtk2garmin-additional-data:$date" localhost:5000/mtk2garmin-additional-data:latest
+#   docker push localhost:5000/mtk2garmin-additional-data:latest
 fi
 
 # docker compose pull
@@ -34,9 +33,6 @@ time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client loa
 echo "******4*****"
 
 time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p kiinteistorekisterikartta -t karttalehdittain -f application/x-shapefile -d /krkdata
-
-# Bitti: tarvitaan (kerran?)
-# docker build --tag "nas.local:5500/mtk2garmin-converter" -f ../mtk2garmin-converter/Dockerfile ../mtk2garmin-converter
 
 echo "******5*****"
 
@@ -54,7 +50,7 @@ time docker compose run mtk2garmin-converter java -jar /opt/mtk2garmin/target/mt
 
 echo "******8*****"
 
-time docker compose run merger ./merge_files.sh
+time docker compose run merger ./process_osm.sh
 
 echo "******9*****"
 
@@ -70,7 +66,7 @@ echo "******10*****"
 #            simplification-max-zoom=12 simplification-factor=16 threads=4 \
 #            zoom-interval-conf=5,4,7,8,8,11,12,12,13,14,14,21 \
 #            label-position=true polylabel=true \
-#            tag-conf-file=/mapstyles/mapsforge_peruskartta/mml_tag-mapping_tidy.xml type=hd comment="(c) NLS, Metsahallitus, Liikennevirasto, OpenStreetMap contributors 2019"
+#            tag-conf-file=/mapstyles/mapsforge_peruskartta/mml_tag-mapping_tidy.xml type=hd comment="(c) NLS, Metsahallitus, Liikennevirasto, OpenStreetMap contributors 2025"
 
 
 # echo "******11*****"
