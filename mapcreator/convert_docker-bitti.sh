@@ -10,6 +10,9 @@ docker pull ghcr.io/osgeo/gdal:ubuntu-full-3.10.0
 docker build --tag teemupel/mtk2garmin-ubuntugis-base -f ./ubuntugis-base/Dockerfile ./ubuntugis-base
 # docker push teemupel/mtk2garmin-ubuntugis-base
 
+# Bitti: oma vanhempi versio
+docker build --tag localhost:5000/mtk2garmin-converter -f ../mtk2garmin-converter/Dockerfile ../mtk2garmin-converter
+
 echo "******1*****"
 
 # Bitti: tarvitaan
@@ -50,7 +53,7 @@ time docker compose run mtk2garmin-converter java -jar /opt/mtk2garmin/target/mt
 
 echo "******8*****"
 
-time docker compose run merger ./process_osm.sh
+time docker compose run merger ./merge_files.sh
 
 echo "******9*****"
 
