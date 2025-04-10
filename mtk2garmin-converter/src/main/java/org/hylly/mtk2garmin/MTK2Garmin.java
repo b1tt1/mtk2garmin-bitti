@@ -1,13 +1,12 @@
 package org.hylly.mtk2garmin;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.logging.Logger;
 
 public class MTK2Garmin {
     static Logger logger = Logger.getLogger(MTKToGarminConverter.class.getName());
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         File configFile = getConfigFile(args);
         if (configFile == null) {
             return;

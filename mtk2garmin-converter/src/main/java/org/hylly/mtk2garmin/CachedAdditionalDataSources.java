@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 class CachedAdditionalDataSources {
-    private final Logger logger = Logger.getLogger(CachedAdditionalDataSources.class.getName());
+    private Logger logger = Logger.getLogger(CachedAdditionalDataSources.class.getName());
     private final Driver memoryd;
 
     private final DataSource syvyyskayrat;

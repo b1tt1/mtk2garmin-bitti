@@ -1,13 +1,15 @@
 package org.hylly.mtk2garmin;
 
 import com.typesafe.config.Config;
-import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.shorts.Short2ObjectOpenHashMap;
 import org.gdal.ogr.*;
+import org.gdal.osr.CoordinateTransformation;
 import org.gdal.osr.SpatialReference;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -17,9 +19,10 @@ import java.util.stream.Stream;
 
 public class SingleCellConverter {
     private final boolean isValidCell;
-    private final Logger logger = Logger.getLogger(SingleCellConverter.class.getName());
+    private Logger logger = Logger.getLogger(CachedAdditionalDataSources.class.getName());
 
     private final File cellFile;
+    private final Path outdir;
     private final ShapeFeaturePreprocess shapePreprocessor;
     private final MMLFeaturePreprocess featurePreprocessMML;
     private final GeomUtils geomUtils;
@@ -36,7 +39,7 @@ public class SingleCellConverter {
     private final double[] bbox;
 
 
-    private final int tyyppi_string_id;
+    private final short tyyppi_string_id;
 
     private final ShapeRetkeilyTagHandler retkeilyTagHandler;
     private final ShapeSyvyysTagHandler syvyysTagHandler;
@@ -49,17 +52,14 @@ public class SingleCellConverter {
     private final Set<String> rightLetters = new HashSet<>(
             Arrays.asList("E", "F", "G", "H"));
 
-    private final Long2ObjectOpenHashMap<LightNode> nodes = new Long2ObjectOpenHashMap<>(50000);
-    private final Long2ObjectOpenHashMap<LightWay> ways = new Long2ObjectOpenHashMap<>(5000);
-    private final Long2ObjectOpenHashMap<LightRelation> relations = new Long2ObjectOpenHashMap<>(500);
-    private final OSMPBFWriter osmpbfWriter;
-    private GeomTransformer sphericToWGS;
-    private GeomTransformer srcToSphericMerc;
+    private final Long2ObjectOpenHashMap<Node> nodes = new Long2ObjectOpenHashMap<>(50000);
+    private final Long2ObjectOpenHashMap<Way> ways = new Long2ObjectOpenHashMap<>(5000);
+    private final Long2ObjectOpenHashMap<Relation> relations = new Long2ObjectOpenHashMap<>(500);
+    private CoordinateTransformation srctowgs;
 
     SingleCellConverter(
             File cellFile,
-            OSMPBFWriter osmpbfWriter,
-            StringTable stringtable,
+            Path outdir,
             Config conf, HashMap<String, double[]> gridExtents,
             MMLFeaturePreprocess featurePreprocessMML,
             ShapeFeaturePreprocess shapePreprocessor,
@@ -67,7 +67,7 @@ public class SingleCellConverter {
             FeatureIDProvider featureIDProvider, CachedAdditionalDataSources cachedDatasources, NodeCache nodeCache) {
 
         this.cellFile = cellFile;
-        this.osmpbfWriter = osmpbfWriter;
+        this.outdir = outdir;
         this.conf = conf;
         this.featurePreprocessMML = featurePreprocessMML;
         this.shapePreprocessor = shapePreprocessor;
@@ -77,7 +77,7 @@ public class SingleCellConverter {
         this.nodeCache = nodeCache;
 
 
-        this.stringtable = stringtable;
+        this.stringtable = new StringTable();
         this.tyyppi_string_id = stringtable.getStringId("tyyppi");
         this.tagHandlerMML = new MMLTagHandler(stringtable);
         this.retkeilyTagHandler = new ShapeRetkeilyTagHandler(stringtable);
@@ -95,6 +95,9 @@ public class SingleCellConverter {
     }
 
     void doConvert() throws IOException {
+        OSMPBFWriter osmpbWriter = new OSMPBFWriter(outdir.resolve(String.format("%s.osm.pbf", cell)).toFile());
+        osmpbWriter.startWritingOSMPBF();
+
         DataSource mtkds = readOGRsource(stringtable, startReadingOGRFile("/vsizip/" + cellFile.toString()), featurePreprocessMML, tagHandlerMML, null);
         mtkds.delete();
         printCounts();
@@ -129,18 +132,24 @@ public class SingleCellConverter {
                     printCounts();
                 });
 
-        osmpbfWriter.writeOSMPBFElements(stringtable, nodes, ways, relations);
+        osmpbWriter.writeOSMPBFElements(stringtable, nodes, ways, relations);
+        osmpbWriter.closeOSMPBFFile();
     }
 
     private TagHandlerI getTagHandlerForDatasource(DataSource ds) {
-        return switch (ds.GetLayer(0).GetName()) {
-            case "syvyyskayra_v", "syvyyspiste_p" -> syvyysTagHandler;
-            case "kesaretkeilyreitit", "ulkoilureitit", "luontopolut", "point_dump" -> retkeilyTagHandler;
-            default -> {
+        switch (ds.GetLayer(0).GetName()) {
+            case "syvyyskayra_v":
+            case "syvyyspiste_p":
+                return syvyysTagHandler;
+            case "kesaretkeilyreitit":
+            case "ulkoilureitit":
+            case "luontopolut":
+            case "point_dump":
+                return retkeilyTagHandler;
+            default:
                 logger.severe("Unknown cached datasource ds name " + ds.GetLayer(0).GetName());
-                yield null;
-            }
-        };
+                return null;
+        }
     }
 
     private DataSource startReadingOGRFile(String fn) {
@@ -198,7 +207,7 @@ public class SingleCellConverter {
 
 
             ignored_fields.addAll(ignoredFields);
-            if (lyr.TestCapability(ogr.OLCIgnoreFields) && !ignoredFields.isEmpty()) {
+            if (lyr.TestCapability(ogr.OLCIgnoreFields) && ignoredFields.size() > 0) {
                 lyr.SetIgnoredFields(ignoredFields);
             }
 
@@ -214,7 +223,7 @@ public class SingleCellConverter {
                             logger.severe("NULL feature encountered on layer " + lyr.GetName());
                             return;
                         }
-                        if (!this.handleFeature(stringtable, lyr.GetName(), fieldMapping, feat, tagHandler)) {
+                        if (!this.handleFeature(stringtable, lyr.GetName(), fieldMapping, feat, featurePreprocess, tagHandler)) {
                             System.out.println("BREAK");
                             breakLayerLoop.set(true);
                         }
@@ -234,11 +243,11 @@ public class SingleCellConverter {
     }
 
     private boolean handleFeature(StringTable stringtable, String lyrname, ArrayList<Field> fieldMapping, Feature feat,
-                                  TagHandlerI tagHandler) {
-        Int2ObjectOpenHashMap<String> fields = new Int2ObjectOpenHashMap<>();
+                                  FeaturePreprocessI featurePreprocess, TagHandlerI tagHandler) {
+        Short2ObjectOpenHashMap<String> fields = new Short2ObjectOpenHashMap<>();
         Geometry geom;
         for (Field f : fieldMapping) {
-            int fid = stringtable.getStringId(f.getFieldName());
+            short fid = stringtable.getStringId(f.getFieldName());
             String fname = feat.GetFieldAsString(f.getFieldIndex()).intern();
             fields.put(fid, fname);
         }
@@ -247,14 +256,13 @@ public class SingleCellConverter {
 
         if (geom == null) return true;
 
-        if (sphericToWGS == null || srcToSphericMerc == null) {
-            SpatialReference sref = geom.GetSpatialReference();
-            sphericToWGS = this.geomUtils.spherictowgs;
-            srcToSphericMerc = this.geomUtils.getTransformationToSphereMercator(sref.ExportToProj4());
-        }
 
-        geom = geom.Transform(srcToSphericMerc);
         geom = geom.SimplifyPreserveTopology(0.5);
+
+        if (srctowgs == null) {
+            SpatialReference sref = geom.GetSpatialReference();
+            srctowgs = this.geomUtils.getTransformationToWGS84(sref.ExportToProj4());
+        }
 
         GeomHandlerResult ghr;
 
@@ -275,11 +283,11 @@ public class SingleCellConverter {
         String tyyppi = lyrname.toLowerCase();
         if (tyyppi.endsWith("kiinteistoraja")) tyyppi = "kiinteistoraja";
 
-        int tyyppi_value_id = stringtable.getStringId(tyyppi);
+        short tyyppi_value_id = stringtable.getStringId(tyyppi);
 
-        for (LightNode n : ghr.lightNodes) {
+        for (Node n : ghr.nodes) {
 
-            if (!n.isWayPart()) {
+            if (!n.isWaypart()) {
                 n.addTag(tyyppi_string_id, tyyppi_value_id);
                 tagHandler.addElementTags(n.nodeTags, fields, tyyppi, geomarea);
             }
@@ -289,7 +297,7 @@ public class SingleCellConverter {
             }
         }
 
-        for (LightWay w : ghr.lightWays) {
+        for (Way w : ghr.ways) {
             if (!w.getRole().equals("inner")) {
                 w.tags.put(tyyppi_string_id, tyyppi_value_id);
                 tagHandler.addElementTags(w.tags, fields, tyyppi, geomarea);
@@ -299,7 +307,7 @@ public class SingleCellConverter {
             }
         }
 
-        for (LightRelation r : ghr.lightRelations) {
+        for (Relation r : ghr.relations) {
 
             r.tags.put(tyyppi_string_id, tyyppi_value_id);
             tagHandler.addElementTags(r.tags, fields, tyyppi, geomarea);
@@ -315,55 +323,61 @@ public class SingleCellConverter {
 
         GeomHandlerResult ghr = new GeomHandlerResult();
 
-        Geometry wgsgeom = geom.Transform(sphericToWGS);
-        if (geom.IsEmpty() || wgsgeom.IsEmpty()) {
+        if (geom.IsEmpty())
             return ghr;
-        }
 
-        boolean isPoint = geom.GetGeometryType() == ogr.wkbPoint || geom.GetGeometryType() == ogr.wkbPoint25D;
+        boolean ispoint = geom.GetGeometryType() == ogr.wkbPoint || geom.GetGeometryType() == ogr.wkbPoint25D;
 
-        LightWay w = null;
+        double[][] srcpoints = geom.GetPoints();
+        double[][] wgspoints = geom.GetPoints();
+
+        srctowgs.TransformPoints(wgspoints);
+        Way w = null;
         long wid;
-        if (!isPoint) {
+        if (!ispoint) {
             wid = featureIDProvider.getWayID();
-            w = new LightWay(wid);
+            w = new Way();
+            w.id = wid;
         }
 
-        for (int i = 0; i < geom.GetPointCount(); i++) {
+        for (int i = 0; i < srcpoints.length; i++) {
 
-            long phash = geomUtils.hashCoords(geom.GetX(i), geom.GetY(i));
-            int pcell = geomUtils.xy2grid(geom.GetX(i), geom.GetY(i));
+            long phash = geomUtils.hashCoords(srcpoints[i][0], srcpoints[i][1]);
+            int pcell = geomUtils.xy2grid(srcpoints[i][0], srcpoints[i][1]);
 
             if (!nodes.containsKey(phash)) {
                 nodeCache.ensureGrid(pcell);
 
                 Optional<Long> cachedNodeId = nodeCache.getNodeId(pcell,phash);
 
-                long nodeID;
+                long nodeid;
                 if (cachedNodeId.isPresent()) {
-                    nodeID = cachedNodeId.get();
+                    nodeid = cachedNodeId.get();
                 } else {
-                    nodeID = featureIDProvider.getNodeID();
-                    if (this.nodeNearCellBorder(geom.GetPoint(i))) {
-                        nodeCache.addNodeId(pcell, phash, nodeID);
+                    nodeid = featureIDProvider.getNodeID();
+                    if (this.nodeNearCellBorder(srcpoints[i])) {
+                        nodeCache.addNodeId(pcell, phash, nodeid);
                     }
                 }
 
-                LightNode n = new LightNode(nodeID, phash, wgsgeom.GetX(i), wgsgeom.GetY(i), !isPoint);
+                Node n = new Node(nodeid, phash, pcell, wgspoints[i][0], wgspoints[i][1], !ispoint);
                 nodes.put(phash, n);
-                ghr.lightNodes.add(n);
+                ghr.nodes.add(n);
+                if (!ispoint) {
+                    w.refs.add(n.getId());
+                }
             } else {
-                LightNode n = nodes.get(phash);
-                n.wayPart = n.wayPart || !isPoint;
-                ghr.lightNodes.add(n);
-            }
-            if (!isPoint) {
-                w.refs.add(phash);
+                Node n = nodes.get(phash);
+                n.waypart = n.waypart || !ispoint;
+                ghr.nodes.add(n);
+                if (!ispoint) {
+                    w.refs.add(n.getId());
+                }
             }
         }
 
         if (w != null) {
-            ghr.lightWays.add(w);
+            ghr.ways.add(w);
         }
 
         return ghr;
@@ -381,7 +395,7 @@ public class SingleCellConverter {
                 Math.min(Math.abs(this.bbox[2] - y), Math.min(Math.abs(this.bbox[1] - x), Math.abs(this.bbox[3] - y))));
     }
 
-    private GeomHandlerResult handleMultiGeom(int type, int multipolygon, Geometry geom) {
+    private GeomHandlerResult handleMultiGeom(short type, short multipolygon, Geometry geom) {
 
         GeomHandlerResult ighr;
         Geometry igeom;
@@ -391,14 +405,14 @@ public class SingleCellConverter {
             for (int i = 0; i < geom.GetGeometryCount(); i++) {
                 igeom = geom.GetGeometryRef(i);
                 ighr = this.handleSingleGeom(igeom);
-                ghr.lightNodes.addAll(ighr.lightNodes);
-                ghr.lightWays.addAll(ighr.lightWays);
+                ghr.nodes.addAll(ighr.nodes);
+                ghr.ways.addAll(ighr.ways);
             }
             return ghr;
         }
 
         long rid = featureIDProvider.getRelationID();
-        LightRelation r = new LightRelation();
+        Relation r = new Relation();
         r.setId(rid);
         r.tags.put(type, multipolygon);
 
@@ -406,20 +420,23 @@ public class SingleCellConverter {
             igeom = geom.GetGeometryRef(i);
 
             ighr = this.handleSingleGeom(igeom);
-            if (ighr.lightWays.isEmpty()) {
+            if (ighr.ways.size() == 0) {
                 return new GeomHandlerResult();
             }
-            String role = i == 0 ? "outer" : "inner";
-            ighr.lightWays.getFirst().setRole(role);
+            ighr.ways.get(0).setRole((i == 0 ? "outer" : "inner"));
 
-            ghr.lightNodes.addAll(ighr.lightNodes);
-            ghr.lightWays.addAll(ighr.lightWays);
+            ghr.nodes.addAll(ighr.nodes);
+            ghr.ways.addAll(ighr.ways);
 
-            LightRelationMember rm = new LightRelationMember(ighr.lightWays.getFirst().getId(), role);
+            RelationMember rm = new RelationMember();
+
+            rm.setId(ighr.ways.get(0).getId());
+            rm.setType();
+            rm.setRole((i == 0 ? "outer" : "inner"));
             r.members.add(rm);
         }
 
-        ghr.lightRelations.add(r);
+        ghr.relations.add(r);
         return ghr;
 
     }

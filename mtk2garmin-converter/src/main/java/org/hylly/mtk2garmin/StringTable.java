@@ -1,35 +1,40 @@
 package org.hylly.mtk2garmin;
 
-import it.unimi.dsi.fastutil.objects.Object2IntMap;
-import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
+import it.unimi.dsi.fastutil.objects.Object2ShortOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 
 class StringTable {
-    private final Object2IntMap<String> stringTableTranslate = new Object2IntOpenHashMap<>();
+    private final Object2ShortOpenHashMap<String> stringTableTranslate = new Object2ShortOpenHashMap<>();
     private final ObjectArrayList<String> stringTable = new ObjectArrayList<>();
+
 
     StringTable() {
         stringTable.add("");
     }
 
-    int getStringId(String stringKey) {
+    short getStringId(String stringKey) {
         if (!this.stringTableTranslate.containsKey(stringKey)) {
-            int newIndex = this.stringTable.size();
+            short newIndex = (short) this.stringTable.size();
             this.stringTableTranslate.put(stringKey, newIndex);
             this.stringTable.add(newIndex, stringKey);
             return newIndex;
         } else {
-            return this.stringTableTranslate.getInt(stringKey);
+            return this.stringTableTranslate.getShort(stringKey);
         }
+
     }
+
 
     String getStringById(int id) {
         return this.stringTable.get(id);
     }
-
-
-    public void clear() {
-        this.stringTableTranslate.clear();
-        this.stringTable.clear();
+    ObjectArrayList<String>  getStringTable() {
+        return stringTable;
     }
+
+    int getStringtableSize() {
+        return stringTable.size();
+    }
+
+
 }
