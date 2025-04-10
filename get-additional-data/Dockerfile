@@ -1,5 +1,4 @@
-# FROM teemupel/mtk2garmin-ubuntugis-base as loader
-FROM nas.local:5500/mtk2garmin-ubuntugis-base as loader
+FROM teemupel/mtk2garmin-ubuntugis-base as loader
 
 WORKDIR /opt/get_additional_data
 ADD get_additional_data.sh get_additional_data.sh
