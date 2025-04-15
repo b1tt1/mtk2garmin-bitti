@@ -48,7 +48,8 @@ services:
       - /opt/mtk2garmin-build/output:/output
       - mapstyle:/mapstyles
   mapstyles:
-    image: teemupel/mtk2garmin-mapstyles
+    # image: teemupel/mtk2garmin-mapstyles
+    image: localhost:5000/mtk2garmin-mapstyles
     build: ../mapstyles
     volumes:
       - mapstyle:/mapstyles
