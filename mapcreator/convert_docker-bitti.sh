@@ -58,7 +58,9 @@ time docker compose run merger ./merge_files.sh
 echo "******9*****"
 
 # Bitti: tarvitaan
+# Jos kartat on päivitetty
 # time docker compose run mkgmap ./run_mkgmap.sh
+# Jos vain tyyppitiedostoa on muokattu
 time docker compose run mkgmap ./run_mkgmap2.sh
 
 echo "******10*****"
