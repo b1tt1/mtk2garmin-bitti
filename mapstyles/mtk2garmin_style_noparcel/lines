@@ -72,6 +72,10 @@ kohdeluokka=12312 [0x11 level 2]    #Talvitie
 kohdeluokka=34800 [0x10102 level 1] #Luiska
 kohdeluokka=14121 [0x19 level 3]    #Kapearaiteinen rautatie
 kohdeluokka=36312 [0x1f level 1]    #Virtavesi, 2-5m
+kohdeluokka=14141 [0x1a level 3]    #Raitiotie, erillinen
+kohdeluokka=14142 [0x1a level 3]    #Raitiotie, ajoradalla
+kohdeluokka=14151 [0x1a level 3]    #Pikaraitiotie, erillinen
+kohdeluokka=14152 [0x1a level 3]    #Pikaraitiotie, ajoradalla
 
 #tyyppi=syvyyskayrat & ele ~ '\d*[24680]0\.0' {name ${ele|conv:"m=>ft"}';addlabel '${ele}'} [0x25]
 tyyppi=syvyyskayra & ele ~ '\d*[24680]0\.0' {name '${ele|conv:"m=>ft"}'} [0x25]

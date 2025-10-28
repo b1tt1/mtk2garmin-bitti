@@ -1445,6 +1445,25 @@ ExtendedLabels=N
 
 
 [_line]
+Type=0x1a
+;GRMN_TYPE: Misc. Line Types/TIME_ZONE_BOUNDARY/Indicates the boundary of a time zone/Non NT
+UseOrientation=Y
+Xpm="32 4 4 1"
+"! c #F8FCF8"
+"# c #606060"
+"3 c #020602"
+"4 c #9F9F9F"
+"################################"
+"####!!!!####!!!!####!!!!####!!!!"
+"####!!!!####!!!!####!!!!####!!!!"
+"################################"
+;12345678901234567890123456789012
+;String1=0x06,Raitiotie
+ExtendedLabels=N
+[end]
+
+
+[_line]
 Type=0x1c
 ;GRMN_TYPE: Political Borders/MJR_PLTCL_BDRY/Major political boundary (typically used for state, provincial borders)/Non NT
 UseOrientation=N
