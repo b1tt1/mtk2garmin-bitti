@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rendertheme xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" version="4" map-background="#FFFFFF">
+<rendertheme xmlns="http://mapsforge.org/renderTheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" version="5" map-background="#FFFFFF">
     <stylemenu id="r4menu" defaultvalue="parcelsno" defaultlang="fi">
 
         <layer id="parcelsyes" visible="true">
@@ -159,18 +159,18 @@
 
     
     <rule e="any" k="kohdeluokka" v="39110" zoom-min="14">
-        <area src="file:/mml/avometsa2.svg" fill="#ff0000" symbol-width="2" symbol-height="2" />
+        <area src="file:mml/avometsa2.svg" fill="#ff0000" symbol-width="2" symbol-height="2" />
     </rule>
 
     
     <rule e="any" k="kohdeluokka" v="39120" zoom-min="12">
-        <area src="file:/mml/varvikko.png" symbol-width="2" symbol-height="2" />
+        <area src="file:mml/varvikko.png" symbol-width="2" symbol-height="2" />
     </rule>
 
 
     
     <rule e="any" k="tyyppi" v="kivikko|vesikivikko" zoom-min="14">
-        <area src="file:/mml/Pkivikko_0_0_0_100.svg" symbol-width="80" symbol-height="80" />
+        <area src="file:mml/Pkivikko_0_0_0_100.svg" symbol-width="80" symbol-height="80" />
     </rule>
 
 
@@ -227,7 +227,7 @@
     </rule>
 
     <rule e="way" k="tyyppi" v="louhos" zoom-min="12">
-        <area src="file:/mml/Pkivikko_0_0_0_60.svg" fill="#ffffd9" stroke="#000000" stroke-width="0.08" symbol-width="60" symbol-height="60" />
+        <area src="file:mml/Pkivikko_0_0_0_60.svg" fill="#ffffd9" stroke="#000000" stroke-width="0.08" symbol-width="60" symbol-height="60" />
     </rule>
 
     <rule e="way" k="tyyppi" v="hietikko" zoom-min="12">
@@ -257,14 +257,14 @@
     
     <rule e="way" k="kohdeluokka" v="35421" zoom-min="12">
         <area fill="#d1cc40" stroke="#d1cc40" stroke-width="0.2" />
-        <area src="file:/mml/suo_vaikea.svg" symbol-width="8" symbol-height="2" />
+        <area src="file:mml/suo_vaikea.svg" symbol-width="8" symbol-height="2" />
     </rule>
 
 
     
     <rule e="way" k="kohdeluokka" v="35422" zoom-min="12">
         <area fill="#C7EBEB" stroke="#C7EBEB" stroke-width="0.2" />
-        <area src="file:/mml/suo_vaikea.svg" symbol-width="8" symbol-height="2" />
+        <area src="file:mml/suo_vaikea.svg" symbol-width="8" symbol-height="2" />
     </rule>
 
 
@@ -279,7 +279,7 @@
 
     
     <rule e="way" k="kohdeluokka" v="38400" zoom-min="12">
-        <area src="file:/mml/Phko_100_50_0_0.svg" symbol-width="160" symbol-height="160" />
+        <area src="file:mml/Phko_100_50_0_0.svg" symbol-width="160" symbol-height="160" />
     </rule>
 
     
@@ -698,24 +698,24 @@
 
     
     <rule e="any" k="kohdeluokka" v="44800" zoom-min="11">
-        <symbol src="file:/mml/Smasto.svg" symbol-width="4" symbol-height="7" />
+        <symbol src="file:mml/Smasto.svg" symbol-width="4" symbol-height="7" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="45200" zoom-min="14">
-        <symbol src="file:/mml/Sportti.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Sportti.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
     
 
     <rule e="any" k="kohdeluokka" v="45710" zoom-min="14">
-        <symbol src="file:/mml/Stuli.svg" symbol-width="8" symbol-height="8" />
+        <symbol src="file:mml/Stuli.svg" symbol-width="8" symbol-height="8" />
     </rule>
 
     
     <rule e="any" k="kohdeluokka" v="12200" zoom-min="12">
-        <symbol src="file:/mml/Sesterak.svg" symbol-width="6" symbol-height="3" />
+        <symbol src="file:mml/Sesterak.svg" symbol-width="6" symbol-height="3" />
     </rule>
 
 
@@ -726,7 +726,7 @@
 
     
     <rule e="any" k="kohdeluokka" v="34200" zoom-min="14">
-        <symbol src="file:/mml/Slo_Slo.svg" symbol-width="2" symbol-height="2" />
+        <symbol src="file:mml/Slo_Slo.svg" symbol-width="2" symbol-height="2" />
     </rule>
 
 
@@ -738,725 +738,725 @@
 
     
     <rule e="any" k="kohdeluokka" v="45500" zoom-min="12">
-        <symbol src="file:/mml/Stvoimala.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/Stvoimala.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
     
     <rule e="any" k="kohdeluokka" v="44700" zoom-min="12">
-        <symbol src="file:/mml/Seste.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Seste.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
     
     <rule e="any" k="kohdeluokka" v="34600" zoom-min="14">
-        <symbol src="file:/mml/Skivi.svg" symbol-width="3" symbol-height="3" />
+        <symbol src="file:mml/Skivi.svg" symbol-width="3" symbol-height="3" />
     </rule>
 
     
     <rule e="any" k="kohdeluokka" v="32710" zoom-min="15">
-        <symbol src="file:/mml/Shm.svg" symbol-width="2" symbol-height="4" />
+        <symbol src="file:mml/Shm.svg" symbol-width="2" symbol-height="4" />
     </rule>
 
     
     <rule e="any" k="kohdeluokka" v="32713" zoom-min="15">
-        <symbol src="file:/mml/Slm.svg" symbol-width="2" symbol-height="2" />
+        <symbol src="file:mml/Slm.svg" symbol-width="2" symbol-height="2" />
     </rule>
 
     
     <rule e="any" k="kohdeluokka" v="32714" zoom-min="15">
-        <symbol src="file:/mml/Ssm.svg" symbol-width="2" symbol-height="5" />
+        <symbol src="file:mml/Ssm.svg" symbol-width="2" symbol-height="5" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="38100" zoom-min="14">
-        <symbol src="file:/mml/Sksko.svg" symbol-width="3" symbol-height="3" />
+        <symbol src="file:mml/Sksko.svg" symbol-width="3" symbol-height="3" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="82500" zoom-min="12">
-        <symbol src="file:/mml/Svkrajapyykki.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Svkrajapyykki.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="95300" zoom-min="15">
-        <symbol src="file:/mml/Svesiasteikko.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Svesiasteikko.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="26191" zoom-min="15">
-        <symbol src="file:/mml/SK.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/SK.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16800" zoom-min="14">
-        <symbol src="file:/mml/STs.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/STs.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="44600" zoom-min="14">
-        <symbol src="file:/mml/Sktli.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Sktli.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="44900" zoom-min="14">
-        <symbol src="file:/mml/SRmm.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/SRmm.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="45000" zoom-min="14">
-        <symbol src="file:/mml/Snt.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Snt.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="45400" zoom-min="14">
-        <symbol src="file:/mml/Stervahauta.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Stervahauta.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="45800" zoom-min="14">
-        <symbol src="file:/mml/Svesitorni.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Svesitorni.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="32191" zoom-min="14">
-        <symbol src="file:/mml/Selop.svg" symbol-width="6" symbol-height="2" />
+        <symbol src="file:mml/Selop.svg" symbol-width="6" symbol-height="2" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="32192" zoom-min="15">
-        <symbol src="file:/mml/Shkiv.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/Shkiv.svg" symbol-width="6" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="32291" zoom-min="15">
-        <symbol src="file:/mml/Shmr.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Shmr.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="32891" zoom-min="15">
-        <symbol src="file:/mml/Sni.svg" symbol-width="3" symbol-height="3" />
+        <symbol src="file:mml/Sni.svg" symbol-width="3" symbol-height="3" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="38991" zoom-min="15">
-        <symbol src="file:/mml/Svar.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Svar.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="72310" zoom-min="14">
-        <symbol src="file:/mml/Skivi.svg" symbol-width="5" symbol-height="5" />
+        <symbol src="file:mml/Skivi.svg" symbol-width="5" symbol-height="5" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="72320" zoom-min="14">
-        <symbol src="file:/mml/Spuu.svg" symbol-width="5" symbol-height="5" />
+        <symbol src="file:mml/Spuu.svg" symbol-width="5" symbol-height="5" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="72330" zoom-min="14">
-        <symbol src="file:/mml/SMjs.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SMjs.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="72340" zoom-min="14">
-        <symbol src="file:/mml/SRmuu.svg" symbol-width="5" symbol-height="5" />
+        <symbol src="file:mml/SRmuu.svg" symbol-width="5" symbol-height="5" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="34900" zoom-min="14">
-        <symbol src="file:/mml/Smluontokohde.svg" symbol-width="5" symbol-height="5" />
+        <symbol src="file:mml/Smluontokohde.svg" symbol-width="5" symbol-height="5" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="35100" zoom-min="14">
-        <symbol src="file:/mml/Spuu.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Spuu.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="36100" zoom-min="14">
-        <symbol src="file:/mml/Slahde.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Slahde.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
     <rule e="any" k="cat_id" v="2413" zoom-min="14">
-        <symbol src="file:/mml/Slahde.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Slahde.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
     
     <rule e="any" k="kohdeluokka" v="36400" zoom-min="14">
-        <symbol src="file:/mml/Svesikuoppa.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Svesikuoppa.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="26200" zoom-min="14">
-        <symbol src="file:/mml/Svo.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Svo.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="32715" zoom-min="14">
-        <symbol src="file:/mml/Svarvikko.svg" symbol-width="3" symbol-height="3" />
+        <symbol src="file:mml/Svarvikko.svg" symbol-width="3" symbol-height="3" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="32719" zoom-min="15">
-        <symbol src="file:/mml/Spensaikko.svg" symbol-width="3" symbol-height="3" />
+        <symbol src="file:mml/Spensaikko.svg" symbol-width="3" symbol-height="3" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="38511" zoom-min="14">
-        <symbol src="file:/mml/Skiva.svg" symbol-width="3" symbol-height="3" />
+        <symbol src="file:mml/Skiva.svg" symbol-width="3" symbol-height="3" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="38512" zoom-min="14">
-        <symbol src="file:/mml/Skivt.svg" symbol-width="3" symbol-height="3" />
+        <symbol src="file:mml/Skivt.svg" symbol-width="3" symbol-height="3" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="38513" zoom-min="14">
-        <symbol src="file:/mml/Skivi.svg" symbol-width="3" symbol-height="3" />
+        <symbol src="file:mml/Skivi.svg" symbol-width="3" symbol-height="3" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="38800" zoom-min="15">
-        <symbol src="file:/mml/Suitto.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Suitto.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
     
     <rule e="any" k="kohdeluokka" v="16600" zoom-min="15">
-        <symbol src="file:/mml/Sankkuri.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Sankkuri.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16712" zoom-min="15">
-        <symbol src="file:/mml/Shylky.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Shylky.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16721" zoom-min="15">
-        <symbol src="file:/mml/Shylkytuntemat.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Shylkytuntemat.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16722" zoom-min="15">
-        <symbol src="file:/mml/Shylkytunnettu.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/Shylkytunnettu.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16121" zoom-min="15">
-        <symbol src="file:/mml/SKum.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/SKum.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16122" zoom-min="15">
-        <symbol src="file:/mml/STmaja.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/STmaja.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16126" zoom-min="15">
-        <symbol src="file:/mml/SMaja.svg" symbol-width="4" symbol-height="4" />
+        <symbol src="file:mml/SMaja.svg" symbol-width="4" symbol-height="4" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16120" zoom-min="15">
-        <symbol src="file:/mml/SLm_SLm.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SLm_SLm.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16124" zoom-min="15">
-        <symbol src="file:/mml/SLo.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SLo.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16125" zoom-min="15">
-        <symbol src="file:/mml/SLl.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SLl.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16127" zoom-min="15">
-        <symbol src="file:/mml/Stutkamerkki.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/Stutkamerkki.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16128" zoom-min="15">
-        <symbol src="file:/mml/Svaltutkamerkki.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/Svaltutkamerkki.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16141" zoom-min="15">
-        <symbol src="file:/mml/SVvas.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVvas.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16142" zoom-min="15">
-        <symbol src="file:/mml/SVoik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVoik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16143" zoom-min="15">
-        <symbol src="file:/mml/SVpoh.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVpoh.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16144" zoom-min="15">
-        <symbol src="file:/mml/SVete.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVete.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16145" zoom-min="15">
-        <symbol src="file:/mml/SVita.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVita.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16146" zoom-min="15">
-        <symbol src="file:/mml/SVlan.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVlan.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16147" zoom-min="15">
-        <symbol src="file:/mml/SVkari.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVkari.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16148" zoom-min="15">
-        <symbol src="file:/mml/SVturva.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVturva.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16149" zoom-min="15">
-        <symbol src="file:/mml/SVerik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVerik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16151" zoom-min="15">
-        <symbol src="file:/mml/SVPvas.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVPvas.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16152" zoom-min="15">
-        <symbol src="file:/mml/SVPoik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVPoik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16153" zoom-min="15">
-        <symbol src="file:/mml/SVPpoh.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVPpoh.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16154" zoom-min="15">
-        <symbol src="file:/mml/SVPete.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVPete.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16155" zoom-min="15">
-        <symbol src="file:/mml/SVPita.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVPita.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16156" zoom-min="15">
-        <symbol src="file:/mml/SVPlan.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVPlan.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16157" zoom-min="15">
-        <symbol src="file:/mml/SVPkari.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVPkari.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16158" zoom-min="15">
-        <symbol src="file:/mml/SVPturva.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVPturva.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16159" zoom-min="15">
-        <symbol src="file:/mml/SVPerik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVPerik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16161" zoom-min="15">
-        <symbol src="file:/mml/SPvas.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SPvas.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16162" zoom-min="15">
-        <symbol src="file:/mml/SPoik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SPoik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16163" zoom-min="15">
-        <symbol src="file:/mml/SPpoh.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SPpoh.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16164" zoom-min="15">
-        <symbol src="file:/mml/SPete.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SPete.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16165" zoom-min="15">
-        <symbol src="file:/mml/SPita.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SPita.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16166" zoom-min="15">
-        <symbol src="file:/mml/SPlan.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SPlan.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16167" zoom-min="15">
-        <symbol src="file:/mml/SPkari.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SPkari.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16168" zoom-min="15">
-        <symbol src="file:/mml/SPturva.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SPturva.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16169" zoom-min="15">
-        <symbol src="file:/mml/SPerik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SPerik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16171" zoom-min="15">
-        <symbol src="file:/mml/SVaPvas.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVaPvas.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16172" zoom-min="15">
-        <symbol src="file:/mml/SVaPoik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVaPoik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16173" zoom-min="15">
-        <symbol src="file:/mml/SVaPpoh.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVaPpoh.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16174" zoom-min="15">
-        <symbol src="file:/mml/SVaPete.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVaPete.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16175" zoom-min="15">
-        <symbol src="file:/mml/SVaPita.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVaPita.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16176" zoom-min="15">
-        <symbol src="file:/mml/SVaPlan.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVaPlan.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16177" zoom-min="15">
-        <symbol src="file:/mml/SVaPkari.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVaPkari.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16178" zoom-min="15">
-        <symbol src="file:/mml/SVaPturva.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVaPturva.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16179" zoom-min="15">
-        <symbol src="file:/mml/SVaPerik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVaPerik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16181" zoom-min="15">
-        <symbol src="file:/mml/SJPvas.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SJPvas.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16182" zoom-min="15">
-        <symbol src="file:/mml/SJPoik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SJPoik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16183" zoom-min="15">
-        <symbol src="file:/mml/SJPpoh.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SJPpoh.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16184" zoom-min="15">
-        <symbol src="file:/mml/SJPete.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SJPete.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16185" zoom-min="15">
-        <symbol src="file:/mml/SJPita.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SJPita.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16186" zoom-min="15">
-        <symbol src="file:/mml/SJPlan.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SJPlan.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16187" zoom-min="15">
-        <symbol src="file:/mml/SJPkari.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SJPkari.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16188" zoom-min="15">
-        <symbol src="file:/mml/SJPturva.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SJPturva.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16189" zoom-min="15">
-        <symbol src="file:/mml/SJPerik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SJPerik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16191" zoom-min="15">
-        <symbol src="file:/mml/SVJPvas.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVJPvas.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16192" zoom-min="15">
-        <symbol src="file:/mml/SVJPoik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVJPoik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16193" zoom-min="15">
-        <symbol src="file:/mml/SVJPpoh.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVJPpoh.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16194" zoom-min="15">
-        <symbol src="file:/mml/SVJPete.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVJPete.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16195" zoom-min="15">
-        <symbol src="file:/mml/SVJPita.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVJPita.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16196" zoom-min="15">
-        <symbol src="file:/mml/SVJPlan.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVJPlan.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16197" zoom-min="15">
-        <symbol src="file:/mml/SVJPkari.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVJPkari.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16198" zoom-min="15">
-        <symbol src="file:/mml/SVJPturva.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVJPturva.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16199" zoom-min="15">
-        <symbol src="file:/mml/SVJPerik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVJPerik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16201" zoom-min="15">
-        <symbol src="file:/mml/SRMvas.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SRMvas.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16202" zoom-min="15">
-        <symbol src="file:/mml/SRMoik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SRMoik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16203" zoom-min="15">
-        <symbol src="file:/mml/SRMpoh.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SRMpoh.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16204" zoom-min="15">
-        <symbol src="file:/mml/SRMete.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SRMete.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16205" zoom-min="15">
-        <symbol src="file:/mml/SRMita.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SRMita.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16206" zoom-min="15">
-        <symbol src="file:/mml/SRMlan.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SRMlan.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16211" zoom-min="15">
-        <symbol src="file:/mml/SVRMvas.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVRMvas.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16212" zoom-min="15">
-        <symbol src="file:/mml/SVRMoik.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVRMoik.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16213" zoom-min="15">
-        <symbol src="file:/mml/SVRMpoh.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVRMpoh.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16214" zoom-min="15">
-        <symbol src="file:/mml/SVRMete.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVRMete.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16215" zoom-min="15">
-        <symbol src="file:/mml/SVRMita.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVRMita.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     
     <rule e="any" k="kohdeluokka" v="16216" zoom-min="15">
-        <symbol src="file:/mml/SVRMlan.svg" symbol-width="4" symbol-height="6" />
+        <symbol src="file:mml/SVRMlan.svg" symbol-width="4" symbol-height="6" />
     </rule>
 
 
     <rule e="any" k="amenity" v="shelter" zoom-min="12">
-        <symbol src="file:/mml/shelter.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/shelter.svg" symbol-width="6" symbol-height="6" />
     </rule>
 
     <rule e="any" k="tourism" v="lean_to|wilderness" zoom-min="12">
-        <symbol src="file:/mml/shelter.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/shelter.svg" symbol-width="6" symbol-height="6" />
     </rule>
 
 
     <rule e="any" k="cat_id" v="2212|1212|1213|1214|1217|1311|2210|2211" zoom-min="12">
-        <symbol src="file:/mml/shelter.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/shelter.svg" symbol-width="6" symbol-height="6" />
     </rule>
 
     <rule e="any" k="amenity" v="toilets" zoom-min="12">
-        <symbol src="file:/mml/toilets.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/toilets.svg" symbol-width="6" symbol-height="6" />
     </rule>
 
 
     <rule e="any" k="cat_id" v="2217|2221|2223|2224" zoom-min="12">
-        <symbol src="file:/mml/toilets.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/toilets.svg" symbol-width="6" symbol-height="6" />
     </rule>
 
     <rule e="any" k="tourism" v="fireplace" zoom-min="12">
-        <symbol src="file:/mml/campfire-99058.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/campfire-99058.svg" symbol-width="6" symbol-height="6" />
     </rule>
 
     <rule e="any" k="cat_id" v="2225|2214|2244" zoom-min="12">
-        <symbol src="file:/mml/campfire-99058.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/campfire-99058.svg" symbol-width="6" symbol-height="6" />
     </rule>
 
 
     <rule e="any" k="man_made" v="tower" zoom-min="12">
-        <symbol src="file:/mml/tower_lookout.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/tower_lookout.svg" symbol-width="6" symbol-height="6" />
     </rule>
     <rule e="any" k="cat_id" v="2226|1614|2229" zoom-min="12">
-        <symbol src="file:/mml/tower_lookout.svg" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/tower_lookout.svg" symbol-width="6" symbol-height="6" />
     </rule>
 
     <rule e="any" k="cat_id" v="2238" zoom-min="12">
-        <symbol src="file:/mml/parking.png" symbol-width="6" symbol-height="6" />
+        <symbol src="file:mml/parking.png" symbol-width="6" symbol-height="6" />
     </rule>
 
     
@@ -1480,7 +1480,7 @@
         <line stroke="#660C00" stroke-width="0.16" stroke-linecap="round" />
     </rule>
     <rule e="any" k="kohdeluokka" v="34800" zoom-min="16">
-        <lineSymbol src="file:/mml/luiska_hapsu_apusymboli.svg" repeat="true" display="always" repeat-gap="4" repeat-start="0" symbol-width="1" symbol-height="4" position="center" />
+        <lineSymbol src="file:mml/luiska_hapsu_apusymboli.svg" repeat="true" display="always" repeat-gap="4" repeat-start="0" symbol-width="1" symbol-height="4" position="center" />
     </rule>
 
 
@@ -1489,7 +1489,7 @@
         <line stroke="#000000" stroke-width="0.16" stroke-linecap="round" />
     </rule>
     <rule e="any" k="kohdeluokka" v="34400" zoom-min="16">
-        <lineSymbol src="file:/mml/jyrkanne_hapsu_apusymboli.svg" repeat="true" display="always" repeat-gap="4" repeat-start="0" symbol-width="1" symbol-height="4" position="center" />
+        <lineSymbol src="file:mml/jyrkanne_hapsu_apusymboli.svg" repeat="true" display="always" repeat-gap="4" repeat-start="0" symbol-width="1" symbol-height="4" position="center" />
     </rule>
 
 
