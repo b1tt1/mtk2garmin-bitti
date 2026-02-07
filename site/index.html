@@ -4,21 +4,31 @@
 <head>
     <meta charset="utf-8">
     <title>Ilmainen maastokartta iPhonelle, Androidille ja Garminille</title>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
+    <script
+        src="https://stats.hylly.org/api/script.js"
+        data-site-id="d128451e8c6f"
+        defer
+    ></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track all download link clicks
+            document.querySelectorAll('a.dl').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    var fileName = this.getAttribute('href').split('/').pop();
+                    var linkText = this.textContent.trim();
+                    
+                    // Send event to Rybbit
+                    if (typeof rybbit !== 'undefined') {
+                        rybbit('event', 'download', {
+                            file: fileName,
+                            link: linkText,
+                            url: this.getAttribute('href')
+                        });
+                    }
+                });
             });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TPTK2KP');</script>
-    <!-- End Google Tag Manager -->
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -68,12 +78,6 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPTK2KP" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div class="container-xl">
         <div class="row text-center bg-light p-5 my-1">
             <div class="col-sm">
@@ -374,19 +378,4 @@
         </footer>
     </div>
 </body>
-<script>window.twttr = (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        t._e = [];
-        t.ready = function (f) {
-            t._e.push(f);
-        };
-        return t;
-    }(document, "script", "twitter-wjs"));</script>
-
 </html>

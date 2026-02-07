@@ -12,10 +12,12 @@ docker push teemupel/mtk2garmin-ubuntugis-base
 docker compose build --parallel
 docker compose push
 
-if docker build --tag "localhost:5000/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
-  echo "Succesfully loaded additional data"
-  docker tag "localhost:5000/mtk2garmin-additional-data:$date" localhost:5000/mtk2garmin-additional-data:latest
-  docker push localhost:5000/mtk2garmin-additional-data:latest
+if [ -z "$(docker images -q "localhost:5000/mtk2garmin-additional-data:$date" 2> /dev/null)" ]; then
+  if docker build --tag "localhost:5000/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
+    echo "Succesfully loaded additional data"
+    docker tag "localhost:5000/mtk2garmin-additional-data:$date" localhost:5000/mtk2garmin-additional-data:latest
+    docker push localhost:5000/mtk2garmin-additional-data:latest
+  fi
 fi
 
 docker compose pull
