@@ -38,7 +38,7 @@ services:
       - additional-data:/additional-data
   mkgmap:
     image: teemupel/mkgmap
-    #build: ../mkgmap-converter
+    build: ../mkgmap-converter
     volumes:
       - /opt/mtk2garmin-build/convertedpbf:/convertedpbf
       - /opt/mtk2garmin-build/splitted:/splitted
