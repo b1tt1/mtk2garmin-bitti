@@ -476,7 +476,7 @@
             <line stroke="#99ffff" stroke-width="0.2" stroke-dasharray="15,15" stroke-linecap="butt" />
         </rule>
 
-        <rule e="way" k="kohdeluokka" v="14112|14131|14121">
+        <rule e="way" k="kohdeluokka" v="14112|14131|14121|14141|14151">
             <line stroke="#ffffff" stroke-width="0.2" stroke-dasharray="15,15" stroke-linecap="butt" />
         </rule>
 
