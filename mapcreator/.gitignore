@@ -2,3 +2,6 @@
 .env
 
 docker-compose.dev.yml
+
+mmlclient.toml
+screenlog*

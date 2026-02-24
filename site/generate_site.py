@@ -320,4 +320,16 @@ with open(os.path.join(path, "site.html"), "w+") as f:
         )
     )
 
+template = env.get_template("index2.html")
+
+with open(os.path.join(path, "site2.html"), "w+") as f:
+    f.write(
+        template.render(
+            release_files=release_files,
+            changes=changes,
+            publishdate=publishdate,
+            current_year=current_year,
+        )
+    )
+
 print("Publish done!")
