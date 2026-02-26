@@ -21,17 +21,20 @@ docker compose build --parallel
 
 echo "******2*****"
 
-if docker build --tag "localhost:5000/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
-  echo "Succesfully loaded additional data"
-  docker tag "localhost:5000/mtk2garmin-additional-data:$date" localhost:5000/mtk2garmin-additional-data:latest
-#   docker push localhost:5000/mtk2garmin-additional-data:latest
+if [ -z "$(docker images -q "localhost:5000/mtk2garmin-additional-data:$date" 2> /dev/null)" ]; then
+  if docker build --tag "localhost:5000/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
+    echo "Succesfully loaded additional data"
+    docker tag "localhost:5000/mtk2garmin-additional-data:$date" localhost:5000/mtk2garmin-additional-data:latest
+#     docker push localhost:5000/mtk2garmin-additional-data:latest
+  fi
 fi
 
 # docker compose pull
 
 echo "******3*****"
 
-time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p maastotietokanta -t kaikki -f application/gml+xml -d /mtkdata
+# time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p maastotietokanta -t kaikki -f application/gml+xml -d /mtkdata
+time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p maastotietokanta -t avoin -f application/gml+xml -d /mtkdata
 
 echo "******4*****"
 

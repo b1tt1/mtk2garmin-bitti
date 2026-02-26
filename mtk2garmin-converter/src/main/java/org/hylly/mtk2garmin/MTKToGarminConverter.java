@@ -156,7 +156,9 @@ class MTKToGarminConverter {
     private Stream<File> getMTKCellFiles(File mtkDirectory) {
         Collection<File> files = FileUtils.listFiles(
                 mtkDirectory,
-                new RegexFileFilter("^([A-Z0-9]{6})_mtk.zip"),
+                // new RegexFileFilter("^([A-Z0-9]{6})_mtk.zip"),
+                // BITTI
+                new RegexFileFilter("^([A-Z0-9]{6}).zip"),
                 DirectoryFileFilter.DIRECTORY
         );
         return files.stream().sorted();
