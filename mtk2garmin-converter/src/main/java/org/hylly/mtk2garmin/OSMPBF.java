@@ -2,8 +2,9 @@ package org.hylly.mtk2garmin;
 
 import com.google.protobuf.ByteString;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
-import it.unimi.dsi.fastutil.shorts.Short2ShortMap.Entry;
-import it.unimi.dsi.fastutil.shorts.Short2ShortRBTreeMap;
+import it.unimi.dsi.fastutil.ints.Int2IntMap;
+import it.unimi.dsi.fastutil.ints.Int2IntMap.Entry;
+import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
 import org.openstreetmap.osmosis.osmbinary.Fileformat;
 import org.openstreetmap.osmosis.osmbinary.Osmformat;
 
@@ -78,8 +79,8 @@ class OSMPBF {
 
     private Osmformat.PrimitiveBlock createOSMDataBlock(
             StringTable stringtable,
-            Long2ObjectOpenHashMap<Node> nodes, Long2ObjectOpenHashMap<Way> ways,
-            Long2ObjectOpenHashMap<Relation> relations) {
+            Long2ObjectOpenHashMap<LightNode> nodes, Long2ObjectOpenHashMap<LightWay> ways,
+            Long2ObjectOpenHashMap<LightRelation> relations) {
         Osmformat.PrimitiveBlock.Builder pbbuilder = Osmformat.PrimitiveBlock
                 .newBuilder();
         pbbuilder.setGranularity(this.granularity);
@@ -98,8 +99,8 @@ class OSMPBF {
 
     private Osmformat.PrimitiveGroup createOSMPrimitiveGroup(
             StringTable stringtable,
-            Long2ObjectOpenHashMap<Node> nodes, Long2ObjectOpenHashMap<Way> ways,
-            Long2ObjectOpenHashMap<Relation> relations) {
+            Long2ObjectOpenHashMap<LightNode> nodes, Long2ObjectOpenHashMap<LightWay> ways,
+            Long2ObjectOpenHashMap<LightRelation> relations) {
         Osmformat.PrimitiveGroup.Builder pgbuilder = Osmformat.PrimitiveGroup
                 .newBuilder();
         if (ways != null)
@@ -114,7 +115,7 @@ class OSMPBF {
 
     private Osmformat.DenseNodes buildOSMDenseNodes(
             StringTable stringtable,
-            final Long2ObjectOpenHashMap<Node> nodes) {
+            final Long2ObjectOpenHashMap<LightNode> nodes) {
 
         Osmformat.DenseNodes.Builder dsb = Osmformat.DenseNodes.newBuilder();
         Osmformat.DenseInfo.Builder dib = Osmformat.DenseInfo.newBuilder();
@@ -124,11 +125,11 @@ class OSMPBF {
         long pbflat, pbflon;
         //Long[] node_keys_sorted = ArrayUtils.toObject(nodes.keySet().toLongArray());
 
-        Node[] nodes_sorted = new Node[nodes.size()];
+        LightNode[] nodes_sorted = new LightNode[nodes.size()];
         nodes.values().toArray(nodes_sorted);
         Arrays.sort(nodes_sorted, (n1,n2) -> (int) (n1.getId()-n2.getId()));
 
-        for (Node n : nodes_sorted) {
+        for (LightNode n : nodes_sorted) {
             long id = n.getId();
             dsb.addId(id - lid);
 
@@ -149,15 +150,15 @@ class OSMPBF {
             llat = pbflat;
             llon = pbflon;
 
-            Short2ShortRBTreeMap ntags = n.getTags();
+            Int2IntMap ntags = n.getTags();
             if (ntags != null) {
-                for (Entry t : ntags.short2ShortEntrySet()) {
-                    if (t.getShortKey() > stringtable.getStringtableSize() || t.getShortValue() > stringtable.getStringtableSize()) {
+                for (Entry t : ntags.int2IntEntrySet()) {
+                    if (t.getIntKey() > stringtable.getStringtableSize() || t.getIntValue() > stringtable.getStringtableSize()) {
 
-                        System.out.println("Node key error! " + t.getShortKey() + " or " + t.getShortValue() + " too large");
+                        System.out.println("Node key error! " + t.getIntKey() + " or " + t.getIntValue() + " too large");
                     }
-                    dsb.addKeysVals(t.getShortKey());
-                    dsb.addKeysVals(t.getShortValue());
+                    dsb.addKeysVals(t.getIntKey());
+                    dsb.addKeysVals(t.getIntValue());
                 }
             }
 
@@ -172,7 +173,7 @@ class OSMPBF {
 
     }
 
-    private ArrayList<Osmformat.Way> buildOSMWays(Long2ObjectOpenHashMap<Way> ways) {
+    private ArrayList<Osmformat.Way> buildOSMWays(Long2ObjectOpenHashMap<LightWay> ways) {
         ArrayList<Osmformat.Way> pbfways = new ArrayList<>();
         Osmformat.Info.Builder wib = Osmformat.Info.newBuilder();
         wib.setVersion(1);
@@ -180,16 +181,16 @@ class OSMPBF {
         Arrays.sort(waykeys);
 
         for (long wk : waykeys) {
-            Way w = ways.get(wk);
+            LightWay w = ways.get(wk);
             Osmformat.Way.Builder wb = Osmformat.Way.newBuilder();
 
             wb.setId(w.getId());
             wb.setInfo(wib);
 
-            Short2ShortRBTreeMap wtags = w.getTags();
-            for (Entry t : wtags.short2ShortEntrySet()) {
-                wb.addKeys(t.getShortKey());
-                wb.addVals(t.getShortValue());
+            Int2IntOpenHashMap wtags = w.getTags();
+            for (Entry t : wtags.int2IntEntrySet()) {
+                wb.addKeys(t.getIntKey());
+                wb.addVals(t.getIntValue());
             }
 
             long lref = 0;
@@ -208,7 +209,7 @@ class OSMPBF {
 
     private ArrayList<Osmformat.Relation> buildOSMRelations(
             StringTable stringtable,
-            Long2ObjectOpenHashMap<Relation> relations) {
+            Long2ObjectOpenHashMap<LightRelation> relations) {
         ArrayList<Osmformat.Relation> pbfrels = new ArrayList<>();
 
         Osmformat.Info.Builder rib = Osmformat.Info.newBuilder();
@@ -217,33 +218,33 @@ class OSMPBF {
         long[] relkeys = relations.keySet().toLongArray();
         Arrays.sort(relkeys);
         for (long rk : relkeys) {
-            Relation r = relations.get(rk);
+            LightRelation r = relations.get(rk);
             Osmformat.Relation.Builder rb = Osmformat.Relation.newBuilder();
             rb.setId(r.getId());
             rb.setInfo(rib);
 
-            Short2ShortRBTreeMap rtags = r.getTags();
-            for (Entry t : rtags.short2ShortEntrySet()) {
-                rb.addKeys(t.getShortKey());
-                rb.addVals(t.getShortValue());
+            Int2IntOpenHashMap rtags = r.getTags();
+            for (Entry t : rtags.int2IntEntrySet()) {
+                rb.addKeys(t.getIntKey());
+                rb.addVals(t.getIntValue());
             }
 
             long lmid = 0;
-            for (RelationMember m : r.getMembers()) {
+            for (LightRelationMember m : r.getMembers()) {
                 rb.addRolesSid(stringtable.getStringId(m.getRole()));
                 rb.addMemids(m.getId() - lmid);
                 lmid = m.getId();
-                switch (m.getType()) {
-                    case "node":
-                        rb.addTypes(Osmformat.Relation.MemberType.NODE);
-                        break;
-                    case "way":
+                // switch (m.getType()) {
+                //     case "node":
+                //         rb.addTypes(Osmformat.Relation.MemberType.NODE);
+                //         break;
+                //     case "way":
                         rb.addTypes(Osmformat.Relation.MemberType.WAY);
-                        break;
-                    case "relation":
-                        rb.addTypes(Osmformat.Relation.MemberType.RELATION);
-                        break;
-                }
+                //         break;
+                //     case "relation":
+                //         rb.addTypes(Osmformat.Relation.MemberType.RELATION);
+                //         break;
+                // }
             }
 
             pbfrels.add(rb.build());
@@ -253,8 +254,8 @@ class OSMPBF {
     }
 
     void writePBFElements(StringTable stringtable,
-                          Long2ObjectOpenHashMap<Node> nodes, Long2ObjectOpenHashMap<Way> ways,
-                          Long2ObjectOpenHashMap<Relation> relations) throws IOException {
+                          Long2ObjectOpenHashMap<LightNode> nodes, Long2ObjectOpenHashMap<LightWay> ways,
+                          Long2ObjectOpenHashMap<LightRelation> relations) throws IOException {
         Osmformat.PrimitiveBlock pb = this
                 .createOSMDataBlock(stringtable, nodes, ways, relations);
         PBFBlob data = this.createBlob("OSMData", pb.toByteArray());

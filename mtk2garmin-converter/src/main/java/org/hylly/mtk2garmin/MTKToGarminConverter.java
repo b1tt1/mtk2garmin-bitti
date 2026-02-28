@@ -19,7 +19,7 @@ import java.util.stream.Stream;
 
 
 class MTKToGarminConverter {
-    private Logger logger = Logger.getLogger(MTKToGarminConverter.class.getName());
+    private final Logger logger = Logger.getLogger(MTKToGarminConverter.class.getName());
 
     private final HashMap<String, double[]> gridExtents = new HashMap<>();
     private final NodeCache nodeCache;
@@ -34,7 +34,7 @@ class MTKToGarminConverter {
     private CachedAdditionalDataSources cachedDatasources;
 
 
-    void doConvert() {
+    void doConvert() throws IOException {
         File mtkDirectory = new File(conf.getString("maastotietokanta"));
         if (!mtkDirectory.exists()) {
             throw new IllegalArgumentException("Maastotietokanta directory does not exists");
