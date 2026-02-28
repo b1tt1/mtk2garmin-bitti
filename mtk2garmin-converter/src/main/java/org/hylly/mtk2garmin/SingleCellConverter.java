@@ -361,7 +361,9 @@ public class SingleCellConverter {
                 }
             } else {
                 LightNode n = nodes.get(phash);
-                n.wayPart = n.wayPart || !isPoint;
+                // n.wayPart = n.wayPart || !isPoint;
+                // BITTI !!!
+                n.wayPart = n.wayPart && !isPoint;
                 ghr.lightNodes.add(n);
                 if (!isPoint) {
                     w.refs.add(n.getId());
