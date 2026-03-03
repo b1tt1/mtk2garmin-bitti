@@ -31,6 +31,7 @@ kohdeluokka=35090 [0x6612 level 1]  #Muu maastonimi
 kohdeluokka=35100 [0x6618]  #Puu
 kohdeluokka=35101 [0x6612 level 1]  #Puun nimi
 kohdeluokka=36100 [0x6511]  #Lahde
+kohdeluokka=36400 [0x6504]  #Vesikuoppa
 kohdeluokka=36101 [0x6511 level 1]  #Lahteen nimi
 kohdeluokka=36201 [0x650d level 2]  #Vakaveden nimi
 kohdeluokka=36301 [0x6603 level 2]  #Virtaveden nimi

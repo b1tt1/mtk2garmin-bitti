@@ -2325,6 +2325,46 @@ NightXpm="12 12 3 1"   Colormode=16
 
 
 [_point]
+Type=0x065
+SubType=0x04
+;GRMN_TYPE: Geographical Named Points of Interest - Water Related/Bend/Non NT, NT
+;String1=0x06,Vesikuoppa
+ExtendedLabels=N
+DayXpm="12 12 2 1"   Colormode=16
+"#	c #3A74CC"
+"  	c none"
+"            "
+"##        ##"
+"##        ##"
+" ##      ## "
+" ##      ## "
+"  ##    ##  "
+"  ##    ##  "
+"   ##  ##   "
+"   ##  ##   "
+"    ####    "
+"    ####    "
+"            "
+;123456789012
+NightXpm="12 12 2 1"   Colormode=16
+"#	c #326CC4"
+"  	c none"
+"            "
+"##        ##"
+"##        ##"
+" ##      ## "
+" ##      ## "
+"  ##    ##  "
+"  ##    ##  "
+"   ##  ##   "
+"   ##  ##   "
+"    ####    "
+"    ####    "
+"            "
+;123456789012
+[end]
+
+[_point]
 Type=0x066
 SubType=0x0f
 ;GRMN_TYPE: Geographical Named Points of Interest - Land Related/PILLAR/Pillar/Non NT, NT
