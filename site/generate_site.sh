@@ -22,8 +22,12 @@ cp /mapstyles/tiekartta.zip /output/dist/tiekartta.zip
 
 python3 generate_site.py "${time_stamp}"
 
+7z a -tzip /output/dist/mtk_suomi.cpkg /output/dist/mtk_suomi.map /output/dist/peruskartta.zip /output/dist/mapdetails.json
 mkdir -p "/publish/${time_stamp}"
 
 rsync -avP "/output/dist/" "/publish/${time_stamp}/"
 aws s3 sync "/publish/${time_stamp}" "s3://kartat-build/new-${time_stamp}"
 aws s3 cp "/publish/${time_stamp}/site.html" "s3://kartat.hylly.org/index.html"
+aws s3 cp "/publish/${time_stamp}/site2.html" "s3://kartat.hylly.org/index2.html"
+
+aws cloudfront create-invalidation --distribution-id "E2F702Y6HFAYV6" --paths "/index.html"
