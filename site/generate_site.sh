@@ -5,7 +5,7 @@ date
 rm -rf /output/dist
 mkdir -p /output/dist
 
-time_stamp=$(date +%Y-%m-%d)
+time_stamp="${TIME_STAMP:-$(date +%Y-%m-%d)}"
 
 cp /output/mtkgarmin/gmapsupp.img /output/dist/mtk_suomi.img
 cp /output/mtkgarmin_noparcel/gmapsupp.img /output/dist/mtk_suomi_noparcel.img
@@ -27,7 +27,7 @@ mkdir -p "/publish/${time_stamp}"
 
 rsync -avP "/output/dist/" "/publish/${time_stamp}/"
 aws s3 sync "/publish/${time_stamp}" "s3://kartat-build/new-${time_stamp}"
-aws s3 cp "/publish/${time_stamp}/site.html" "s3://kartat.hylly.org/index.html"
-aws s3 cp "/publish/${time_stamp}/site2.html" "s3://kartat.hylly.org/index2.html"
+aws s3 cp "/publish/${time_stamp}/site.html" "s3://kartat.hylly.org/index_old.html"
+aws s3 cp "/publish/${time_stamp}/site2.html" "s3://kartat.hylly.org/index.html"
 
 aws cloudfront create-invalidation --distribution-id "E2F702Y6HFAYV6" --paths "/index.html"

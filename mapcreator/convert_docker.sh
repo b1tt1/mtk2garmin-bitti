@@ -25,6 +25,8 @@ docker compose pull
 time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p maastotietokanta -t kaikki -f application/gml+xml -d /mtkdata
 time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p kiinteistorekisterikartta -t karttalehdittain -f application/x-shapefile -d /krkdata
 
+time docker compose run mml-ogr-client
+
 
 docker compose up --no-start additional-data
 docker compose up --no-start mapstyles
@@ -35,12 +37,12 @@ time docker compose run merger ./process_osm.sh
 time docker compose run mkgmap ./run_mkgmap.sh
 
 time docker compose run mapsforge /app/bin/osmosis \
-           --rbf file=/convertedpbf/all_osm.osm.pbf workers=2 \
+           --rbf file=/convertedpbf/all_osm.osm.pbf workers=4 \
            --mapfile-writer file=/output/mtk_all.map bbox=59.4507573,19.0714057,70.1120744,31.6133108 \
-           simplification-max-zoom=12 simplification-factor=16 threads=4 \
-           zoom-interval-conf=5,4,7,8,8,11,12,12,13,14,14,21 \
+           simplification-max-zoom=12 simplification-factor=8 threads=8 \
+           zoom-interval-conf=5,0,7,10,8,11,12,12,13,14,14,21 \
            label-position=true polylabel=true \
-           tag-conf-file=/mapstyles/mapsforge_peruskartta/mml_tag-mapping_tidy.xml type=hd comment="(c) NLS, Metsahallitus, Liikennevirasto, OpenStreetMap contributors 2025"
+           tag-conf-file=/mapstyles/mapsforge_peruskartta/mml_tag-mapping_tidy.xml type=hd comment="(c) NLS, Metsahallitus, Liikennevirasto, OpenStreetMap contributors 2026"
 
 
 time docker compose run osxconverter
