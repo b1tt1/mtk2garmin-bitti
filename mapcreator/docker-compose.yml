@@ -6,6 +6,11 @@ services:
       - ./mmlclient.toml:/go/src/app/mmlclient.toml
       - /opt/mtkdata/:/mtkdata
       - /opt/krkdata/:/krkdata
+  mml-ogr-client:
+    build: ../mml-ogc-processes
+    volumes:
+      - /opt/mtkdata/:/mtkdata
+      - /opt/krkdata/:/krkdata
   mapsforge:
     image: teemupel/mapsforge
     volumes:
