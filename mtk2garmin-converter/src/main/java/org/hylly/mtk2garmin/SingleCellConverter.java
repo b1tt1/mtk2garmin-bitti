@@ -8,6 +8,7 @@ import org.gdal.osr.SpatialReference;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -20,6 +21,7 @@ public class SingleCellConverter {
     private final Logger logger = Logger.getLogger(SingleCellConverter.class.getName());
 
     private final File cellFile;
+    private final Path outdir;
     private final ShapeFeaturePreprocess shapePreprocessor;
     private final MMLFeaturePreprocess featurePreprocessMML;
     private final GeomUtils geomUtils;
@@ -52,14 +54,12 @@ public class SingleCellConverter {
     private final Long2ObjectOpenHashMap<LightNode> nodes = new Long2ObjectOpenHashMap<>(50000);
     private final Long2ObjectOpenHashMap<LightWay> ways = new Long2ObjectOpenHashMap<>(5000);
     private final Long2ObjectOpenHashMap<LightRelation> relations = new Long2ObjectOpenHashMap<>(500);
-    private final OSMPBFWriter osmpbfWriter;
     private GeomTransformer sphericToWGS;
     private GeomTransformer srcToSphericMerc;
 
     SingleCellConverter(
             File cellFile,
-            OSMPBFWriter osmpbfWriter,
-            StringTable stringtable,
+            Path outdir,
             Config conf, HashMap<String, double[]> gridExtents,
             MMLFeaturePreprocess featurePreprocessMML,
             ShapeFeaturePreprocess shapePreprocessor,
@@ -67,7 +67,7 @@ public class SingleCellConverter {
             FeatureIDProvider featureIDProvider, CachedAdditionalDataSources cachedDatasources, NodeCache nodeCache) {
 
         this.cellFile = cellFile;
-        this.osmpbfWriter = osmpbfWriter;
+        this.outdir = outdir;
         this.conf = conf;
         this.featurePreprocessMML = featurePreprocessMML;
         this.shapePreprocessor = shapePreprocessor;
@@ -77,7 +77,7 @@ public class SingleCellConverter {
         this.nodeCache = nodeCache;
 
 
-        this.stringtable = stringtable;
+        this.stringtable = new StringTable();
         this.tyyppi_string_id = stringtable.getStringId("tyyppi");
         this.tagHandlerMML = new MMLTagHandler(stringtable);
         this.retkeilyTagHandler = new ShapeRetkeilyTagHandler(stringtable);
@@ -95,6 +95,9 @@ public class SingleCellConverter {
     }
 
     void doConvert() throws IOException {
+        OSMPBFWriter osmpbWriter = new OSMPBFWriter(outdir.resolve(String.format("%s.osm.pbf", cell)).toFile());
+        osmpbWriter.startWritingOSMPBF();
+
         DataSource mtkds = readOGRsource(stringtable, startReadingOGRFile("/vsizip/" + cellFile.toString()), featurePreprocessMML, tagHandlerMML, null);
         mtkds.delete();
         printCounts();
@@ -129,7 +132,8 @@ public class SingleCellConverter {
                     printCounts();
                 });
 
-        osmpbfWriter.writeOSMPBFElements(stringtable, nodes, ways, relations);
+        osmpbWriter.writeOSMPBFElements(stringtable, nodes, ways, relations);
+        osmpbWriter.closeOSMPBFFile();
     }
 
     private TagHandlerI getTagHandlerForDatasource(DataSource ds) {
@@ -352,13 +356,16 @@ public class SingleCellConverter {
                 LightNode n = new LightNode(nodeID, phash, wgsgeom.GetX(i), wgsgeom.GetY(i), !isPoint);
                 nodes.put(phash, n);
                 ghr.lightNodes.add(n);
+                if (!isPoint) {
+                    w.refs.add(n.getId());
+                }
             } else {
                 LightNode n = nodes.get(phash);
-                n.wayPart = n.wayPart || !isPoint;
+                n.wayPart = !isPoint;
                 ghr.lightNodes.add(n);
-            }
-            if (!isPoint) {
-                w.refs.add(phash);
+                if (!isPoint) {
+                    w.refs.add(n.getId());
+                }
             }
         }
 

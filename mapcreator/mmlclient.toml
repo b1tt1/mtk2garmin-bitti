@@ -1,3 +1,3 @@
 api_key = "6dqjmhh6b5af9qvfoam2d3a347"
 atom_url = "https://tiedostopalvelu.maanmittauslaitos.fi/tp/feed/mtp"
-num_workers = 40
+num_workers = 20

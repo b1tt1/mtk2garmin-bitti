@@ -86,10 +86,6 @@ class MTKToGarminConverter {
 
         String areaFilter = conf.hasPath("areaFilter") ? conf.getString("areaFilter") : null;
 
-        OSMPBFWriter osmpbWriter = new OSMPBFWriter(outdir.resolve("all_direct.osm.pbf").toFile());
-        osmpbWriter.startWritingOSMPBF();
-        StringTable stringTable = new StringTable();
-
         areas
                 .entrySet()
                 .stream()
@@ -104,10 +100,10 @@ class MTKToGarminConverter {
                     int areaGrid = geomUtils.xy2grid(areaBBox[0], areaBBox[1]);
                     nodeCache.ensureGrid(areaGrid);
 
-                    areaCells.forEach(cellFile -> {
+                    areaCells.parallelStream().forEach(cellFile -> {
                         logger.info("Processing file: " + cellFile.toString() + " in thread [" + Thread.currentThread().getId() + "]");
                         try {
-                            SingleCellConverter cellConverter = new SingleCellConverter(cellFile, osmpbWriter, stringTable, conf, gridExtents, featurePreprocessMML, shapePreprocessor, geomUtils, featureIDProvider, cachedDatasources, nodeCache);
+                            SingleCellConverter cellConverter = new SingleCellConverter(cellFile, outdir, conf, gridExtents, featurePreprocessMML, shapePreprocessor, geomUtils, featureIDProvider, cachedDatasources, nodeCache);
                             if (cellConverter.isValidCell()) {
                                 cellConverter.doConvert();
                             }
@@ -117,13 +113,6 @@ class MTKToGarminConverter {
                         }
                     });
 
-                    try {
-                        osmpbWriter.flush();
-                        stringTable.clear();
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-
                     Optional<String> relatedArea = areaRelations.get(areaKey);
                     if (relatedArea != null && relatedArea.isPresent()) {
                         double[] relatedBBox = grid2448.get(relatedArea.get());
@@ -131,8 +120,6 @@ class MTKToGarminConverter {
                         nodeCache.removeGrid(relatedGrid);
                     }
                 });
-
-        osmpbWriter.closeOSMPBFFile();
     }
 
     private Map<String, Optional<String>> getRelatedAreas(Map<String, double[]> grid2448, Map<String, List<File>> areas) {
@@ -169,7 +156,7 @@ class MTKToGarminConverter {
     private Stream<File> getMTKCellFiles(File mtkDirectory) {
         Collection<File> files = FileUtils.listFiles(
                 mtkDirectory,
-                new RegexFileFilter("^([A-Z0-9]{6})_mtk.zip"),
+                new RegexFileFilter("^([A-Z0-9]{6})(_mtk)?\\.zip"),
                 DirectoryFileFilter.DIRECTORY
         );
         return files.stream().sorted();

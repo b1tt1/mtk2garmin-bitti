@@ -2,10 +2,10 @@ package org.hylly.mtk2garmin;
 
 import it.unimi.dsi.fastutil.ints.Int2IntMap;
 import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
-import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
-import org.openstreetmap.osmosis.core.domain.v0_6.*;
+// import org.openstreetmap.osmosis.core.container.v0_6.NodeContainer;
+// import org.openstreetmap.osmosis.core.domain.v0_6.*;
 
-import java.util.Date;
+// import java.util.Date;
 
 class LightNode {
     final long id;
@@ -35,6 +35,14 @@ class LightNode {
         return id;
     }
 
+    double getLon() {
+        return lon;
+    }
+
+    double getLat() {
+        return lat;
+    }
+
     boolean isWayPart() {
         return wayPart;
     }
@@ -43,16 +51,20 @@ class LightNode {
         return hash;
     }
 
-    public NodeContainer toOsmiumEntity(StringTable stringTable, Date timestamp) {
-        CommonEntityData ced = new CommonEntityData(this.id, -1, timestamp, OsmUser.NONE, 0);
-        if (nodeTags != null) {
-            nodeTags.int2IntEntrySet().forEach(t -> ced.getTags().add(new Tag(stringTable.getStringById(t.getIntKey()), stringTable.getStringById(t.getIntValue()))));
-        }
-
-        return new NodeContainer(new Node(ced, this.lat, this.lon));
+    Int2IntMap getTags() {
+        return nodeTags;
     }
 
-    public WayNode toOsmiumWayNode() {
-        return new WayNode(this.id, this.lat, this.lon);
-    }
+    // public NodeContainer toOsmiumEntity(StringTable stringTable, Date timestamp) {
+    //     CommonEntityData ced = new CommonEntityData(this.id, -1, timestamp, OsmUser.NONE, 0);
+    //     if (nodeTags != null) {
+    //         nodeTags.int2IntEntrySet().forEach(t -> ced.getTags().add(new Tag(stringTable.getStringById(t.getIntKey()), stringTable.getStringById(t.getIntValue()))));
+    //     }
+    //
+    //     return new NodeContainer(new Node(ced, this.lat, this.lon));
+    // }
+    //
+    // public WayNode toOsmiumWayNode() {
+    //     return new WayNode(this.id, this.lat, this.lon);
+    // }
 }

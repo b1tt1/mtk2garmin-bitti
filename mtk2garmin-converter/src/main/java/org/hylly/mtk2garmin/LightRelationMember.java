@@ -1,8 +1,5 @@
 package org.hylly.mtk2garmin;
 
-import org.openstreetmap.osmosis.core.domain.v0_6.EntityType;
-import org.openstreetmap.osmosis.core.domain.v0_6.RelationMember;
-
 class LightRelationMember {
     private final long id;
     private final String role;
@@ -12,7 +9,12 @@ class LightRelationMember {
         this.role = role;
     }
 
-    public RelationMember toOsmiumEntity() {
-        return new RelationMember(this.id, EntityType.Way, this.role);
+    long getId() {
+        return id;
     }
+
+    String getRole() {
+        return role;
+    }
+
 }

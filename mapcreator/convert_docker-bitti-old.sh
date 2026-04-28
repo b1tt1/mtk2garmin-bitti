@@ -4,14 +4,11 @@ set -euxo pipefail
 printf -v date '%(%Y%m%d)T' -1
 
 # Bitti: tarvitaan
-docker compose down -v --remove-orphans
+docker compose down -v
 
-docker pull ghcr.io/osgeo/gdal:ubuntu-full-3.10.0
-docker build --tag teemupel/mtk2garmin-ubuntugis-base -f ./ubuntugis-base/Dockerfile ./ubuntugis-base
-# docker push teemupel/mtk2garmin-ubuntugis-base
-
-# Bitti: oma vanhempi versio
-docker build --tag localhost:5000/mtk2garmin-converter -f ../mtk2garmin-converter/Dockerfile ../mtk2garmin-converter
+docker pull ghcr.io/osgeo/gdal:ubuntu-full-3.6.3
+docker build --tag nas.local:5500/mtk2garmin-ubuntugis-base -f ./ubuntugis-base/Dockerfile ./ubuntugis-base
+# docker push nas.local:5500/mtk2garmin-ubuntugis-base
 
 echo "******1*****"
 
@@ -21,24 +18,25 @@ docker compose build --parallel
 
 echo "******2*****"
 
-if [ -z "$(docker images -q "localhost:5000/mtk2garmin-additional-data:$date" 2> /dev/null)" ]; then
-  if docker build --tag "localhost:5000/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
-    echo "Succesfully loaded additional data"
-    docker tag "localhost:5000/mtk2garmin-additional-data:$date" localhost:5000/mtk2garmin-additional-data:latest
-#     docker push localhost:5000/mtk2garmin-additional-data:latest
-  fi
+if docker build --tag "nas.local:5500/mtk2garmin-additional-data:$date" -f ../get-additional-data/Dockerfile --no-cache ../get-additional-data; then
+  echo "Succesfully loaded additional data"
+  docker tag "nas.local:5500/mtk2garmin-additional-data:$date" nas.local:5500/mtk2garmin-additional-data:latest
+#   docker push nas.local:5500/mtk2garmin-additional-data:latest
+#   docker push "nas.local:5500/mtk2garmin-additional-data:$date"
 fi
 
 # docker compose pull
 
 echo "******3*****"
 
-# time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p maastotietokanta -t kaikki -f application/gml+xml -d /mtkdata
-time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p maastotietokanta -t avoin -f application/gml+xml -d /mtkdata
+time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p maastotietokanta -t kaikki -f application/gml+xml -d /mtkdata
 
 echo "******4*****"
 
 time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p kiinteistorekisterikartta -t karttalehdittain -f application/x-shapefile -d /krkdata
+
+# Bitti: tarvitaan (kerran?)
+# docker build --tag "nas.local:5500/mtk2garmin-converter" -f ../mtk2garmin-converter/Dockerfile ../mtk2garmin-converter
 
 echo "******5*****"
 
@@ -61,9 +59,7 @@ time docker compose run merger ./merge_files.sh
 echo "******9*****"
 
 # Bitti: tarvitaan
-# Jos kartat on päivitetty
 # time docker compose run mkgmap ./run_mkgmap.sh
-# Jos vain tyyppitiedostoa on muokattu
 time docker compose run mkgmap ./run_mkgmap2.sh
 
 echo "******10*****"
@@ -74,7 +70,7 @@ echo "******10*****"
 #            simplification-max-zoom=12 simplification-factor=16 threads=4 \
 #            zoom-interval-conf=5,4,7,8,8,11,12,12,13,14,14,21 \
 #            label-position=true polylabel=true \
-#            tag-conf-file=/mapstyles/mapsforge_peruskartta/mml_tag-mapping_tidy.xml type=hd comment="(c) NLS, Metsahallitus, Liikennevirasto, OpenStreetMap contributors 2025"
+#            tag-conf-file=/mapstyles/mapsforge_peruskartta/mml_tag-mapping_tidy.xml type=hd comment="(c) NLS, Metsahallitus, Liikennevirasto, OpenStreetMap contributors 2019"
 
 
 # echo "******11*****"
