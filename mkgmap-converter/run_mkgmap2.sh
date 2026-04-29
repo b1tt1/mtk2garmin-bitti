@@ -13,6 +13,7 @@ rm -rf /output/mtkgarmin_noparcel/*
 # BITTI time java -jar -Xmx30G mkgmap.jar -c /splitted/mkgmap_mtk2garmin_noparcel.args perus.typ
 # BITTI
 time java -jar -Xmx8G mkgmap.jar -c /splitted/mkgmap_mtk2garmin_noparcel.args perus.typ
+time java -jar -Xmx8G mkgmap.jar -c /splitted/mkgmap_mtk2garmin.args perus.typ
 
-# cp perus.typ /output/mtkgarmin/perus.typ
+cp perus.typ /output/mtkgarmin/perus.typ
 cp perus.typ /output/mtkgarmin_noparcel/perus.typ
