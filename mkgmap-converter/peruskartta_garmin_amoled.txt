@@ -3167,23 +3167,35 @@ Type=0x661f
 ;GRMN_TYPE: User Customizable Points/CUSTOMIZABLE_POINT_12/User customizable point type/Non NT, NT
 ;String1=0x06,Harva louhikko
 ExtendedLabels=N
-DayXpm="8 12 3 1"   Colormode=16
+DayXpm="7 11 3 1"   Colormode=16
 "!	c #000000"
 ".	c #FBFBEF"
 "  	c none"
-"...     "
-".!!.    "
-".!!!.   "
-".!!!!.  "
-".!!!!!. "
-".!!!!!!."
-".!!!!!!."
-".!!!!!. "
-".!!!!.  "
-".!!!.   "
-".!!.    "
-"...     "
-;12345678
+"..     "
+".!.    "
+".!!.   "
+".!!!.  "
+".!!!!. "
+".!!!!!."
+".!!!!. "
+".!!!.  "
+".!!.   "
+".!.    "
+"..     "
+;1234567
+; "...     "
+; ".!!.    "
+; ".!!!.   "
+; ".!!!!.  "
+; ".!!!!!. "
+; ".!!!!!!."
+; ".!!!!!!."
+; ".!!!!!. "
+; ".!!!!.  "
+; ".!!!.   "
+; ".!!.    "
+; "...     "
+; ;12345678
 ; NightXpm="6 10 2 1"   Colormode=16
 ; "!	c #FFFFFF"
 ; "  	c none"
