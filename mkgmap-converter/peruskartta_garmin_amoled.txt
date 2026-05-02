@@ -1770,7 +1770,7 @@ FontStyle=LargeFont
 CustomColor=No
 DayXpm="10 10 3 1"   Colormode=16
 "!	c #303030"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "   ....   "
 "  .!!!!.  "
@@ -1815,7 +1815,7 @@ FontStyle=NormalFont
 CustomColor=No
 DayXpm="10 10 3 1"   Colormode=16
 "!	c #303030"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "   ....   "
 "  .!!!!.  "
@@ -1861,7 +1861,7 @@ CustomColor=No
 ; ExtendedLabels=N
 DayXpm="10 10 3 1"   Colormode=16
 "!	c #303030"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "   ....   "
 "  .!!!!.  "
@@ -1906,7 +1906,7 @@ FontStyle=SmallFont
 CustomColor=No
 DayXpm="10 10 3 1"   Colormode=16
 "!	c #303030"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "   ....   "
 "  .!!!!.  "
@@ -1949,21 +1949,18 @@ SubType=0x00
 ExtendedLabels=Y
 FontStyle=SmallFont
 CustomColor=No
-DayXpm="10 10 3 1"   Colormode=16
+DayXpm="8 8 2 1"   Colormode=16
 "!	c #A4A4A4"
-".	c #FFFFFF"
 "  	c none"
-"   ....   "
-"  .!!!!.  "
-" .!!!!!!. "
-".!!!!!!!!."
-".!!!!!!!!."
-".!!!!!!!!."
-".!!!!!!!!."
-" .!!!!!!. "
-"  .!!!!.  "
-"   ....   "
-;1234567890
+"  !!!!  "
+" !!!!!! "
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+"!!!!!!!!"
+" !!!!!! "
+"  !!!!  "
+;12345678
 ; NightXpm="8 8 2 1"   Colormode=16
 ; "!	c #5A5A5A"
 ; "  	c none"
@@ -1977,7 +1974,7 @@ DayXpm="10 10 3 1"   Colormode=16
 ; "  !!!!  "
 ; ;12345678
 ;DayXpm="4 4 2 1"   Colormode=16
-"!	c #A4A4A4"
+;"!	c #A4A4A4"
 ;"  	c none"
 ;" !! "
 ;"!!!!"
@@ -1995,7 +1992,7 @@ ExtendedLabels=N
 DayXpm="16 14 4 1"   Colormode=16
 "!	c #898989"
 "#	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "       ..       "
 "      .##.      "
@@ -2051,7 +2048,7 @@ SubType=0x15
 ExtendedLabels=N
 DayXpm="16 16 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "................"
 ".!!!!!!!!!!!!!!."
@@ -2158,7 +2155,7 @@ Type=0x2f12
 ExtendedLabels=N
 DayXpm="14 26 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "      ..      "
 "     .!!.     "
@@ -2242,7 +2239,7 @@ SubType=0x14
 ExtendedLabels=N
 DayXpm="10 10 3 1"   Colormode=16
 "!	c #303030"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "   ....   "
 "  .!!!!.  "
@@ -2287,7 +2284,7 @@ ExtendedLabels=N
 DayXpm="14 14 4 1"   Colormode=16
 "#	c #000000"
 "%	c #3A74CC"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 ".............."
 ".##%%%%%%%%##."
@@ -2345,23 +2342,23 @@ SubType=0x04
 ExtendedLabels=N
 DayXpm="16 16 3 1"   Colormode=16
 "!	c #3A74CC"
-".  c #FFFFFF"
+".  c #FBFBEF"
 "  	c none"
-".....      ....."
-".!!!.      .!!!."
-".!!!.      .!!!."
-".!!!..    ..!!!."
-"..!!!.    .!!!.."
-" .!!!..  ..!!!. "
-" ..!!!.  .!!!.. "
-"  .!!!....!!!.  "
-"  ..!!!..!!!..  "
-"   .!!!..!!!.   "
-"   ..!!!!!!..   "
-"    .!!!!!!.    "
-"    ..!!!!..    "
-"    ..!!!!..    "
-"     ..!!..     "
+"....        ...."
+".!!.        .!!."
+".!!.        .!!."
+".!!..      ..!!."
+" .!!.      .!!. "
+" .!!..    ..!!. "
+"  .!!.    .!!.  "
+"  .!!..  ..!!.  "
+"   .!!.  .!!.   "
+"   .!!.  .!!.   "
+"    .!!..!!.    "
+"    .!!..!!.    "
+"     .!!!!.     "
+"      .!!.      "
+"      .!!.      "
 "      ....      "
 ;1234567890123456
 ; NightXpm="16 16 3 1"   Colormode=16
@@ -2395,7 +2392,7 @@ SubType=0x0f
 ExtendedLabels=N
 DayXpm="22 14 3 1"   Colormode=16
 "!	c #FF0000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "....              ...."
 ".!!!..          ..!!!."
@@ -2454,7 +2451,7 @@ Type=0x661d
 ExtendedLabels=N
 DayXpm="12 14 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "    ....    "
 "    .!!.    "
@@ -2590,7 +2587,7 @@ Type=0x6501
 ExtendedLabels=N
 DayXpm="16 16 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "................"
 ".!!!!!!!!!!!!!!."
@@ -2648,7 +2645,7 @@ Type=0x6502
 ExtendedLabels=N
 DayXpm="16 16 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "      ....      "
 "      .!!.      "
@@ -2706,7 +2703,7 @@ Type=0x6503
 ExtendedLabels=N
 DayXpm="16 16 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "      ....      "
 "      .!!.      "
@@ -2764,7 +2761,7 @@ Type=0x1204
 ExtendedLabels=N
 DayXpm="10 10 3 1"   Colormode=16
 "!	c #303030"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "   ....   "
 "  .!!!!.  "
@@ -2807,7 +2804,7 @@ Type=0x6604
 ExtendedLabels=N
 DayXpm="20 14 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "     ..      ..     "
 "    .!!.    .!!.    "
@@ -2858,7 +2855,7 @@ Type=0x6417
 ;String1=0x06,Pylväs
 ExtendedLabels=N
 DayXpm="14 14 3 1"   Colormode=16
-"!	c #FFFFFF"
+"!	c #FBFBEF"
 "#	c #000000"
 "  	c none"
 "     !!!!     "
@@ -2915,7 +2912,7 @@ Type=0x5201
 ;String1=0x06,Näkötorni
 ExtendedLabels=N
 DayXpm="18 26 3 1"   Colormode=16
-"!	c #FFFFFF"
+"!	c #FBFBEF"
 "#	c #000000"
 "  	c none"
 "      !!!!!!      "
@@ -2999,7 +2996,7 @@ Type=0x6413
 ;String1=0x06,Kellotapuli / savupiippu
 ExtendedLabels=N
 DayXpm="18 18 3 1"   Colormode=16
-"!	c #FFFFFF"
+"!	c #FBFBEF"
 "#	c #000000"
 "  	c none"
 "      !!!!!!      "
@@ -3063,7 +3060,7 @@ Type=0x2b06
 ;GRMN_TYPE: User Customizable Points/CUSTOMIZABLE_POINT_10/User customizable point type/Non NT, NT
 ;String1=0x06,Tulentekopaikka
 ExtendedLabels=N
-DayXpm="10 14 82 2"   Colormode=16
+DayXpm="20 28 82 2"   Colormode=16
 "!!	c #E53500"
 "!#	c #E73900"
 "!%	c #E73800"
@@ -3146,21 +3143,50 @@ DayXpm="10 14 82 2"   Colormode=16
 "$9	c #F7FA6D"
 "*!	c #EFC03C"
 "  	c none"
-"        !#!#        "
-"        !%!%    !#!#"
-"!#!#    !#!?  !#!#!#"
-"!#!#  !$!*!=  !%!#  "
-"!#!%!%!1!2!3!4!%!5  "
-"!#!#!1!#!6!7!#!8!9  "
-"#!###%!##?#$#*#=#1  "
-"#2#3#4#5#6#7#8#9%!  "
-"%#%%%?%%%$%*%=%1#2!9"
-"%2%3%4%5%6%7%8%9?!?#"
-"!1?%???$?*?=?1?2?3?4"
-"%!?5?6?7?8?9$!$#$%$?"
-"  $$$*$=$1$2$3$4$5  "
-"    $6$7$8$9*!!!    "
-;1234567890
+"                  !#!#                  "
+"                !#!#!#!#                "
+"                !%!%!%!%        !#!#!#  "
+"                !%!%!%!%      !#!#!#!#!#"
+"  !#!#          !#!#!?!?    !#!#!#!#!#!#"
+"!#!#!#!#      !#!#!#!?!?    !#!#!#!#!#!#"
+"!#!#!#!#    !$!$!*!*!=!=    !%!%!#!#!#  "
+"!#!#!#!#    !$!$!*!*!=!=    !%!%!#!#    "
+"!#!#!%!%!%!%!1!1!2!2!3!3!4!4!%!%!5!5    "
+"!#!#!%!%!%!%!1!1!2!2!3!3!4!4!%!%!5!5    "
+"!#!#!#!#!1!1!#!#!6!6!7!7!#!#!8!8!9!9    "
+"!#!#!#!#!1!1!#!#!6!6!7!7!#!#!8!8!9!9    "
+"#!#!#####%#%!#!##?#?#$#$#*#*#=#=#1#1    "
+"#!#!#####%#%!#!##?#?#$#$#*#*#=#=#1#1    "
+"#2#2#3#3#4#4#5#5#6#6#7#7#8#8#9#9%!%!    "
+"#2#2#3#3#4#4#5#5#6#6#7#7#8#8#9#9%!%!%!  "
+"%#%#%%%%%?%?%%%%%$%$%*%*%=%=%1%1#2#2!9!9"
+"%#%#%%%%%?%?%%%%%$%$%*%*%=%=%1%1#2#2!9!9"
+"%2%2%3%3%4%4%5%5%6%6%7%7%8%8%9%9?!?!?#?#"
+"%2%2%3%3%4%4%5%5%6%6%7%7%8%8%9%9?!?!?#?#"
+"!1!1?%?%?????$?$?*?*?=?=?1?1?2?2?3?3?4?4"
+"!1!1?%?%?????$?$?*?*?=?=?1?1?2?2?3?3?4?4"
+"%!%!?5?5?6?6?7?7?8?8?9?9$!$!$#$#$%$%$?$?"
+"%!%!?5?5?6?6?7?7?8?8?9?9$!$!$#$#$%$%$?$?"
+"  $$$$$$$*$*$=$=$1$1$2$2$3$3$4$4$5$5$%  "
+"    $$$$$*$*$=$=$1$1$2$2$3$3$4$4$5$5    "
+"      $6$6$6$7$7$8$8$9$9*!*!!!!!!!      "
+"        $6$6$7$7$8$8$9$9*!*!!!!!        "
+;11223344556677889900
+; "        !#!#        "
+; "        !%!%    !#!#"
+; "!#!#    !#!?  !#!#!#"
+; "!#!#  !$!*!=  !%!#  "
+; "!#!%!%!1!2!3!4!%!5  "
+; "!#!#!1!#!6!7!#!8!9  "
+; "#!###%!##?#$#*#=#1  "
+; "#2#3#4#5#6#7#8#9%!  "
+; "%#%%%?%%%$%*%=%1#2!9"
+; "%2%3%4%5%6%7%8%9?!?#"
+; "!1?%???$?*?=?1?2?3?4"
+; "%!?5?6?7?8?9$!$#$%$?"
+; "  $$$*$=$1$2$3$4$5  "
+; "    $6$7$8$9*!!!    "
+; ;1234567890
 [end]
 
 
@@ -3171,7 +3197,7 @@ Type=0x6618
 ExtendedLabels=N
 DayXpm="10 10 3 1"   Colormode=16
 "!	c #303030"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "   ....   "
 "  .!!!!.  "
@@ -3214,7 +3240,7 @@ Type=0x661f
 ExtendedLabels=N
 DayXpm="8 12 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "...     "
 ".!!.    "
@@ -3262,7 +3288,7 @@ Type=0x661c
 ExtendedLabels=N
 DayXpm="16 16 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "      ....      "
 "      .!!.      "
@@ -3321,7 +3347,7 @@ Type=0x661a
 ExtendedLabels=N
 DayXpm="16 16 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "                "
 "                "
@@ -3379,7 +3405,7 @@ Type=0x661b
 ExtendedLabels=N
 DayXpm="16 18 3 1"   Colormode=16
 "!	c #000000"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "     ......     "
 "    .!!!!!!.    "
@@ -3488,7 +3514,7 @@ SubType=0x00
 ExtendedLabels=N
 DayXpm="12 26 3 1"   Colormode=16
 "!	c #030303"
-".	c #FFFFFF"
+".	c #FBFBEF"
 "  	c none"
 "     ..     "
 "    .!!.    "
