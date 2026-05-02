@@ -628,9 +628,11 @@ Type=0x10f07
 ;GRMN_TYPE: Customizable Areas/CUSTOMIZABLE_AREA_8/Customizable area/Non NT, NT
 ;String1=0x06,Kallio
 ExtendedLabels=N
-Xpm="0 0 2 0"
+Xpm="0 0 1 0"
 "1 c #BFB6BF"
-"2 c #483F48"
+; Xpm="0 0 2 0"
+; "1 c #BFB6BF"
+; "2 c #483F48"
 [end]
 
 
