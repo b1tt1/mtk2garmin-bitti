@@ -33,7 +33,6 @@ fi
 
 echo "******3*****"
 
-# time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p maastotietokanta -t kaikki -f application/gml+xml -d /mtkdata
 time docker compose run mml-client /go/src/app/mml-muutostietopalvelu-client load -p maastotietokanta -t avoin -f application/gml+xml -d /mtkdata
 
 echo "******4*****"
@@ -62,9 +61,9 @@ echo "******9*****"
 
 # Bitti: tarvitaan
 # Jos kartat on päivitetty
-# time docker compose run mkgmap ./run_mkgmap.sh
+time docker compose run mkgmap ./run_mkgmap.sh
 # Jos vain tyyppitiedostoa on muokattu
-time docker compose run mkgmap ./run_mkgmap2.sh
+# time docker compose run mkgmap ./run_mkgmap2.sh
 
 echo "******10*****"
 
@@ -81,13 +80,10 @@ echo "******10*****"
 
 # time docker compose run osxconverter
 
-# echo "******12*****"
-
 # time docker compose run nsis /output/mtkgarmin/osmmap.nsi
-
-# echo "******13*****"
-
 # time docker compose run nsis /output/mtkgarmin_noparcel/osmmap.nsi
+# time docker compose run nsis /output/mtkgarmin_amoled/osmmap.nsi
+# time docker compose run nsis /output/mtkgarmin_amoled_noparcel/osmmap.nsi
 
 echo "******14*****"
 

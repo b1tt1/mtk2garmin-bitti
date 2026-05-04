@@ -15,18 +15,18 @@ kohdeluokka>=12111 & kohdeluokka<=12141 {name '${name} (${ref})'|'${name}'|'${re
 kohdeluokka=12111  {add mkgmap:bicycle=no; add mkgmap:foot=no} [0x01 road_class 4 road_speed 6 level 4] #Autotie Ia
 kohdeluokka=12112 [0x02 road_class 3 road_speed 5 level 4]  #Autotie Ib
 kohdeluokka=12121 [0x03 road_class 2 road_speed 4 level 4]  #Autotie IIa
-kohdeluokka=12122 [0x05 road_class 2 road_speed 3 level 4]  #Autotie IIb
+kohdeluokka=12122 [0x05 road_class 2 road_speed 3 level 3]  #Autotie IIb
 
 kohdeluokka=12131 [0x04 road_class 2 road_speed 3 level 3]  #Autotie IIIa
-kohdeluokka=12132 & paallyste=2 [0x06 road_class 2 road_speed 2 level 3] #Autotie IIIb
-kohdeluokka=12132 & paallyste<2 [0x08 road_class 0 road_speed 1 level 3] #Autotie IIIb
+kohdeluokka=12132 & paallyste=2 [0x06 road_class 2 road_speed 2 level 2] #Autotie IIIb
+kohdeluokka=12132 & paallyste<2 [0x08 road_class 0 road_speed 1 level 2] #Autotie IIIb
 
 kohdeluokka=12141 [0x07 road_class 0 road_speed 1 level 2]  #Ajotie
 
-kohdeluokka=12313 & paallyste!=2 {add mkgmap:foot=yes;add mkgmap:bicycle=yes} [0x16 road_class 0 road_speed 0 level 1] #Polku
-kohdeluokka=12313 & paallyste=2 {add mkgmap:foot=yes;add mkgmap:bicycle=yes} [0x10e00 road_class 0 road_speed 0 level 1] #Pitkospuut
-kohdeluokka=12314 {add mkgmap:foot=yes;add mkgmap:bicycle=yes} [0x0e road_class 0 road_speed 0 level 1]  #Kavely- ja pyoratie
-kohdeluokka=12316 {add mkgmap:foot=yes;add mkgmap:bicycle=yes} [0x0a road_class 0 road_speed 0 level 1]  #Ajopolku
+kohdeluokka=12313 & paallyste!=2 {add mkgmap:foot=yes;add mkgmap:bicycle=yes} [0x16 road_class 0 road_speed 0 level 2] #Polku
+kohdeluokka=12313 & paallyste=2 {add mkgmap:foot=yes;add mkgmap:bicycle=yes} [0x10e00 road_class 0 road_speed 0 level 2] #Pitkospuut
+kohdeluokka=12314 {add mkgmap:foot=yes;add mkgmap:bicycle=yes} [0x0e road_class 0 road_speed 0 level 2]  #Kavely- ja pyoratie
+kohdeluokka=12316 {add mkgmap:foot=yes;add mkgmap:bicycle=yes} [0x0a road_class 0 road_speed 0 level 2]  #Ajopolku
 
 kohdeluokka=52100 & ele ~ '\d*[24680]0\.0' {name '${ele|conv:"m=>ft"}'} [0x22 level 1]    #Korkeuskayra
 kohdeluokka=52100 & ele ~ '\d*[24680]0000' {name '${ele|conv:"m=>ft"}'} [0x22 level 1]    #Korkeuskayra
@@ -75,9 +75,11 @@ kohdeluokka=38200 [0x10110] #Koski
 kohdeluokka=12312 [0x11 level 2]    #Talvitie
 kohdeluokka=34800 [0x10102 level 1] #Luiska
 kohdeluokka=14121 [0x19 level 3]    #Kapearaiteinen rautatie
+kohdeluokka=14141 [0x19 level 3]    #Raitiotie, erillinen
+kohdeluokka=14142 [0x19 level 3]    #Raitiotie, ajoradalla
+kohdeluokka=14151 [0x19 level 3]    #Pikaraitiotie, erillinen
+kohdeluokka=14152 [0x19 level 3]    #Pikaraitiotie, ajoradalla
 kohdeluokka=36312 [0x1f level 1]    #Virtavesi, 2-5m
-tyyppi=kiinteistoraja [0x1b] #Kiinteistoraja
-
 
 #tyyppi=syvyyskayrat & ele ~ '\d*[24680]0\.0' {name ${ele|conv:"m=>ft"}';addlabel '${ele}'} [0x25]
 tyyppi=syvyyskayra & ele ~ '\d*[24680]0\.0' {name '${ele|conv:"m=>ft"}'} [0x25]
@@ -91,14 +93,14 @@ tyyppi=syvyyskayra_v & ele ~ '\d*[24680]0000' {name '${ele|conv:"m=>ft"}'} [0x25
 tyyppi=syvyyskayra_v {name '${ele|height:"m=>ft"}'} [0x24]
 
 
-highway=track [0x0c level 1]
-highway=trail [0x0d level 1]
-highway=path [0x0d level 1]
-highway=footway [0x0d level 1]
+highway=track [0x0c level 2]
+highway=trail [0x0d level 2]
+highway=path [0x0d level 2]
+highway=footway [0x0d level 2]
 
-tyyppi=luontopolut [0x09 level 1]
-tyyppi=kesaretkeilyreititline [0x09 level 1]
-tyyppi=ulkoilureititline [0x09 level 1]
+tyyppi=luontopolut [0x09 level 2]
+tyyppi=kesaretkeilyreititline [0x09 level 2]
+tyyppi=ulkoilureititline [0x09 level 2]
 
 
 <finalize>

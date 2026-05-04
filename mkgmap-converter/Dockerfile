@@ -11,11 +11,16 @@ RUN curl --fail --verbose --retry 5 --retry-delay 30 -o mkgmap-latest.tar.gz -L 
 
 ADD mkgmap_mtk2garmin.args .
 ADD mkgmap_mtk2garmin_noparcel.args .
+ADD mkgmap_mtk2garmin_amoled.args .
+ADD mkgmap_mtk2garmin_amoled_noparcel.args .
 ADD peruskartta_garmin.txt .
+ADD peruskartta_garmin_amoled.txt .
 ADD run_mkgmap.sh .
 ADD run_mkgmap2.sh .
 
 RUN chmod +x run_mkgmap.sh
 RUN chmod +x run_mkgmap2.sh
-# RUN java -jar -Xmx10G mkgmap.jar --family-id=2501 peruskartta_garmin.txt && mv peruskartta_garmin.typ perus.typ
+# RUN java -jar -Xmx30G mkgmap.jar --family-id=2501 peruskartta_garmin.txt && mv peruskartta_garmin.typ perus.typ
+# RUN java -jar -Xmx30G mkgmap.jar --family-id=2501 peruskartta_garmin_amoled.txt && mv peruskartta_garmin_amoled.typ perus_amoled.typ
 RUN java -jar mkgmap.jar --family-id=2501 peruskartta_garmin.txt && mv peruskartta_garmin.typ perus.typ
+RUN java -jar mkgmap.jar --family-id=2501 peruskartta_garmin_amoled.txt && mv peruskartta_garmin_amoled.typ perus_amoled.typ
